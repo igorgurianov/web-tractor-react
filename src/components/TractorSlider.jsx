@@ -56,7 +56,7 @@ const TractorSlider = ({ slides, className }) => {
         <Swiper
           onSwiper={setThumbsSwiper}
           spaceBetween={10}
-          // slidesPerView={4}
+          slidesPerView={3}
           freeMode={true}
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs, Lazy]}
@@ -65,9 +65,6 @@ const TractorSlider = ({ slides, className }) => {
           // preventClicksPropagation
           // preventClicks
           breakpoints={{
-            320: {
-              slidesPerView: 3,
-            },
             550: {
               slidesPerView: 8,
             },
