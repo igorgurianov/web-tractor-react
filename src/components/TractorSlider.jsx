@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
-import "swiper/swiper-bundle.min.css";
+// import "swiper/swiper-bundle.min.css";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,7 +13,7 @@ const TractorSlider = ({ slides, className }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <div className="">
+    <>
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
@@ -44,7 +44,7 @@ const TractorSlider = ({ slides, className }) => {
               {/* <div className="swiper-zoom-container"> */}
               <img
                 data-src={slide}
-                className={`mx-auto max-h-[300px] object-contain swiper-lazy ${className}-img`}
+                className={`mx-auto max-h-[300px] object-contain swiper-lazy tractor-slider-img`}
               />
               <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
               {/* </div> */}
@@ -52,7 +52,7 @@ const TractorSlider = ({ slides, className }) => {
           );
         })}
       </Swiper>
-      <div className="relative md:px-20">
+      <div className="relative md:my-4 z-10">
         <Swiper
           onSwiper={setThumbsSwiper}
           spaceBetween={10}
@@ -78,7 +78,7 @@ const TractorSlider = ({ slides, className }) => {
               <SwiperSlide className="cursor-pointer">
                 <img
                   data-src={slide}
-                  className="h-full w-full max-h-[60px] md:max-h-[75px] object-center object-cover swiper-lazy"
+                  className="h-full w-full [60px] md:max-h-[75px] object-center object-contain swiper-lazy"
                   loading="lazy"
                 />
                 <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
@@ -86,14 +86,16 @@ const TractorSlider = ({ slides, className }) => {
             );
           })}
         </Swiper>
-        <div
-          className={`${className}-button-prev swiper-button-prev-custom swiper-button-prev-tractor`}
-        ></div>
-        <div
-          className={`${className}-button-next swiper-button-next-custom swiper-button-next-tractor`}
-        ></div>
+        <div className="flex absolute w-full h-full top-0 items-center justify-center">
+          <div
+            className={`${className}-button-prev swiper-button-prev-custom swiper-button-prev-tractor`}
+          ></div>
+          <div
+            className={`${className}-button-next swiper-button-next-custom swiper-button-next-tractor`}
+          ></div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

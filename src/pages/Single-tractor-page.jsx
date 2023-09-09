@@ -79,14 +79,17 @@ const SingleTractorPage = () => {
               className="w-full h-full object-cover col-span-2 container mx-auto md:order-[-1] md:mt-0 md:row-span-3"
               alt={tractor.alt}
             /> */}
-            <ul className="flex mt-5 md:mt-0 gap-2 flex-col md:order-0 md:justify-between lg:flex-row lg:row-start-3 lg:col-start-3 lg:col-span-2 lg:mt-0 lg:items-center">
+            <ul className="flex mt-5 md:mt-0 gap-6 md:gap-2 flex-col md:order-0 md:justify-between lg:flex-row lg:row-start-3 lg:col-start-3 lg:col-span-2 lg:mt-0 lg:items-center">
               {tractor.promo.map((promoItem, index) => {
                 return <PromoTag data={promoItem} key={index} />;
               })}
             </ul>
-            <div className="mt-5 flex items-end flex-col justify-between md:mt-0">
-              <div className="flex items-center justify-end">
-                <h2 className="text-color_accent_red">
+            <div className="mt-5 flex gap-2 items-end flex-col justify-between md:mt-0">
+              <div className="flex flex-col justify-end">
+                <p className="text-sm text-color_dark_gray text-right">
+                  Базовая комплектация:
+                </p>
+                <h2 className="text-color_accent_red text-right">
                   {tractor.price} &#x20bd;
                 </h2>
               </div>
@@ -94,18 +97,16 @@ const SingleTractorPage = () => {
                 В кредит <br /> ОТ 12 000 &#x20bd;/МЕС.
               </h5>
               <ContactUsBtn
-                text="ЗАБРОНИРОВАТЬ"
-                style=" hover:bg-color_dark hover:text-color_white lg:text-base md:px-4"
+                text="КУПИТЬ"
+                style="w-full hover:bg-color_dark hover:text-color_white md:px-20 md:py-2"
               />
             </div>
-            <ul className=" mt-4 md:mt-0 flex gap-2 col-span-2 flex-wrap lg:col-start-3 lg:col-span-1 lg:row-start-2 md:content-start">
+            <ul className=" mt-6 md:mt-0 flex gap-2 col-span-2 flex-wrap lg:col-start-3 lg:col-span-1 lg:row-start-2 md:content-start">
               {tractor.keySpecs.map((spec, index) => {
                 return <SpecTag data={spec} key={index} />;
               })}
             </ul>
           </div>
-          <div></div>
-
           <div className="flex overflow-scroll md:overflow-auto mt-6 md:mt-12 justify-between">
             <button
               className={buttonClass(0)}

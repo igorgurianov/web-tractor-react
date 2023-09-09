@@ -17,7 +17,7 @@ const TractorsCataloguePage = () => {
 
   const renderButtonSelect = (button) => {
     const classes =
-      "btn text-sm p-3 w-[153px] font-bold hover:bg-color_dark hover:text-color_white hover:border";
+      "btn text-sm p-2 md:p-3 w-[153px] font-bold hover:bg-color_dark hover:text-color_white hover:border";
     if (button === tractor) {
       return classes + " bg-color_accent_yellow";
     } else {
@@ -38,10 +38,10 @@ const TractorsCataloguePage = () => {
         <Breadcrumbs />
         <SectionHeader
           headerText="Наша Техника"
-          subheaderText="У нас налажено собственное производство 2 видов надежных тракторов."
+          subheaderText="У нас налажено собственное производство 2 видов надежных тракторов: ВЗГМ-90 (улучшенный ДТ-75) и ВЗГМ-150 (улучшенный ХТЗ-150). А также Вы можете приобрести полностью обслуженные б/у модели классических тракторов ДТ-75 и ХТЗ-150."
           styles="mt-6 lg:mt-8"
         />
-        <div className="flex gap-6 justify-center">
+        <div className="flex gap-2 md:gap-6 justify-center">
           <button
             className={renderButtonSelect("VZGM-90")}
             onClick={() => {
@@ -58,8 +58,24 @@ const TractorsCataloguePage = () => {
           >
             ВЗГМ-150
           </button>
+          <button
+            className={renderButtonSelect("DT-75")}
+            onClick={() => {
+              setTractor("DT-75");
+            }}
+          >
+            ДТ-75
+          </button>
+          <button
+            className={renderButtonSelect("XTZ-150")}
+            onClick={() => {
+              setTractor("XTZ-150");
+            }}
+          >
+            ХТЗ-150
+          </button>
         </div>
-        <div className="md:grid md:grid-cols-2 md:gap-6 mt-6">
+        <div className="md:grid md:grid-cols-2 md:gap-6 mt-6 md:mt-10">
           <img
             className="mt-6 mx-auto w-full md:row-start-1 md:mt-0"
             src={showData.img}
@@ -80,7 +96,7 @@ const TractorsCataloguePage = () => {
             <div className=" flex justify-center mx-auto md:col-start-2 md:row-start-4 md:justify-start md:mt-6 self-center">
               <LinkBtn
                 text="ПОДРОБНЕЕ О МОДЕЛИ"
-                style="btn text-sm mt-6 py-3 px-8 lg:px-8 block md:mt-0 hover:bg-color_dark hover:text-color_white"
+                style="w-full text-sm mt-6 py-3 px-8 lg:px-8 block md:mt-0 hover:bg-color_dark hover:text-color_white"
                 to={`/tractors/${tractor}`}
               />
             </div>

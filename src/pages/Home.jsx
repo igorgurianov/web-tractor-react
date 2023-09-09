@@ -36,9 +36,8 @@ const HomePage = () => {
 
       <Section styles="md:my-14 lg:my-20">
         <SectionHeader
-          headerText="Наша Техника"
-          subheaderText="Мы предлагаем широкий спектр надежных запасных частей для
-          сельскохозяйственной техники"
+          headerText="Новая Техника"
+          subheaderText="У нас налажено собственное производство 2 видов надежных тракторов."
           styles="lg:mb-12"
         />
 
@@ -50,31 +49,46 @@ const HomePage = () => {
       <div className="bg-color_light_gray">
         <Section styles="py-10 md:py-14 lg:py-20">
           <SectionHeader
-            headerText="Чем мы занимаемся"
-            subheaderText="У нас налажено производство собственной сельскохозяйственной техники. Мы делаем 2 вида надежных тракторов. 
-Помимо этого предоставляем услуги по полному техническому обслуживанию сельскохозяйственной техники. 
-А также продаем запчасти"
+            headerText="Классическая техника"
+            subheaderText="Так же Вы можете приобрести классические модели тракторов ДТ-75 и ХТЗ-150"
             styles="lg:mb-12"
           />
-          <div className="flex flex-col md:flex-row md:gap-4 container mx-auto">
-            {whatWeDo.map((item) => {
-              return (
-                <div className="h-full">
-                  <Link to={item.to}>
-                    <Card
-                      img={item.img}
-                      alt={item.alt}
-                      caption={item.caption}
-                      captionStyle="p-2 pl-4"
-                    />
-                    <p className="text-left mt-4 mb-6">{item.text}</p>
-                  </Link>
-                </div>
-              );
-            })}
+
+          <div className="grid grid-row-2 md:grid-cols-2 items-center justify-center gap-6">
+            <OurTractor data={tractorData[2]} className="DT-75-home" />
+
+            <OurTractor data={tractorData[3]} className="HTZ-150-home" />
           </div>
         </Section>
       </div>
+
+      <Section styles="md:my-14 lg:my-20">
+        <SectionHeader
+          headerText="Чем мы занимаемся"
+          subheaderText="У нас налажено производство собственной сельскохозяйственной техники. Мы делаем 2 вида надежных тракторов. 
+Помимо этого предоставляем услуги по полному техническому обслуживанию сельскохозяйственной техники. 
+А также продаем запчасти"
+          styles="lg:mb-12"
+        />
+        <div className="flex flex-col md:flex-row md:gap-4 container mx-auto">
+          {whatWeDo.map((item) => {
+            return (
+              <div className="h-full">
+                <Link to={item.to}>
+                  <Card
+                    img={item.img}
+                    alt={item.alt}
+                    caption={item.caption}
+                    captionStyle="p-2 pl-4"
+                  />
+                  <p className="text-left mt-4 mb-6">{item.text}</p>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+      </Section>
+
       <AnyProblems />
       <OurSpareParts />
 

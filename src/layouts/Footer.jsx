@@ -41,14 +41,14 @@ const Footer = () => {
             </li>
             <li className=" hover:text-color_white">
               <FooterFrame
-                text={`Звоните нам сейчас ${organizationInfo.phone.callNow.toShow}`}
+                text={`Заказ техники ${organizationInfo.phone.callNow.toShow}`}
                 href={`tel:${organizationInfo.phone.callNow.toLink}`}
                 icon={<FiPhoneCall className="w-6 h-6" />}
               />
             </li>
             <li className=" hover:text-color_white">
               <FooterFrame
-                text={`Помощь на дороге ${organizationInfo.phone.aroundClock.toShow}`}
+                text={`Консультация ${organizationInfo.phone.aroundClock.toShow}`}
                 href={`tel:${organizationInfo.phone.aroundClock.toLink}`}
                 icon={<FiHeadphones className="w-6 h-6" />}
               />

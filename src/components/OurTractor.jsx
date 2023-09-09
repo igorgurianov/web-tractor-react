@@ -15,28 +15,20 @@ const OurTractor = ({ data, className }) => {
      md:p-5 md:px-3"
     >
       <div className="grid gap-x-2 md:gap-x-0 grid-cols-2 md:grid-cols-[35%,65%]">
-        {/* <img
-          src={img}
-          alt={alt}
-          className="object-cover md:w-full row-span-2 md:order-2"
-        /> */}
         <div className="md:w-full row-span-2 md:order-2 min-w-0">
           <TractorSlider slides={gallery} className={className} />
         </div>
-        <div className="grid items-center md:gap-1 md:flex md:mt-3 md:justify-between md:order-6 md:col-start-2">
-          <div className="flex items-center justify-end">
-            <p className="text-sm mr-2 font-bold">от</p>
-            <h4 className="md:text-xs lg:text-lg">{price} &#x20bd;</h4>
-          </div>
-          <h5 className="font-normal tracking-normal text-right md:font-bold md:text-xs">
-            КРЕДИТ ОТ 115 000 &#x20bd;/МЕС.
-          </h5>
+        <div className="flex items-center md:gap-1 my-3 justify-end order-6 col-span-2">
+          <p className="text-sm mr-2 text-color_dark_gray">
+            Базовая комплектация:
+          </p>
+          <h4 className="md:text-xs lg:text-lg">{price} &#x20bd;</h4>
         </div>
         <h4 className="mb-4 col-span-2 text-left order-first md:col-span-1 md:order-1">
           {name}
         </h4>
 
-        <ul className="flex mt-2 gap-2 flex-col md:justify-between md:mt-4 md:order-2 md:flex-col md:col-span-1">
+        <ul className="flex mt-2 gap-2 flex-col md:gap-4 md:mt-0 md:order-2 md:flex-col md:col-span-1">
           {promo.map((promoItem, index) => {
             return <PromoTag data={promoItem} key={index} />;
           })}
@@ -54,7 +46,7 @@ const OurTractor = ({ data, className }) => {
           text="ЛИЗИНГ"
         />
         <ContactUsBtn
-          text="ЗАБРОНИРОВАТЬ"
+          text="КУПИТЬ"
           style="w-full h-full basis-[36%] hover:bg-color_dark hover:text-color_white basis-1/3 px-1 md:px-2"
         />
         <LinkBtn

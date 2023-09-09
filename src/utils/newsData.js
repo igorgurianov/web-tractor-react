@@ -70,7 +70,7 @@ export const newsData = [
   {
     id: "002",
     url: "DT-75-advantages",
-    date: { iso: "2023-07-20", human: "20.07.2023" },
+    date: { iso: "2023-06-20", human: "20.06.2023" },
     title: "Особенности и преимущества ДТ-75",
     img: img002,
     alt: "Особенности и преимущества ДТ-75 ВЗГМ-90",
@@ -138,7 +138,7 @@ export const newsData = [
   {
     id: "003",
     url: "varieties-of-tracks",
-    date: { iso: "2023-07-23", human: "23.07.2023" },
+    date: { iso: "2023-05-23", human: "23.05.2023" },
     title: "Разновидности тракторных гусениц",
     img: img003,
     alt: "Какие бывают разновидности тракторных гусениц",

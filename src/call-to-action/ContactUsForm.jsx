@@ -3,11 +3,12 @@ import WhatsAppIcon from "../UI/WhatsAppIcon";
 import { useState, useContext, useRef } from "react";
 import { sendEmail } from "../utils/email";
 import { PopupContext } from "../context/PopupContext";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const ContactUsForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [disabled, setDisable] = useState(true);
-  const { formSuccess, setFormSuccess, setIsPopupOpen } =
+  const { formSuccess, setFormSuccess, setIsPopupOpen, closePopup } =
     useContext(PopupContext);
   const form = useRef();
 
@@ -36,8 +37,14 @@ const ContactUsForm = () => {
   const cursor = isLoading ? "cursor-wait" : "cursor-auto";
 
   return (
-    <div className="flex p-6 flex-col fixed z-20 text-center">
-      <h3 className="uppercase text-lg md:text-3xl">
+    <div className="flex p-6 flex-col fixed z-20 text-center bg-color_light_gray rounded-lg">
+      <div
+        className="absolute top-2 right-2 md:-top-10 md:-right-10 cursor-pointer hover:text-color_accent_yellow hover:scale-110 duration-200"
+        onClick={closePopup}
+      >
+        <AiOutlineCloseCircle size={40} />
+      </div>
+      <h3 className="uppercase text-lg md:text-3xl mt-8 md:mt-5">
         Оставьте заявку и мы перезвоним
       </h3>
 
@@ -71,18 +78,18 @@ const ContactUsForm = () => {
         />
         {/* <input type="email" name="" id="" placeholder="Ваш e-mail" /> */}
         <input
-          className="bg-color_accent_yellow py-3 font-bold text-xs tracking-widest cursor-pointer hover:bg-color_dark_gray hover:text-color_white"
+          className="bg-color_accent_yellow py-3 font-bold text-xs tracking-widest cursor-pointer hover:bg-color_dark_gray hover:text-color_white duration-200"
           type="submit"
           value={isLoading ? "ОТПРАВЛЯЕМ ЗАЯВКУ ..." : "ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ"}
           disabled={isLoading}
         />
       </form>
-      <h3 className="uppercase text-lg md:text-3xl mt-10 text-center">
+      <h3 className="uppercase text-lg md:text-3xl mt-6 md:mt-8 text-center">
         Или напишите нам в соц сетях
       </h3>
-      <div className="flex flex-row items-center gap-14 mx-auto mt-10 ">
-        <TelegramIcon size="62" />
-        <WhatsAppIcon size="62" />
+      <div className="flex flex-row items-center gap-14 mx-auto mt-6 md:mt-8">
+        <TelegramIcon size="50" />
+        <WhatsAppIcon size="50" />
       </div>
     </div>
   );
