@@ -26,20 +26,20 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
-            <Route path="about" element={<AboutPage />} />
-            <Route path="about-us" element={<Navigate to="/about" replace />} />
-            <Route path="gallery" element={<GalleryPage />} />
-            <Route path="eqipment" element={<EquipmentPage />} />
-            <Route path="eqipment/:id" element={<CataloguePage />} />
-            <Route path="eqipment/engine/:id" element={<SingleSparePage />} />
-            <Route path="eqipment/spare/:id" element={<SingleSparePage />} />
-            <Route path="eqipment/blade/:id" element={<SingleSparePage />} />
-            <Route path="tractors" element={<TractorsCataloguePage />} />
-            <Route path="tractors/:id" element={<SingleTractorPage />} />
-            <Route path="services" element={<ServicesCatalogue />} />
-            <Route path="services/:id" element={<SingleServicePage />} />
-            <Route path="news" element={<NewsCatalogue />} />
-            <Route path="news/:id" element={<SingleNewsPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            {/* <Route path="about-us" element={<Navigate to="/about" replace />} /> */}
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/eqipment" element={<EquipmentPage />} />
+            <Route path="/eqipment/:id" element={<CataloguePage />} />
+            <Route path="/eqipment/engine/:id" element={<SingleSparePage />} />
+            <Route path="/eqipment/spare/:id" element={<SingleSparePage />} />
+            <Route path="/eqipment/blade/:id" element={<SingleSparePage />} />
+            <Route path="/tractors" element={<TractorsCataloguePage />} />
+            <Route path="/tractors/:id" element={<SingleTractorPage />} />
+            <Route path="/services" element={<ServicesCatalogue />} />
+            <Route path="/services/:id" element={<SingleServicePage />} />
+            <Route path="/news" element={<NewsCatalogue />} />
+            <Route path="/news/:id" element={<SingleNewsPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
