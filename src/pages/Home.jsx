@@ -47,7 +47,7 @@ const HomePage = () => {
           <OurTractor data={tractorData[1]} className="VZGM-150-home" />
         </div>
       </Section>
-      <div className="bg-color_light_gray">
+      {/* <div className="bg-color_light_gray">
         <Section styles="py-10 md:py-14 lg:py-20">
           <SectionHeader
             headerText="Классическая техника"
@@ -61,34 +61,35 @@ const HomePage = () => {
             <OurTractor data={tractorData[3]} className="HTZ-150-home" />
           </div>
         </Section>
-      </div>
-
-      <Section styles="md:my-14 lg:my-20">
-        <SectionHeader
-          headerText="Чем мы занимаемся"
-          subheaderText="У нас налажено производство собственной сельскохозяйственной техники. Мы делаем 2 вида надежных тракторов. 
+      </div> */}
+      <div className="bg-color_light_gray">
+        <Section styles="py-10 md:py-14 lg:py-20">
+          <SectionHeader
+            headerText="Чем мы занимаемся"
+            subheaderText="У нас налажено производство собственной сельскохозяйственной техники. Мы делаем 2 вида надежных тракторов. 
 Помимо этого предоставляем услуги по полному техническому обслуживанию сельскохозяйственной техники. 
 А также продаем запчасти"
-          styles="lg:mb-12"
-        />
-        <div className="flex flex-col md:flex-row md:gap-4 container mx-auto">
-          {whatWeDo.map((item) => {
-            return (
-              <div className="h-full">
-                <Link to={item.to}>
-                  <Card
-                    img={item.img}
-                    alt={item.alt}
-                    caption={item.caption}
-                    captionStyle="p-2 pl-4"
-                  />
-                  <p className="text-left mt-4 mb-6">{item.text}</p>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
-      </Section>
+            styles="lg:mb-12"
+          />
+          <div className="flex flex-col md:flex-row md:gap-4 container mx-auto">
+            {whatWeDo.map((item) => {
+              return (
+                <div className="h-full">
+                  <Link to={item.to}>
+                    <Card
+                      img={item.img}
+                      alt={item.alt}
+                      caption={item.caption}
+                      captionStyle="p-2 pl-4"
+                    />
+                    <p className="text-left mt-4 mb-6">{item.text}</p>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        </Section>
+      </div>
 
       <AnyProblems />
       <OurSpareParts />

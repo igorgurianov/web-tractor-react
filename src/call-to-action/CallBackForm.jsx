@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import bgImg from "../assets/images/form/form-bg-md.png";
 import { sendEmail } from "../utils/email";
 import { useContext } from "react";
@@ -20,11 +19,11 @@ const CallBackForm = () => {
     sendEmail(form.current)
       .then(
         (result) => {
-          console.log(result.text);
+          // console.log(result.text);
           e.target.reset();
         },
         (error) => {
-          console.log(error.text);
+          // console.log(error.text);
         }
       )
       .then(() => {

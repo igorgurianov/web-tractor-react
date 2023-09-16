@@ -1,7 +1,7 @@
 const LocationMaps = () => {
   return (
     <div style={{ position: "relative", overflow: "hidden" }}>
-      {/* <a
+      <a
         href="https://yandex.uz/maps/38/volgograd/?utm_medium=mapframe&utm_source=maps"
         style={{
           color: "#eee",
@@ -31,7 +31,7 @@ const LocationMaps = () => {
         frameBorder="1"
         allowFullScreen={true}
         style={{ position: "relative" }}
-      ></iframe> */}
+      ></iframe>
     </div>
   );
 };

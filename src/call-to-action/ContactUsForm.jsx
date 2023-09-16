@@ -20,11 +20,11 @@ const ContactUsForm = () => {
     sendEmail(form.current)
       .then(
         (result) => {
-          console.log(result.text);
+          // console.log(result.text);
           e.target.reset();
         },
         (error) => {
-          console.log(error.text);
+          // console.log(error.text);
         }
       )
       .then(() => {

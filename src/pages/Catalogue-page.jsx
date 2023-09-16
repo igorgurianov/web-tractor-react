@@ -16,7 +16,7 @@ const CataloguePage = () => {
 
   const captionStyle = "p-2";
 
-  console.log(id);
+  // console.log(id);
 
   useEffect(() => {
     setCategory(id);

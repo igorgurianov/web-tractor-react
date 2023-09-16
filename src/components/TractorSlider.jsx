@@ -46,7 +46,7 @@ const TractorSlider = ({ slides, className }) => {
                 data-src={slide}
                 className={`mx-auto max-h-[300px] object-contain swiper-lazy tractor-slider-img`}
               />
-              <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
               {/* </div> */}
             </SwiperSlide>
           );
@@ -81,7 +81,7 @@ const TractorSlider = ({ slides, className }) => {
                   className="h-full w-full [60px] md:max-h-[75px] object-center object-contain swiper-lazy"
                   loading="lazy"
                 />
-                <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
               </SwiperSlide>
             );
           })}
