@@ -22,6 +22,7 @@ const SingleNewsPage = () => {
         <Helmet>
           <title>{`ВЗГМ - ${post.title}`}</title>
           <meta name="description" content={post.previewLG} />
+          <link rel="canonical" href={`https://vzgm.ru/news/${post.url}`} />
         </Helmet>
       )}
       <Breadcrumbs />

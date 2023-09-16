@@ -3,5 +3,5 @@
 User-agent: *
 Disallow:
 
-
+Sitemap: https://vzgm.ru/sitemap.xml
 

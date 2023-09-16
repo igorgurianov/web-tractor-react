@@ -28,7 +28,7 @@ const HomePage = () => {
           name="description"
           content="Исследуйте мир сельскохозяйственной техники на главной странице нашего сайта. Узнайте о нашей компании, предлагающей высококачественные гусеничные тракторы, запасные части и обслуживание для эффективного сельского хозяйства."
         />
-        <link rel="canonical" href="/" />
+        <link rel="canonical" href="https://vzgm.ru/" />
       </Helmet>
       <div className="relative">
         {/* <MainBanner /> */}

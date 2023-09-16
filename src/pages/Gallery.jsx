@@ -17,6 +17,7 @@ const GalleryPage = () => {
           name="description"
           content="Разнообразие тракторов и сельхозтехники в нашей галерее. Познакомьтесь с моделями ВЗГМ-90, ВЗГМ-150, ДТ-75, К-700 и другими популярными марками. Ознакомьтесь с нашими достижениями и опытом в производстве и ремонте техники."
         />
+        <link rel="canonical" href="https://vzgm.ru/gallery" />
       </Helmet>
       <Section styles=" md:my-6 lg:my-8 xl:my-12">
         <Breadcrumbs />

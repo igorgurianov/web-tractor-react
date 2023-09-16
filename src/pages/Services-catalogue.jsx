@@ -17,6 +17,7 @@ const ServicesCatalogue = () => {
           name="description"
           content="Мы предоставляем профессиональные услуги по ремонту тракторов всех марок. Промежуточный и капитальный ремонт, замена запчастей, обслуживание и ТО. Опытные специалисты, высокое качество обслуживания."
         />
+        <link rel="canonical" href="https://vzgm.ru/services" />
       </Helmet>
       <Section styles="md:mb-14 lg:mb-20">
         <Breadcrumbs />
