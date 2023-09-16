@@ -1,16 +1,17 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
-import { BrowserRouter } from "react-router-dom";
-import ScrollToTop from "./utils/scrollToTop";
+import { hydrate, render } from "react-dom";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+const APP = (
   <React.StrictMode>
-    <BrowserRouter>
-      <ScrollToTop />
-      <App />
-    </BrowserRouter>
+    <App />
   </React.StrictMode>
 );
+
+const rootElement = document.getElementById("root");
+if (rootElement.hasChildNodes()) {
+  hydrate(APP, rootElement);
+} else {
+  render(APP, rootElement);
+}
