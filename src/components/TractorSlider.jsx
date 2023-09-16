@@ -61,7 +61,7 @@ const TractorSlider = ({ slides, className }) => {
           watchSlidesProgress={true}
           modules={[FreeMode, Navigation, Thumbs, Lazy]}
           className={`${className} mySwiper`}
-          lazy={true}
+          // lazy={true}
           // preventClicksPropagation
           // preventClicks
           breakpoints={{
@@ -77,11 +77,10 @@ const TractorSlider = ({ slides, className }) => {
             return (
               <SwiperSlide className="cursor-pointer">
                 <img
-                  data-src={slide}
+                  src={slide}
                   className="h-full w-full [60px] md:max-h-[75px] object-center object-contain swiper-lazy"
-                  loading="lazy"
                 />
-                <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div> */}
               </SwiperSlide>
             );
           })}
