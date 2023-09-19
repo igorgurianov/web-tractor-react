@@ -7,9 +7,6 @@ import { PopupContext } from "./context/PopupContext";
 import { store } from "./services/store";
 import { Provider } from "react-redux";
 
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
-
 const APP = (
   <React.StrictMode>
     <Provider store={store}>
@@ -18,8 +15,18 @@ const APP = (
   </React.StrictMode>
 );
 
+const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-  root.hydrate(APP);
+  hydrate(APP, rootElement);
 } else {
-  root.render(APP);
+  render(APP, rootElement);
 }
+
+// const rootElement = document.getElementById("root");
+// const root = createRoot(rootElement);
+
+// if (rootElement.hasChildNodes()) {
+//   root.hydrate(APP);
+// } else {
+//   root.render(APP);
+// }
