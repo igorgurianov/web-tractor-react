@@ -19,7 +19,7 @@ import vzgm150p7 from "../assets/images/tractors/vzgm-150/VZGM-150-7.png";
 
 const tractorData = [
   {
-    name: "Гусеничный трактор ВЗГМ-90 (ДТ-75)",
+    name: "Гусеничный трактор ДТ-75 (ВЗГМ-90)",
     shortName: "ВЗГМ-90",
     url: "VZGM-90",
     price: "3 500 000",
@@ -238,7 +238,7 @@ const tractorData = [
     ],
   },
   {
-    name: "Колесный трактор ВЗГМ-150 (ХТЗ-150)",
+    name: "Колесный трактор ХТЗ-150 (ВЗГМ-150)",
     shortName: "ВЗГМ-150",
     url: "VZGM-150",
     price: "5 400 000",

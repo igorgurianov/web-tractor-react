@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import { PopupContext } from "../context/PopupContext";
 import { OPEN_CONTACT_POPUP } from "../services/actions/form";
 import { useDispatch } from "react-redux";
 

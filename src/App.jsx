@@ -36,6 +36,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <ScrollToTop />
+
         <div className="App">
           <Routes>
             <Route path="/" element={<HomePage />}></Route>
@@ -47,6 +48,7 @@ function App() {
             <Route path="/eqipment/spare/:id" element={<SingleSparePage />} />
             <Route path="/eqipment/blade/:id" element={<SingleSparePage />} />
             <Route path="/tractors" element={<TractorsCataloguePage />} />
+            <Route path="/tractors/:id" element={<SingleTractorPage />} />
             <Route path="/tractors/:id/:tab" element={<SingleTractorPage />} />
             <Route path="/services" element={<ServicesCatalogue />} />
             <Route path="/services/:id" element={<SingleServicePage />} />

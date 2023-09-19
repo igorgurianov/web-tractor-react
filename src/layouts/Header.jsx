@@ -1,11 +1,10 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import CustomLink from "../UI/CustomLink";
 import { FiPhoneCall, FiMapPin, FiMenu } from "react-icons/fi";
 import { BiTimeFive } from "react-icons/bi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import TelegramIcon from "../UI/TelegramIcon";
 import WhatsAppIcon from "../UI/WhatsAppIcon";
-import { PopupContext } from "../context/PopupContext";
 import ContactUsBtn from "../UI/ContactUsBtn";
 import ContactItem from "../UI/ContactItem";
 import { organizationInfo } from "../utils/const";

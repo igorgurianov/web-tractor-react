@@ -1,6 +1,6 @@
 import React from "react";
 
-function Information({ tab, tractor }) {
+function Information({ tab = "description", tractor }) {
   return (
     <div>
       {tab === "description" && (

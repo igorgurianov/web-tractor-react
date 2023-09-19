@@ -3,7 +3,6 @@ import App from "./App";
 import "./index.css";
 import { hydrate, render } from "react-dom";
 import ReactDOM, { createRoot } from "react-dom/client";
-import { PopupContext } from "./context/PopupContext";
 import { store } from "./services/store";
 import { Provider } from "react-redux";
 

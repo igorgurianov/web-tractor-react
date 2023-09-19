@@ -3,11 +3,9 @@ import React from "react";
 // import "swiper/swiper-bundle.min.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/css";
-import { useContext } from "react";
-import { PopupContext } from "../context/PopupContext";
 
-import SwiperCore, { Lazy, Navigation } from "swiper";
-SwiperCore.use([Navigation, Lazy]);
+import SwiperCore, { Navigation } from "swiper";
+SwiperCore.use([Navigation]);
 
 const BaseSwiper = ({
   slides,
@@ -66,8 +64,8 @@ const BaseSwiper = ({
           nextEl: `.swiper-button-next-${sliderName}`,
         }}
         className={`swiper ${sliderName}`}
-        lazy={true}
-        modules={[Lazy]}
+        // lazy={true}
+        // modules={[Lazy]}
         breakpoints={{
           320: {
             slidesPerView: slidesPerViewSmallScreen,
@@ -92,22 +90,22 @@ const BaseSwiper = ({
             >
               {isClickable ? (
                 <img
-                  data-src={slide.img}
+                  src={slide.img}
                   alt={slide.alt}
-                  className="mx-auto object-cover h-full w-full cursor-pointer hover:shadow-xl swiper-lazy"
+                  className="mx-auto object-cover h-full w-full cursor-pointer hover:shadow-xl"
                   // onClick={() => handleImgCLick(slide.img)}
-                  loading="lazy"
+                  // loading="lazy"
                 />
               ) : (
                 <img
-                  data-src={slide.img}
+                  src={slide.img}
                   alt={slide.alt}
-                  loading="lazy"
-                  className="mx-auto object-cover h-full w-full swiper-lazy"
+                  // loading="lazy"
+                  className="mx-auto object-cover h-full w-full"
                 />
               )}
             </div>
-            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div> */}
           </SwiperSlide>
         ))}
       </Swiper>
