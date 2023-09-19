@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import Modal from "../components/Modal";
 import ContactUsForm from "../call-to-action/ContactUsForm";
 import PopupWithImage from "../components/PopupWithImage";
-import FormSuccess from "../components/Form-success";
+import FormSuccess from "../components/Form-success -r";
 
 const setActive = ({ isActive }) => (isActive ? "active-link" : "");
 
@@ -16,7 +16,7 @@ const Layout = () => {
 
   return (
     <div>
-      <Header />
+      {/* <Header />
       <main className="mx-auto ">
         <Outlet />
       </main>
@@ -35,7 +35,7 @@ const Layout = () => {
         <Modal>
           <FormSuccess />
         </Modal>
-      )}
+      )} */}
     </div>
   );
 };

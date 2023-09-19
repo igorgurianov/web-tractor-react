@@ -5,9 +5,9 @@ import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import required modules
-import SwiperCore, { Navigation, FreeMode, Thumbs, Lazy, Zoom } from "swiper";
+import SwiperCore, { Navigation, FreeMode, Thumbs, Zoom } from "swiper";
 
-SwiperCore.use([Navigation, Lazy]);
+SwiperCore.use([Navigation]);
 
 const TractorSlider = ({ slides, className }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -15,18 +15,16 @@ const TractorSlider = ({ slides, className }) => {
   return (
     <>
       <Swiper
-        style={{
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
-        }}
+        // style={{
+        //   "--swiper-navigation-color": "#fff",
+        //   "--swiper-pagination-color": "#fff",
+        // }}
         spaceBetween={10}
         navigation={{
-          // prevEl: `.swiper-button-prev-tractor`,
-          // nextEl: `.swiper-button-next-tractor`,
           prevEl: `.${className}-button-prev`,
           nextEl: `.${className}-button-next`,
         }}
-        slidesPerGroup={1}
+        // slidesPerGroup={1}
         slidesPerView={1}
         // zoom={true}
         // thumbs={{ swiper: thumbsSwiper }}
@@ -34,19 +32,19 @@ const TractorSlider = ({ slides, className }) => {
         thumbs={{
           swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
-        lazy={true}
-        modules={[Thumbs, Lazy, Zoom]}
+        // lazy={true}
+        modules={[Thumbs, Zoom]}
         className={`${className} mySwiper2`}
       >
-        {slides.map((slide) => {
+        {slides.map((slide, index) => {
           return (
-            <SwiperSlide className="">
+            <SwiperSlide className="" key={index}>
               {/* <div className="swiper-zoom-container"> */}
               <img
-                data-src={slide}
+                src={slide}
                 className={`mx-auto max-h-[300px] object-contain swiper-lazy tractor-slider-img`}
               />
-              <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-black"></div> */}
               {/* </div> */}
             </SwiperSlide>
           );
@@ -59,7 +57,7 @@ const TractorSlider = ({ slides, className }) => {
           slidesPerView={3}
           freeMode={true}
           watchSlidesProgress={true}
-          modules={[FreeMode, Navigation, Thumbs, Lazy]}
+          modules={[FreeMode, Navigation, Thumbs]}
           className={`${className} mySwiper`}
           // lazy={true}
           // preventClicksPropagation
@@ -73,9 +71,9 @@ const TractorSlider = ({ slides, className }) => {
             },
           }}
         >
-          {slides.map((slide) => {
+          {slides.map((slide, index) => {
             return (
-              <SwiperSlide className="cursor-pointer">
+              <SwiperSlide className="cursor-pointer" key={index}>
                 <img
                   src={slide}
                   className="h-full w-full [60px] md:max-h-[75px] object-center object-contain swiper-lazy"

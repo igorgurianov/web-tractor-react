@@ -2,16 +2,24 @@ import React from "react";
 import App from "./App";
 import "./index.css";
 import { hydrate, render } from "react-dom";
+import ReactDOM, { createRoot } from "react-dom/client";
+import { PopupContext } from "./context/PopupContext";
+import { store } from "./services/store";
+import { Provider } from "react-redux";
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 
 const APP = (
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
-const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-  hydrate(APP, rootElement);
+  root.hydrate(APP);
 } else {
-  render(APP, rootElement);
+  root.render(APP);
 }

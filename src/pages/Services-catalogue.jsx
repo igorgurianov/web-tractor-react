@@ -19,7 +19,7 @@ const ServicesCatalogue = () => {
         />
         <link rel="canonical" href="https://vzgm.ru/services" />
       </Helmet>
-      <Section styles="md:mb-14 lg:mb-20">
+      <Section styles="md:mb-14 md:mt-6 lg:mb-20">
         <Breadcrumbs />
         <SectionHeader headerText="Сервис" styles="mt-6 lg:mt-8" />
         <div className="flex md:h-[260px] flex-col gap-5 md:grid md:grid-cols-3 justify-evenly container mx-auto">

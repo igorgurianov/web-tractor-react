@@ -61,7 +61,7 @@ const SingleServicePage = () => {
           )}
         </div>
       )}
-      <Section>
+      <Section styles={"md:mt-6"}>
         {service && (
           <div>
             <Breadcrumbs />

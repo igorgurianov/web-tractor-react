@@ -18,7 +18,7 @@ const AboutPage = () => {
         />
         <link rel="canonical" href="https://vzgm.ru/about" />
       </Helmet>
-      <Section styles="lg:mt-8 xl:mt-12">
+      <Section styles="md:mt-6">
         <Breadcrumbs />
         <SectionHeader
           headerText="Как все начиналось"

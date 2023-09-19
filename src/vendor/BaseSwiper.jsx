@@ -19,12 +19,12 @@ const BaseSwiper = ({
 }) => {
   // const swiperRef = useRef(null);
 
-  const { setImgPopup, setImg } = useContext(PopupContext);
+  // const { setImgPopup, setImg } = useContext(PopupContext);
 
-  const handleImgCLick = (img) => {
-    setImgPopup(true);
-    setImg(img);
-  };
+  // const handleImgCLick = (img) => {
+  //   setImgPopup(true);
+  //   setImg(img);
+  // };
 
   // useEffect(() => {
   //   new Swiper(`.${sliderName}`, {
@@ -95,7 +95,7 @@ const BaseSwiper = ({
                   data-src={slide.img}
                   alt={slide.alt}
                   className="mx-auto object-cover h-full w-full cursor-pointer hover:shadow-xl swiper-lazy"
-                  onClick={() => handleImgCLick(slide.img)}
+                  // onClick={() => handleImgCLick(slide.img)}
                   loading="lazy"
                 />
               ) : (

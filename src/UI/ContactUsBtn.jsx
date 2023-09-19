@@ -1,12 +1,16 @@
 import { useContext } from "react";
 import { PopupContext } from "../context/PopupContext";
+import { OPEN_CONTACT_POPUP } from "../services/actions/form";
+import { useDispatch } from "react-redux";
+
+// Кнопка открытия попапа с формой обратной связи
 
 const ContactUsBtn = ({ text, style }) => {
-  const { setIsPopupOpen, setPopupType } = useContext(PopupContext);
+  const dispatch = useDispatch();
 
   const handleButtonClick = () => {
-    setIsPopupOpen("open");
-    document.body.style.overflow = "hidden";
+    dispatch({ type: OPEN_CONTACT_POPUP });
+    // document.body.style.overflow = "hidden";
   };
 
   return (

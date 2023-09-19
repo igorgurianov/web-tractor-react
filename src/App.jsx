@@ -1,57 +1,74 @@
-// import "swiper/css/bundle";
 import "./App.css";
-import React from "react";
-import { Routes, Route, Link, Navigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import Header from "./layouts/Header";
 import HomePage from "./pages/Home";
 import GalleryPage from "./pages/Gallery";
 import EquipmentPage from "./pages/Equipment";
 import TractorsCataloguePage from "./pages/Tractors-catalogue";
 import NotFoundPage from "./pages/Not-found";
 import AboutPage from "./pages/About";
-import Layout from "./layouts/Layout";
 import NewsCatalogue from "./pages/News-catalogue";
 import SingleNewsPage from "./pages/Single-news-page";
 import ServicesCatalogue from "./pages/Services-catalogue";
 import SingleTractorPage from "./pages/Single-tractor-page";
 import SingleSparePage from "./pages/Single-spare-page";
 import CataloguePage from "./pages/Catalogue-page";
-import { BrowserRouter } from "react-router-dom";
-import ScrollToTop from "./utils/scrollToTop";
-import { PopupProvider } from "./context/PopupContext";
 import SingleServicePage from "./pages/Single-service-page";
+import Modal from "./components/Modal";
+import ContactUsForm from "./call-to-action/ContactUsForm";
+import Footer from "./layouts/Footer";
+import ScrollToTop from "./utils/scrollToTop";
+import { setContent } from "./services/actions/content";
+import tractorData from "./utils/data";
 
 function App() {
+  const dispatch = useDispatch();
+  const { contactSuccess, contactPopup } = useSelector((store) => store.form);
+
+  useEffect(() => {
+    dispatch(setContent(tractorData));
+  });
+
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <div className="App">
-        <PopupProvider>
+    <>
+      <BrowserRouter>
+        <Header />
+        <ScrollToTop />
+        <div className="App">
           <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              {/* <Route path="about-us" element={<Navigate to="/about" replace />} /> */}
-              <Route path="/gallery" element={<GalleryPage />} />
-              <Route path="/eqipment" element={<EquipmentPage />} />
-              <Route path="/eqipment/:id" element={<CataloguePage />} />
-              <Route
-                path="/eqipment/engine/:id"
-                element={<SingleSparePage />}
-              />
-              <Route path="/eqipment/spare/:id" element={<SingleSparePage />} />
-              <Route path="/eqipment/blade/:id" element={<SingleSparePage />} />
-              <Route path="/tractors" element={<TractorsCataloguePage />} />
-              <Route path="/tractors/:id" element={<SingleTractorPage />} />
-              <Route path="/services" element={<ServicesCatalogue />} />
-              <Route path="/services/:id" element={<SingleServicePage />} />
-              <Route path="/news" element={<NewsCatalogue />} />
-              <Route path="/news/:id" element={<SingleNewsPage />} />
-              <Route path="*" element={<NotFoundPage />} />
-            </Route>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/eqipment" element={<EquipmentPage />} />
+            <Route path="/eqipment/:id" element={<CataloguePage />} />
+            <Route path="/eqipment/engine/:id" element={<SingleSparePage />} />
+            <Route path="/eqipment/spare/:id" element={<SingleSparePage />} />
+            <Route path="/eqipment/blade/:id" element={<SingleSparePage />} />
+            <Route path="/tractors" element={<TractorsCataloguePage />} />
+            <Route path="/tractors/:id/:tab" element={<SingleTractorPage />} />
+            <Route path="/services" element={<ServicesCatalogue />} />
+            <Route path="/services/:id" element={<SingleServicePage />} />
+            <Route path="/news" element={<NewsCatalogue />} />
+            <Route path="/news/:id" element={<SingleNewsPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
-        </PopupProvider>
-      </div>
-    </BrowserRouter>
+
+          <Footer />
+        </div>
+        {contactPopup && (
+          <Modal>
+            <ContactUsForm />
+          </Modal>
+        )}
+        {contactSuccess && (
+          <Modal>
+            <ContactUsForm />
+          </Modal>
+        )}
+      </BrowserRouter>
+    </>
   );
 }
 

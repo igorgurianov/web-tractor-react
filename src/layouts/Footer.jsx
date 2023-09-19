@@ -4,7 +4,6 @@ import LocationMaps from "../vendor/YandexMaps";
 import CustomLink from "../UI/CustomLink";
 import TelegramIcon from "../UI/TelegramIcon";
 import WhatsAppIcon from "../UI/WhatsAppIcon";
-import { useState } from "react";
 import FooterFrame from "../components/FooterFrame";
 import { organizationInfo } from "../utils/const";
 import ContactItem from "../UI/ContactItem";
@@ -13,16 +12,6 @@ import Logo from "../components/Logo";
 const Footer = () => {
   const defaultStyle = "text-color_white text-base";
   const activeStyle = "text-color_accent_yellow text-base";
-
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleHover = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
 
   return (
     <footer>

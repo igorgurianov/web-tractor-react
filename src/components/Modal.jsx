@@ -2,17 +2,18 @@ import React, { useState, useEffect, useContext } from "react";
 import ReactDOM from "react-dom";
 
 import ModalOverlay from "./ModalOverlay";
-import { PopupContext } from "../context/PopupContext";
+import { closePopup } from "../services/actions/form";
+import { useDispatch } from "react-redux";
 
 const modalRoot = document.getElementById("react-modals");
 
 const Modal = ({ children }) => {
-  const { closePopup } = useContext(PopupContext);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const closePopupOnBtn = (evt) => {
       if (evt.key === "Escape") {
-        closePopup();
+        dispatch(closePopup());
       }
     };
 
@@ -25,7 +26,7 @@ const Modal = ({ children }) => {
 
   return ReactDOM.createPortal(
     <>
-      <ModalOverlay onClose={closePopup} />
+      <ModalOverlay />
       <div className="w-screen h-screen absolute flex top-0 left-0 items-center justify-center">
         {children}
       </div>

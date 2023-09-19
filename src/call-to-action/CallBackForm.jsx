@@ -1,39 +1,23 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import bgImg from "../assets/images/form/form-bg-md.png";
-import { sendEmail } from "../utils/email";
-import { useContext } from "react";
-import { PopupContext } from "../context/PopupContext";
+import { useDispatch, useSelector } from "react-redux";
+import { sendForm } from "../services/actions/form";
+import { useForm } from "../hooks/useForm";
 
 const CallBackForm = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [disabled, setDisable] = useState(true);
-  const { formSuccess, setFormSuccess, setIsPopupOpen } =
-    useContext(PopupContext);
-  const form = useRef();
+  const { isSending } = useSelector((store) => store.form);
+
+  const { values, handleChange } = useForm();
+
+  const dispatch = useDispatch();
 
   const submitHandler = (e) => {
     e.preventDefault();
     window.ym(94606235, "reachGoal", "lead");
-    document.body.style.overflow = "hidden";
-    setIsLoading(true);
-    sendEmail(form.current)
-      .then(
-        (result) => {
-          // console.log(result.text);
-          e.target.reset();
-        },
-        (error) => {
-          // console.log(error.text);
-        }
-      )
-      .then(() => {
-        setIsLoading(false);
-        setIsPopupOpen(true);
-        setFormSuccess(true);
-      });
+    dispatch(sendForm(values));
   };
 
-  const cursor = isLoading ? "cursor-wait" : "cursor-auto";
+  const cursor = isSending ? "cursor-wait" : "cursor-auto";
 
   return (
     <div
@@ -53,12 +37,11 @@ const CallBackForm = () => {
               Перебьем предложения от конкурентов!
             </h3>
             <p className="text-color_white text-left">
-              Скидки от
-              <span className="text-color_accent_yellow"> 10 до 25% </span> на
-              стоимость трактора
+              Получите
+              <span className="text-color_accent_yellow"> скидку </span>
+              при заказе трактора :
             </p>
             <form
-              ref={form}
               action=""
               className="flex flex-col gap-4 mt-6"
               onSubmit={(e) => {
@@ -69,9 +52,11 @@ const CallBackForm = () => {
                 className="bg-color_white bg-opacity-70 py-2 pl-7 placeholder:text-color_placeholder"
                 required
                 maxLength={20}
-                disabled={isLoading}
+                disabled={isSending}
+                onChange={handleChange}
+                value={values.name}
                 type="text"
-                name="user_name"
+                name="name"
                 id=""
                 placeholder="Ваше имя"
               />
@@ -79,20 +64,21 @@ const CallBackForm = () => {
                 className="bg-color_white bg-opacity-70 py-2 pl-7 placeholder:text-color_placeholder"
                 required
                 maxLength={20}
-                disabled={isLoading}
+                disabled={isSending}
+                onChange={handleChange}
+                value={values.phone}
                 type="tel"
-                name="user_phone"
+                name="phone"
                 id=""
                 placeholder="Ваш телефон"
               />
-              {/* <input type="email" name="" id="" placeholder="Ваш e-mail" /> */}
               <input
                 className="bg-color_accent_yellow py-3 font-bold text-xs tracking-widest cursor-pointer hover:bg-color_dark_gray hover:text-color_white"
                 type="submit"
                 value={
-                  isLoading ? "ОТПРАВЛЯЕМ ЗАЯВКУ ..." : "ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ"
+                  isSending ? "ОТПРАВЛЯЕМ ЗАЯВКУ ..." : "ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ"
                 }
-                disabled={isLoading}
+                disabled={isSending}
               />
             </form>
           </div>

@@ -14,7 +14,6 @@ import { Helmet } from "react-helmet";
 
 const SingleSparePage = () => {
   const { id } = useParams();
-
   const [tractor, setTractor] = useState(null);
   const [activeTab, setActiveTab] = useState(0);
 
@@ -32,16 +31,13 @@ const SingleSparePage = () => {
   };
 
   useEffect(() => {
-    const activeProduct = sparesData.find(
-      (singleProduct) => singleProduct.url === id
-    );
-    setTractor(activeProduct);
+    setTractor(sparesData.find((singleProduct) => singleProduct.url === id));
   }, [id]);
 
-  return (
-    <div>
+  if (tractor) {
+    return (
       <div>
-        {tractor && (
+        <div>
           <Helmet>
             <title>{`ВЗГМ - ${tractor.name}`}</title>
             <meta name="description" content={tractor.shortDescription} />
@@ -50,9 +46,7 @@ const SingleSparePage = () => {
               href={`https://vzgm.ru/eqipment/${tractor.category}/${tractor.url}`}
             />
           </Helmet>
-        )}
-      </div>
-      {tractor && (
+        </div>
         <Section styles="lg:my-8 xl:my-12">
           <Breadcrumbs />
           <div>
@@ -147,16 +141,6 @@ const SingleSparePage = () => {
               {activeTab === 1 && (
                 <div className="md:columns-2">
                   <table className="table-auto w-full">
-                    {/* <thead>
-                      <tr>
-                        <th>
-                          <h5 className="text-left p-2">Название</h5>
-                        </th>
-                        <th className="text-left p-2">
-                          <h5>{tractor.name}</h5>
-                        </th>
-                      </tr>
-                    </thead> */}
                     <tbody>
                       {tractor.characteristics.map((row, index) => (
                         <tr
@@ -189,13 +173,13 @@ const SingleSparePage = () => {
             </div>
           </div>
         </Section>
-      )}
-      <div className="bg-color_light_gray">
-        <Brands />
+        <div className="bg-color_light_gray">
+          <Brands />
+        </div>
+        <OurSpareParts />
       </div>
-      <OurSpareParts />
-    </div>
-  );
+    );
+  }
 };
 
 export default SingleSparePage;

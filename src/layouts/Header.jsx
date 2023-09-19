@@ -14,7 +14,7 @@ import Logo from "../components/Logo";
 const Header = () => {
   const [nav, setNav] = useState(false);
 
-  const { isPopupOpen } = useContext(PopupContext);
+  // const { isPopupOpen } = useContext(PopupContext);
 
   const handleNav = () => {
     setNav(!nav);

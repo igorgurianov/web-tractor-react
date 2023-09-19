@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import tractorData from "../utils/data";
 import Section from "../components/Section";
 import PromoTag from "../components/PromoTag";
@@ -8,38 +9,26 @@ import OurSpareParts from "../components/OurSpareParts";
 import ContactUsBtn from "../UI/ContactUsBtn";
 import Breadcrumbs from "../UI/Breadcrumbs";
 import CallBackForm from "../call-to-action/CallBackForm";
-import { Helmet } from "react-helmet";
 import TractorSlider from "../components/TractorSlider";
+import Information from "../components/Information";
+import Tab from "../UI/Tab";
+import { useSelector } from "react-redux";
 
 const SingleTractorPage = () => {
-  const { id } = useParams();
+  const tractors = useSelector((store) => store.content.content);
 
+  const { id, tab } = useParams();
   const [tractor, setTractor] = useState(null);
-  const [activeTab, setActiveTab] = useState(1);
-
-  const handleTabClick = (index) => {
-    setActiveTab(index);
-  };
-
-  const buttonClass = (index) => {
-    const baseClass =
-      "text-xs font-bold uppercase pt-3 pb-2 px-2 border-r-color_dark_gray border-r last-of-type:border-none w-full hover:bg-color_dark hover:text-color_white hover:duration-300 ";
-    return (
-      baseClass +
-      (activeTab === index ? "bg-color_accent_yellow" : "bg-color_white")
-    );
-  };
 
   useEffect(() => {
-    const activeTractor = tractorData.find(
-      (singleTractor) => singleTractor.url === id
-    );
-    setTractor(activeTractor);
-  }, [id]);
+    const tractor = tractors.find((singleTractor) => singleTractor.url === id);
+    setTractor(tractor);
+  }, [tractor, id]);
 
   return (
     <div>
       {tractor && (
+        <div>
           <div>
             {tractor.url === "VZGM-90" && (
               <Helmet>
@@ -51,7 +40,6 @@ const SingleTractorPage = () => {
                 <link rel="canonical" href="https://vzgm.ru/tractors/VZGM-90" />
               </Helmet>
             )}
-
             {tractor.url === "VZGM-150" && (
               <Helmet>
                 <title>ВЗГМ - Колесный трактор ВЗГМ-150</title>
@@ -66,7 +54,6 @@ const SingleTractorPage = () => {
               </Helmet>
             )}
           </div>
-        ) && (
           <div>
             <Section styles="md:my-6 lg:my-8 xl:my-12">
               <Breadcrumbs />
@@ -112,144 +99,23 @@ const SingleTractorPage = () => {
                 </ul>
               </div>
               <div className="flex overflow-scroll md:overflow-auto mt-6 md:mt-12 justify-between">
-                <button
-                  className={buttonClass(0)}
-                  onClick={() => handleTabClick(0)}
-                >
-                  Описание
-                </button>
-
-                <button
-                  className={buttonClass(1)}
-                  onClick={() => handleTabClick(1)}
-                >
-                  Лизинг
-                </button>
-
-                <button
-                  className={buttonClass(2)}
-                  onClick={() => handleTabClick(2)}
-                >
-                  Характеристики
-                </button>
-
-                <button
-                  className={buttonClass(3)}
-                  onClick={() => handleTabClick(3)}
-                >
-                  Модификации
-                </button>
+                <Tab to={`/tractors/${id}/description`} text="Описание" />
+                <Tab to={`/tractors/${id}/leasing`} text="Лизинг" />
+                <Tab
+                  to={`/tractors/${id}/characteristics`}
+                  text="Характеристики"
+                />
+                <Tab to={`/tractors/${id}/modifications`} text="Модификации" />
               </div>
               <div className="border border-color_accent_yellow mt-2 p-2">
-                {activeTab === 0 && (
-                  <div className="text-left">
-                    {tractor.description.map((item, index) => {
-                      if (item.type === "paragraph") {
-                        return (
-                          <p className="md:text-base mb-2" key={index}>
-                            {item.content}
-                          </p>
-                        );
-                      } else if (item.type === "list") {
-                        return (
-                          <ul className="list-disc ml-8 mt-2 mb-6" key={index}>
-                            {item.content.map((item, index) => {
-                              return (
-                                <li className="ml-3" key={index}>
-                                  {item}
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        );
-                      }
-                    })}
-                  </div>
-                )}
-                {activeTab === 1 && (
-                  <div className="text-left">
-                    {tractor.leasing.map((item, index) => {
-                      if (item.type === "paragraph") {
-                        return (
-                          <h4 className="md:text-base mb-2" key={index}>
-                            {item.content}
-                          </h4>
-                        );
-                      } else if (item.type === "list") {
-                        return (
-                          <ul
-                            className="ml-8 mt-2 mb-6 list-decimal"
-                            key={index}
-                          >
-                            {item.content.map((item, index) => {
-                              return (
-                                <li className="ml-3" key={index}>
-                                  {item}
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        );
-                      }
-                    })}
-                  </div>
-                )}
-                {activeTab === 2 && (
-                  <div className="md:columns-2">
-                    <table className="table-auto w-full ">
-                      <tbody className="">
-                        {tractor.characteristics.map((row, index) => (
-                          <tr
-                            key={index}
-                            className={
-                              index % 2 === 0
-                                ? "bg-color_light_gray "
-                                : "bg-color_white"
-                            }
-                          >
-                            <td className="text-xs p-2 w-[70%] text-left md:text-base md:break-inside-avoid-column">
-                              {row.column1}
-                            </td>
-                            <td className="text-xs p-2 text-left md:text-base md:break-inside-avoid-column">
-                              {row.column2}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
-                {activeTab === 3 && (
-                  <div className="text-left">
-                    {tractor.modifications.map((item, index) => {
-                      if (item.type === "paragraph") {
-                        return (
-                          <p className="md:text-base mb-2" key={index}>
-                            {item.content}
-                          </p>
-                        );
-                      } else if (item.type === "list") {
-                        return (
-                          <ul className="list-disc ml-8 mt-2 mb-6" key={index}>
-                            {item.content.map((item, index) => {
-                              return (
-                                <li className="ml-3" key={index}>
-                                  {item}
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        );
-                      }
-                    })}
-                  </div>
-                )}
+                <Information tab={tab} tractor={tractor} />
               </div>
             </Section>
             <CallBackForm />
             <OurSpareParts />
           </div>
-        )}
+        </div>
+      )}
     </div>
   );
 };

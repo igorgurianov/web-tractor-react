@@ -23,7 +23,7 @@ const NewsCatalogue = () => {
         />
         <link rel="canonical" href="https://vzgm.ru/news" />
       </Helmet>
-      <Section>
+      <Section styles={"md:mt-6"}>
         <Breadcrumbs />
         <SectionHeader headerText="Новости" styles="mt-6 lg:mt-8" />
         <ul className="flex flex-col gap-y-6 md:gap-y-14 lg:gap-y-20">

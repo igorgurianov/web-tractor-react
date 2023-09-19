@@ -16,16 +16,9 @@ const CataloguePage = () => {
 
   const captionStyle = "p-2";
 
-  // console.log(id);
-
   useEffect(() => {
     setCategory(id);
-
-    setItems(
-      sparesData.filter((item) => {
-        return item.category === category;
-      })
-    );
+    setItems(sparesData.filter((item) => item.category === category));
   }, [category]);
 
   return (
@@ -66,7 +59,7 @@ const CataloguePage = () => {
         </div>
       )}
 
-      <Section>
+      <Section styles={"md:mt-6"}>
         <Breadcrumbs />
         <SectionHeader
           headerText="Наши запчасти"

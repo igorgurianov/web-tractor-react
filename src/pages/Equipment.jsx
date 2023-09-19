@@ -23,7 +23,7 @@ const EquipmentPage = () => {
         <link rel="canonical" href="https://vzgm.ru/eqipment" />
       </Helmet>
 
-      <Section styles="md:my-6 lg:my-8 xl:my-12">
+      <Section styles="md:my-6">
         <Breadcrumbs />
         <SectionHeader
           headerText="Наше оборудование и запчасти"

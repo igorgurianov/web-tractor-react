@@ -19,7 +19,7 @@ const GalleryPage = () => {
         />
         <link rel="canonical" href="https://vzgm.ru/gallery" />
       </Helmet>
-      <Section styles=" md:my-6 lg:my-8 xl:my-12">
+      <Section styles="md:my-6">
         <Breadcrumbs />
         <SectionHeader headerText="Галерея работ" styles="mt-6 lg:mt-8" />
         <div className="max-h-[400px]">

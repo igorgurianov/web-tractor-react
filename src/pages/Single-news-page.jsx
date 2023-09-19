@@ -17,7 +17,7 @@ const SingleNewsPage = () => {
   }, [id]);
 
   return (
-    <Section>
+    <Section styles="md:mt-6">
       {post && (
         <Helmet>
           <title>{`ВЗГМ - ${post.title}`}</title>

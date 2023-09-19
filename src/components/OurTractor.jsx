@@ -5,9 +5,8 @@ import LinkBtn from "../UI/LinkBtn";
 import TractorSlider from "./TractorSlider";
 
 const OurTractor = ({ data, className }) => {
-  const { name, img, promo, keySpecs, price, url, alt, gallery } = data;
+  const { name, promo, keySpecs, price, url, gallery } = data;
 
-  // md:max-w-[461px] lg:max-w-[588px]
   return (
     <div
       className="py-4 px-2 border border-color_middle_gray 
@@ -41,17 +40,17 @@ const OurTractor = ({ data, className }) => {
       </ul>
       <div className="flex items-center mt-4">
         <LinkBtn
-          to={`/tractors/${url}`}
           style="bg-color_dark_gray max-h-[40px] text-color_white border-color_dark_gray border hover:text-color_dark hover:bg-color_white hover:border hover:border-color_dark_gray basis-1/3"
+          to={`/tractors/${url}/leasing`}
           text="ЛИЗИНГ"
         />
         <ContactUsBtn
           text="КУПИТЬ"
-          style="w-full h-full basis-[36%] hover:bg-color_dark hover:text-color_white basis-1/3 px-1 md:px-2"
+          style=" hover:bg-color_dark hover:text-color_white basis-1/3 px-1 md:px-2"
         />
         <LinkBtn
-          to={`/tractors/${url}`}
-          style="btn w-full h-full text-color_white bg-color_dark hover:bg-color_accent_yellow hover:text-color_dark basis-1/3"
+          style=" w-full h-full text-color_white bg-color_dark hover:bg-color_accent_yellow hover:text-color_dark basis-1/3"
+          to={`/tractors/${url}/description`}
           text="ПОДРОБНЕЕ"
         />
       </div>

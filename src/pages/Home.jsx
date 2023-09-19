@@ -72,9 +72,9 @@ const HomePage = () => {
             styles="lg:mb-12"
           />
           <div className="flex flex-col md:flex-row md:gap-4 container mx-auto">
-            {whatWeDo.map((item) => {
+            {whatWeDo.map((item, index) => {
               return (
-                <div className="h-full">
+                <div className="h-full" key={index}>
                   <Link to={item.to}>
                     <Card
                       img={item.img}
