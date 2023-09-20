@@ -2,8 +2,8 @@ import "./App.css";
 import React, { useEffect } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import Header from "./layouts/Header";
 import HomePage from "./pages/Home";
+import Header from "./layouts/Header";
 import GalleryPage from "./pages/Gallery";
 import EquipmentPage from "./pages/Equipment";
 import TractorsCataloguePage from "./pages/Tractors-catalogue";
@@ -36,7 +36,6 @@ function App() {
       <BrowserRouter>
         <Header />
         <ScrollToTop />
-
         <div className="App">
           <Routes>
             <Route path="/" element={<HomePage />}></Route>

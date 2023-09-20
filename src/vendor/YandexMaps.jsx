@@ -1,7 +1,8 @@
 const LocationMaps = () => {
   return (
-    <div style={{ position: "relative", overflow: "hidden" }}>
-      <a
+    <>
+      {/* // <div style={{ position: "relative", overflow: "hidden" }}> */}
+      {/* <a
         href="https://yandex.uz/maps/38/volgograd/?utm_medium=mapframe&utm_source=maps"
         style={{
           color: "#eee",
@@ -30,9 +31,18 @@ const LocationMaps = () => {
         className="max-h-[470px] md:max-h-[415px] xl:max-h-[487px]"
         frameBorder="1"
         allowFullScreen={true}
-        style={{ position: "relative" }}
-      ></iframe>
-    </div>
+        style={{ position: "
+        relative" }}
+      ></iframe> */}
+      {/* // </div> */}
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=143044221128"
+        width="100%"
+        height="400"
+        frameborder="0"
+        className="max-h-[470px] md:max-h-[415px] xl:max-h-[487px]"
+      />
+    </>
   );
 };
 

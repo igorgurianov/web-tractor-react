@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import NewsSlider from "../components/newsSlider";
+import BaseSwiper from "../vendor/BaseSwiper";
+import MainSwiper from "../vendor/MainBanner";
 import SectionHeader from "../components/SectionHeader";
 import OurTractor from "../components/OurTractor";
 import tractorData from "../utils/data";
@@ -11,9 +14,6 @@ import HowWeWork from "../components/HowWeWork";
 import { galleryData, whatWeDo } from "../utils/const";
 import Licenses from "../components/Licenses";
 import Partners from "../components/Partners";
-import NewsSlider from "../components/newsSlider";
-import BaseSwiper from "../vendor/BaseSwiper";
-import MainSwiper from "../vendor/MainBanner";
 import LinkBtn from "../UI/LinkBtn";
 import CallBackForm from "../call-to-action/CallBackForm";
 import { Helmet } from "react-helmet";
