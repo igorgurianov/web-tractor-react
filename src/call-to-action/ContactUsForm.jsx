@@ -20,6 +20,7 @@ const ContactUsForm = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    window.ym(94606235, "reachGoal", "lead");
     dispatch(sendForm(values));
   };
 

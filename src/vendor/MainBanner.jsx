@@ -1,5 +1,7 @@
-import ContactUsBtn from "../UI/ContactUsBtn";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
+import ContactUsBtn from "../UI/ContactUsBtn";
 import bannerImg1 from "../assets/images/main-banner/banner2.jpg";
 import bannerImg2 from "../assets/images/main-banner/banner1.jpg";
 
@@ -13,70 +15,32 @@ import bannerImg2 from "../assets/images/main-banner/banner1.jpg";
 
 //New import
 
-import React from "react";
 // import Swiper from "swiper";
-import "swiper/swiper-bundle.min.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 
-import SwiperCore, { Navigation } from "swiper";
-SwiperCore.use([Navigation]);
+// import "swiper/css";
+
+// раскоментить если в проде не заработает
+// import SwiperCore, { Navigation } from "swiper";
+// SwiperCore.use([Navigation]);
 
 const mainBannerData = [
   {
     header: "Надежные трактора",
     subHeader: "для широкого спектра работ",
-    text1: "лучше качество по доступной цене,",
-    text2: "с возможностью продажи в лизинг",
+    text1: "купите новый трактор ДТ 75 с оборудованием",
+    text2: "и гарантией от производителя",
     img: bannerImg1,
   },
-  {
-    header: "доставка",
-    subHeader: "в помощь покупателю",
-    text1: "помощь в погрузке",
-    text2: " и материалы для первого  ТО",
-    img: bannerImg2,
-  },
-  {
-    header: "Надежные трактора",
-    subHeader: "для широкого спектра работ",
-    text1: "лучше качество по доступной цене,",
-    text2: "с возможностью продажи в лизинг",
-    img: bannerImg1,
-  },
-  {
-    header: "доставка",
-    subHeader: "в помощь покупателю",
-    text1: "помощь в погрузке",
-    text2: " и материалы для первого  ТО",
-    img: bannerImg2,
-  },
+  // {
+  //   header: "доставка",
+  //   subHeader: "в помощь покупателю",
+  //   text1: "помощь в погрузке",
+  //   text2: " и материалы для первого  ТО",
+  //   img: bannerImg2,
+  // },
 ];
 
-const MainSwiper = ({ slides, sliderName }) => {
-  // const swiperRef = useRef(null);
-
-  // useEffect(() => {
-  //   swiperRef.current = new Swiper(`.${sliderName}`, {
-  //     pagination: {
-  //       el: ".swiper-pagination-main",
-  //     },
-  //     preventClicks: true,
-  //     slidesPerView: 1,
-  //     // Navigation arrows
-  //     navigation: {
-  //       nextEl: ".swiper-button-next-main",
-  //       prevEl: ".swiper-button-prev-main",
-  //     },
-  //     injectStyles: [
-  //       `
-  //     `,
-  //     ],
-
-  //     // ...other options
-  //   });
-  // }, []);
-
+const MainSwiper = ({ sliderName }) => {
   return (
     <div>
       <Swiper
@@ -101,12 +65,12 @@ const MainSwiper = ({ slides, sliderName }) => {
                       <p className="text-color_accent_yellow md:text-2xl">
                         {slide.subHeader}
                       </p>
-                      <h1 className="text-3xl text-color_light_gray mt-4 lg:mt-6 whitespace-nowrap md:text-5xl">
+                      <h2 className="text-3xl text-color_light_gray mt-4 lg:mt-6 whitespace-nowrap md:text-5xl">
                         {slide.header}
-                      </h1>
-                      <p className="text-color_white mt-6 md:text-xl lg:mt-10">
+                      </h2>
+                      <h1 className="text-color_white text-base mt-6 md:text-xl lg:mt-10 font-normal lowercase font-primary">
                         {slide.text1}
-                      </p>
+                      </h1>
                       <p className="text-color_white md:text-xl ">
                         {slide.text2}
                       </p>
@@ -124,7 +88,7 @@ const MainSwiper = ({ slides, sliderName }) => {
         <div className="swiper-button-prev swiper-button-prev-main"></div>
         <div className="swiper-button-next swiper-button-next-main"></div>
         <div className="relative lg:max-w-[1335px] md:max-w-[990px] top-1/2 mx-auto"></div>
-        <div className="swiper-pagination-main"></div>
+        {/* <div className="swiper-pagination-main"></div> */}
       </Swiper>
     </div>
   );

@@ -5,7 +5,9 @@ const SectionHeader = ({ headerText, subheaderText, styles }) => {
     >
       <div className="border-l-8 border-color_accent_yellow border-solid pl-4">
         <h2 className="text-left">{headerText}</h2>
-        <p className="text-left text-color_dark">{subheaderText}</p>
+        <h3 className="text-left text-color_dark font-normal lowercase font-primary tracking-normal">
+          {subheaderText}
+        </h3>
       </div>
     </div>
   );

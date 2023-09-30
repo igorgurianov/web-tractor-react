@@ -1,60 +1,15 @@
 import React from "react";
-// import Swiper from "swiper";
-// import "swiper/swiper-bundle.min.css";
+// import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
-
-import SwiperCore, { Navigation } from "swiper";
-SwiperCore.use([Navigation]);
+// SwiperCore.use([Navigation]);
 
 const BaseSwiper = ({
   slides,
   sliderName,
   slidesPerViewSmallScreen = "1",
   slidesPerViewMdScreen = "3",
-  isClickable = false,
   slideHeigth,
 }) => {
-  // const swiperRef = useRef(null);
-
-  // const { setImgPopup, setImg } = useContext(PopupContext);
-
-  // const handleImgCLick = (img) => {
-  //   setImgPopup(true);
-  //   setImg(img);
-  // };
-
-  // useEffect(() => {
-  //   new Swiper(`.${sliderName}`, {
-  //     pagination: {
-  //       el: ".swiper-pagination",
-  //     },
-  //     preventClicks: true,
-  //     preventClicksPropagation: true,
-  //     // Navigation arrows
-  //     navigation: {
-  //       nextEl: `.swiper-button-next-${sliderName}`,
-  //       prevEl: `.swiper-button-prev-${sliderName}`,
-  //     },
-  //     //   // And if we need scrollbar
-  //     //   scrollbar: {
-  //     //     el: ".swiper-scrollbar",
-  //     //   },
-  //     // Configure the Swiper options here
-  //     spaceBetween: 24,
-  //     breakpoints: {
-  //       320: {
-  //         slidesPerView: slidesPerViewSmallScreen,
-  //         spaceBetween: 24,
-  //       },
-  //       1000: {
-  //         slidesPerView: slidesPerViewMdScreen,
-  //       },
-  //     },
-  //     // ...other options
-  //   });
-  // }, []);
-
   return (
     <div className="relative mt-10 md:mt-0">
       <Swiper
@@ -63,9 +18,8 @@ const BaseSwiper = ({
           prevEl: `.swiper-button-prev-${sliderName}`,
           nextEl: `.swiper-button-next-${sliderName}`,
         }}
+        slidesPerGroup={1}
         className={`swiper ${sliderName}`}
-        // lazy={true}
-        // modules={[Lazy]}
         breakpoints={{
           320: {
             slidesPerView: slidesPerViewSmallScreen,
@@ -88,24 +42,12 @@ const BaseSwiper = ({
                   : { height: "100%" }
               }
             >
-              {isClickable ? (
-                <img
-                  src={slide.img}
-                  alt={slide.alt}
-                  className="mx-auto object-cover h-full w-full cursor-pointer hover:shadow-xl"
-                  // onClick={() => handleImgCLick(slide.img)}
-                  // loading="lazy"
-                />
-              ) : (
-                <img
-                  src={slide.img}
-                  alt={slide.alt}
-                  // loading="lazy"
-                  className="mx-auto object-cover h-full w-full"
-                />
-              )}
+              <img
+                src={slide.img}
+                alt={slide.alt}
+                className="mx-auto object-cover h-full w-full"
+              />
             </div>
-            {/* <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div> */}
           </SwiperSlide>
         ))}
       </Swiper>

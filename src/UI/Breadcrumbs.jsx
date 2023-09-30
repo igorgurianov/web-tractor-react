@@ -18,6 +18,11 @@ const breadCrumbsTranslate = [
   { en: "engine", ru: "Двигатели" },
   { en: "blade", ru: "Навесное оборудование" },
   { en: "spare", ru: "Запчасти" },
+  { en: "DT-75", ru: "ДТ-75" },
+  { en: "description", ru: "Описание" },
+  { en: "leasing", ru: "Лизинг" },
+  { en: "modifications", ru: "Модификации" },
+  { en: "characteristics", ru: "Характеристики" },
 ];
 
 const Breadcrumbs = () => {

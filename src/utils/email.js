@@ -25,14 +25,3 @@ export const sendEmail = (form) => {
     }),
   }).then(checkResponse);
 };
-
-// const checkSuccess = (res) => {
-//   debugger;
-//   console.log(res);
-//   if (res && res.ok) {
-//     debugger;
-//     console.log(res);
-//     return res;
-//   }
-//   return Promise.reject(`Ответ не success: ${res}`);
-// };

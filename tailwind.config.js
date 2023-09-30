@@ -23,6 +23,7 @@ module.exports = {
       color_accent_red: "#FF4200",
       color_accent_blue: "#1A73E9",
       color_accent_yellow: "#FEC513",
+      color_accent_green: "#2ea83a",
       color_dark: "#2D2D2D",
       color_xl_dark_gray: "#171717",
       color_white: "#FFFFFF",

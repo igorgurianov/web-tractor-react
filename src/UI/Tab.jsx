@@ -6,7 +6,7 @@ function Tab({ to, text }) {
     <NavLink
       preventScrollReset={true}
       className={({ isActive }) =>
-        `text-xs font-bold uppercase pt-3 pb-2 px-2 border-r-color_dark_gray border-r last-of-type:border-none w-full hover:bg-color_dark hover:text-color_white hover:duration-300
+        `text-xs text-center font-bold uppercase pt-3 pb-2 px-2 border-r-color_dark_gray border-r last-of-type:border-none w-full hover:bg-color_dark hover:text-color_white hover:duration-300
         ${isActive ? "bg-color_accent_yellow" : ""}`
       }
       to={to}

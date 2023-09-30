@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NewsSlider from "../components/newsSlider";
-import BaseSwiper from "../vendor/BaseSwiper";
 import MainSwiper from "../vendor/MainBanner";
+import NewsSlider from "../vendor/newsSlider";
+import BaseSwiper from "../vendor/BaseSwiper";
 import SectionHeader from "../components/SectionHeader";
 import OurTractor from "../components/OurTractor";
 import tractorData from "../utils/data";
@@ -23,13 +23,14 @@ const HomePage = () => {
   return (
     <div className="">
       <Helmet>
-        <title>ВЗГМ - Главная</title>
+        <title>ВЗГМ - Купить ДТ-75</title>
         <meta
           name="description"
-          content="Исследуйте мир сельскохозяйственной техники на главной странице нашего сайта. Узнайте о нашей компании, предлагающей высококачественные гусеничные тракторы, запасные части и обслуживание для эффективного сельского хозяйства."
+          content="Купить обновленную модель трактора ДТ 75 или трактора ХТЗ-150. Купить гусеничный или колесный трактор, запасные части для сельского хозяйства."
         />
-        <link rel="canonical" href="https://vzgm.ru/" />
+        <link rel="canonical" href="https://vzgm.ru" />
       </Helmet>
+
       <div className="relative">
         {/* <MainBanner /> */}
         <MainSwiper sliderName="mainCarousel" />
@@ -37,8 +38,8 @@ const HomePage = () => {
 
       <Section styles="md:my-14 lg:my-20">
         <SectionHeader
-          headerText="Новая Техника"
-          subheaderText="У нас налажено собственное производство 2 видов надежных тракторов."
+          headerText="НОВЫЕ МОДЕЛИ ТРАКТОРОВ ДТ 75 И ХТЗ 150"
+          subheaderText="предлагаем классическая технику в базовом исполнении без навесного оборудования"
           styles="lg:mb-12"
         />
 
@@ -47,11 +48,11 @@ const HomePage = () => {
           <OurTractor data={tractorData[1]} className="VZGM-150-home" />
         </div>
       </Section>
-      {/* <div className="bg-color_light_gray">
+      <div className="bg-color_light_gray">
         <Section styles="py-10 md:py-14 lg:py-20">
           <SectionHeader
-            headerText="Классическая техника"
-            subheaderText="Так же Вы можете приобрести классические модели тракторов ДТ-75 и ХТЗ-150"
+            headerText="ТРАКТОР ДТ 75 И ХТЗ 150 С ОТВАЛОМ"
+            subheaderText="Оборудуем Ваш трактор поворотным, прямым или универсальным отвалом."
             styles="lg:mb-12"
           />
 
@@ -61,7 +62,18 @@ const HomePage = () => {
             <OurTractor data={tractorData[3]} className="HTZ-150-home" />
           </div>
         </Section>
-      </div> */}
+      </div>
+      <Section styles="md:my-14 lg:my-20">
+        <SectionHeader
+          headerText="МОДИФИКАЦИИ СО СПЕЦОБОРУДОВАНИЕМ"
+          subheaderText="Укомплектуем Ваш трактор специализированным оборудованием для различных работ"
+          styles="lg:mb-12"
+        />
+        <div className="grid grid-row-2 md:grid-cols-2 items-center justify-center gap-6">
+          <OurTractor data={tractorData[4]} className="VZGM-90-home-spec" />
+          <OurTractor data={tractorData[5]} className="VZGM-150-home-spec" />
+        </div>
+      </Section>
       <div className="bg-color_light_gray">
         <Section styles="py-10 md:py-14 lg:py-20">
           <SectionHeader

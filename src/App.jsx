@@ -1,4 +1,3 @@
-import "./App.css";
 import React, { useEffect } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,7 +6,6 @@ import Header from "./layouts/Header";
 import GalleryPage from "./pages/Gallery";
 import EquipmentPage from "./pages/Equipment";
 import TractorsCataloguePage from "./pages/Tractors-catalogue";
-import NotFoundPage from "./pages/Not-found";
 import AboutPage from "./pages/About";
 import NewsCatalogue from "./pages/News-catalogue";
 import SingleNewsPage from "./pages/Single-news-page";
@@ -29,7 +27,7 @@ function App() {
 
   useEffect(() => {
     dispatch(setContent(tractorData));
-  });
+  }, [dispatch]);
 
   return (
     <>
@@ -38,7 +36,7 @@ function App() {
         <ScrollToTop />
         <div className="App">
           <Routes>
-            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/eqipment" element={<EquipmentPage />} />
@@ -53,9 +51,8 @@ function App() {
             <Route path="/services/:id" element={<SingleServicePage />} />
             <Route path="/news" element={<NewsCatalogue />} />
             <Route path="/news/:id" element={<SingleNewsPage />} />
-            <Route path="*" element={<NotFoundPage />} />
+            <Route path="*" element={<HomePage />} />
           </Routes>
-
           <Footer />
         </div>
         {contactPopup && (

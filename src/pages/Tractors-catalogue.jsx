@@ -1,19 +1,26 @@
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { Helmet } from "react-helmet";
 import Section from "../components/Section";
 import SectionHeader from "../components/SectionHeader";
-import { useState } from "react";
 import tractorData from "../utils/data";
 import SpecTag from "../components/SpecTag";
 import LinkBtn from "../UI/LinkBtn";
 import Breadcrumbs from "../UI/Breadcrumbs";
-import { Helmet } from "react-helmet";
 import Discount from "../call-to-action/Discount";
 
 const TractorsCataloguePage = () => {
-  const [tractor, setTractor] = useState("VZGM-90");
+  const tractors = useSelector((store) => store.content.content);
 
-  const showData = tractorData.find((tractorItem) => {
-    return tractorItem.url === tractor;
-  });
+  const [tractor, setTractor] = useState("VZGM-90");
+  const [activeTractor, setActiveTractor] = useState(null);
+
+  useEffect(() => {
+    const showData = tractors.find(
+      (tractorItem) => tractorItem.url === tractor
+    );
+    setActiveTractor(showData);
+  }, [activeTractor, tractor]);
 
   const renderButtonSelect = (button) => {
     const classes =
@@ -24,14 +31,15 @@ const TractorsCataloguePage = () => {
       return classes + " bg-color_white border border-color_accent_yellow";
     }
   };
-  if (tractor) {
+
+  if (activeTractor && tractors) {
     return (
       <div>
         <Helmet>
-          <title>ВЗГМ - Наша техника</title>
+          <title>ВЗГМ - Купить трактор ДТ 75 | Купить трактор ХТЗ 150</title>
           <meta
             name="description"
-            content="Изучите усовершенствованные модели тракторов: гусеничный трактор ВЗГМ-90 и колесный трактор ВЗГМ-150. ВЗГМ-90 - это улучшенная версия популярного трактора ДТ-75, а ВЗГМ-150 - модернизированная версия ХТЗ-150, созданная Харьковским тракторным заводом в 1974 году. Узнайте больше о характеристиках, истории создания и преимуществах каждой из этих надежных техник."
+            content="Купить гусеничный трактор ДТ 75 или обновленную модель ВЗГМ 90. Купить колесный трактор ХТЗ 150 или обновленную версию ВЗГМ 150. Цена трактора ДТ 75 - 3 100 000 рублей. Цена трактора ХТЗ 150 - 5 800 000 рублей."
           />
           <link rel="canonical" href="https://vzgm.ru/tractors" />
         </Helmet>
@@ -79,18 +87,18 @@ const TractorsCataloguePage = () => {
           <div className="md:grid md:grid-cols-2 md:gap-6 mt-6 md:mt-10">
             <img
               className="mt-6 mx-auto w-full md:row-start-1 md:mt-0"
-              src={showData.img}
-              alt={showData.name}
+              src={activeTractor.img}
+              alt={activeTractor.name}
             />
             <div>
-              <h3 className="mt-5 md:mt-0 text-left md:col-start-2 md:text-xl">
-                {showData.name}
-              </h3>
+              <h1 className="mt-5 md:mt-0 text-left md:col-start-2 md:text-xl">
+                {activeTractor.name}
+              </h1>
               <p className="text-left mt-4 md:col-start-2 md:mt-6 md:row-start-2">
-                {showData.shortDescription}
+                {activeTractor.shortDescription}
               </p>
               <ul className="flex gap-2 flex-wrap mt-6 md:col-start-2 md:row-start-3 md:mt-6 md:items-center">
-                {showData.keySpecs.map((spec, index) => {
+                {activeTractor.keySpecs.map((spec, index) => {
                   return <SpecTag data={spec} key={index} />;
                 })}
               </ul>

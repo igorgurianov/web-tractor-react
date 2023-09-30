@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.7eebcf8e.css",
-    "main.js": "/static/js/main.439e74ce.js",
+    "main.css": "/static/css/main.5dae245b.css",
+    "main.js": "/static/js/main.840ad745.js",
     "static/media/form-bg-md.png": "/static/media/form-bg-md.7d2909256250704f69a7.png",
     "static/media/VZGM-90-2.png": "/static/media/VZGM-90-2.aba3ccb0be16dbfb7fde.png",
     "static/media/VZGM-90-1.png": "/static/media/VZGM-90-1.2f72023c60c861f4b64b.png",
-    "static/media/VZGM-150-4.png": "/static/media/VZGM-150-4.b3acb4416c61c48938b6.png",
-    "static/media/VZGM-150-5.png": "/static/media/VZGM-150-5.151d7682edcd51f4a1b7.png",
+    "static/media/VZGM-150-4.png": "/static/media/VZGM-150-4.aca7a408e20941a7a721.png",
+    "static/media/VZGM-150-5.png": "/static/media/VZGM-150-5.fb2ba8ee01a8d7693491.png",
+    "static/media/VZGM-150-8.png": "/static/media/VZGM-150-8.151d7682edcd51f4a1b7.png",
     "static/media/VZGM-150-2.png": "/static/media/VZGM-150-2.d8daec6fcf5957660cf4.png",
     "static/media/ImageGallery11.jpeg": "/static/media/ImageGallery11.9e2c305abd9e8bafdf08.jpeg",
     "static/media/discount.png": "/static/media/discount.305261062a8e4f0ba8d6.png",
@@ -17,9 +18,12 @@
     "static/media/ImageGallery9.jpeg": "/static/media/ImageGallery9.09960ce59f265f2caf34.jpeg",
     "static/media/ImageGallery14.jpeg": "/static/media/ImageGallery14.b51410c101bea4bc83a3.jpeg",
     "static/media/ImageGallery4.jpg": "/static/media/ImageGallery4.90f094e02b8aacbe2182.jpg",
+    "static/media/VZGM-90-3.png": "/static/media/VZGM-90-3.d8c5b5084acf8d6ac56e.png",
     "static/media/ImageGallery5.jpeg": "/static/media/ImageGallery5.32c3385b0c6719c30913.jpeg",
-    "static/media/VZGM-150-6.png": "/static/media/VZGM-150-6.9a4269665fb0e02a0ff4.png",
-    "static/media/VZGM-150-7.png": "/static/media/VZGM-150-7.04e527862307e715e38a.png",
+    "static/media/VZGM-150-10.png": "/static/media/VZGM-150-10.9a4269665fb0e02a0ff4.png",
+    "static/media/VZGM-150-6.png": "/static/media/VZGM-150-6.2e13954125e7aa7bb35f.png",
+    "static/media/VZGM-150-7.png": "/static/media/VZGM-150-7.aa06e5563d40699fd06b.png",
+    "static/media/VZGM-150-9.png": "/static/media/VZGM-150-9.04e527862307e715e38a.png",
     "static/media/ImageGallery15.jpeg": "/static/media/ImageGallery15.93e9916e9a573c83f4d0.jpeg",
     "static/media/any-problems.png": "/static/media/any-problems.42713ab09b98d2baffae.png",
     "static/media/ImageGallery10.jpeg": "/static/media/ImageGallery10.57c1cd9d2ff799162d3c.jpeg",
@@ -27,8 +31,12 @@
     "static/media/ImageGallery12.jpeg": "/static/media/ImageGallery12.cbabe7d1943b449ee1a4.jpeg",
     "static/media/Imagenews-003.jpg": "/static/media/Imagenews-003.f261cbd6825aebb28ab2.jpg",
     "static/media/about-img.jpg": "/static/media/about-img.0c5b55ea34cd79ce02e8.jpg",
+    "static/media/VZGM-90-6.png": "/static/media/VZGM-90-6.7b16ecba6fd71bb1549f.png",
+    "static/media/VZGM-90-5 (1).png": "/static/media/VZGM-90-5 (1).9f4c768321d2241282a8.png",
+    "static/media/VZGM-90-5.png": "/static/media/VZGM-90-5.d0cd08335050ecce7bc1.png",
     "static/media/Numbers-bg.jpg": "/static/media/Numbers-bg.8dc7bb0e2c8456397e5c.jpg",
     "static/media/Imagenews-001.jpg": "/static/media/Imagenews-001.6963f288d9917348c76b.jpg",
+    "static/media/VZGM-90-7.png": "/static/media/VZGM-90-7.6088e42fedf71161db39.png",
     "static/media/capitalAfter.jpeg": "/static/media/capitalAfter.ec96c1406700b90df748.jpeg",
     "static/media/Imagenews-002.jpg": "/static/media/Imagenews-002.6fa6b25908733e0d3c9e.jpg",
     "static/media/gearbox-T-150K.png": "/static/media/gearbox-T-150K.ae21e08b33caec032639.png",
@@ -39,6 +47,7 @@
     "static/media/ImageTechnical.jpg": "/static/media/ImageTechnical.79d51694c0cba34061cd.jpg",
     "static/media/ImageGallery2.png": "/static/media/ImageGallery2.a857ae85aaac32c9c883.png",
     "static/media/banner1.jpg": "/static/media/banner1.a9392e15be607e84dc3c.jpg",
+    "static/media/VZGM-90-8 (1).png": "/static/media/VZGM-90-8 (1).478212f9cfd4c157abb7.png",
     "static/media/Transmission-DT-75.png": "/static/media/Transmission-DT-75.5f9a4c0fcc28b1996b93.png",
     "static/media/ImageGallery1.png": "/static/media/ImageGallery1.60d31f7b2efe24dfefcb.png",
     "static/media/ourSpareParts.png": "/static/media/ourSpareParts.a13380a6fd3b69708603.png",
@@ -54,6 +63,7 @@
     "static/media/Gilroy-Bold.woff": "/static/media/Gilroy-Bold.0607a1bc636f63251ed8.woff",
     "static/media/Gilroy-Semibold.woff": "/static/media/Gilroy-Semibold.5b042906a8b58ec4633e.woff",
     "static/media/Gilroy-Regular.woff": "/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
+    "static/media/VZGM-90-4.png": "/static/media/VZGM-90-4.4795217477507af4e3d3.png",
     "static/media/VZGM-150.jpg": "/static/media/VZGM-150.24d74f38fc1bed382d54.jpg",
     "static/media/roboto-v30-latin_cyrillic-ext_cyrillic-500.woff2": "/static/media/roboto-v30-latin_cyrillic-ext_cyrillic-500.57ca36f8f4b5686aac9b.woff2",
     "static/media/roboto-v30-latin_cyrillic-ext_cyrillic-700.woff2": "/static/media/roboto-v30-latin_cyrillic-ext_cyrillic-700.194558987752a0c67ae7.woff2",
@@ -92,11 +102,11 @@
     "static/media/left-arrow-white.svg": "/static/media/left-arrow-white.35d73a36af3f37141cf0.svg",
     "static/media/left-arrow.svg": "/static/media/left-arrow.71cf5160a4e969eee5be.svg",
     "static/media/breadCrumb.svg": "/static/media/breadCrumb.146124c91e6cc18dbe799ca4165adce3.svg",
-    "main.7eebcf8e.css.map": "/static/css/main.7eebcf8e.css.map",
-    "main.439e74ce.js.map": "/static/js/main.439e74ce.js.map"
+    "main.5dae245b.css.map": "/static/css/main.5dae245b.css.map",
+    "main.840ad745.js.map": "/static/js/main.840ad745.js.map"
   },
   "entrypoints": [
-    "static/css/main.7eebcf8e.css",
-    "static/js/main.439e74ce.js"
+    "static/css/main.5dae245b.css",
+    "static/js/main.840ad745.js"
   ]
 }

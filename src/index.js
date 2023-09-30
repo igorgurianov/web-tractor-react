@@ -1,10 +1,10 @@
 import React from "react";
 import App from "./App";
-import "./index.css";
 import { hydrate, render } from "react-dom";
-import ReactDOM, { createRoot } from "react-dom/client";
-import { store } from "./services/store";
+import "./index.css";
+// import ReactDOM, { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
+import { store } from "./services/store";
 
 const APP = (
   <React.StrictMode>
