@@ -84,9 +84,9 @@ const TractorsCataloguePage = () => {
             ХТЗ-150
           </button> */}
           </div>
-          <div className="md:grid md:grid-cols-2 md:gap-6 mt-6 md:mt-10">
+          <div className="md:grid  md:grid-cols-2 md:gap-6 mt-6 md:mt-10">
             <img
-              className="mt-6 mx-auto w-full md:row-start-1 md:mt-0"
+              className="mt-6 mx-auto w-auto max-h-[370px] md:row-start-1 md:mt-0"
               src={activeTractor.img}
               alt={activeTractor.name}
             />

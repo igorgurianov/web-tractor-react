@@ -51,7 +51,7 @@ const TractorSlider = ({ data, className, model }) => {
           </div>
         )}
       </Swiper>
-      <div className="relative md:my-4 z-10">
+      <div className="relative my-2 md:my-6 z-10">
         <Swiper
           onSwiper={setThumbsSwiper}
           spaceBetween={10}
@@ -71,7 +71,10 @@ const TractorSlider = ({ data, className, model }) => {
         >
           {data.gallery.map((slide, index) => {
             return (
-              <SwiperSlide className="cursor-pointer" key={index}>
+              <SwiperSlide
+                className="cursor-pointer bg-color_light_gray rounded-xl border border-color_dark"
+                key={index}
+              >
                 <img
                   src={slide}
                   className="h-full w-full [60px] md:max-h-[60px] object-center object-contain "

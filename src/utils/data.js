@@ -21,6 +21,8 @@ import vzgm_90_otval_1 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-4.p
 // import vzgm_90_otval_2 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-5.png";
 import vzgm_90_otval_3 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-6.png";
 import vzgm_90_otval_4 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-7.png";
+import vzgm_90_otval_5 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-9.png";
+import vzgm_90_otval_6 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-10.png";
 
 //VZGM-150 otval
 import vzgm_150_otval_1 from "../assets/images/tractors/vzgm-150/otval/VZGM-150-4.png";
@@ -55,8 +57,8 @@ const tractorData = [
     name: "Гусеничный трактор ДТ-75",
     shortName: "ВЗГМ-90",
     url: "VZGM-90",
-    price: "3 100 000",
-    img: vzgm90,
+    price: "3 050 000",
+    img: vzgm_90_base_1,
     inStock: true,
     alt: "Гусеничный трактор ВЗГМ-90 – усовершенствованная модель трактора ДТ-75",
     gallery: [vzgm_90_base_1, vzgm_90_base_2, vzgm_90_base_3],
@@ -277,7 +279,7 @@ const tractorData = [
     name: "Колесный трактор ХТЗ-150",
     shortName: "ВЗГМ-150",
     url: "VZGM-150",
-    price: "5 800 000",
+    price: "5 520 000",
     inStock: true,
     gallery: [
       vzgm_150_base_1,
@@ -288,7 +290,7 @@ const tractorData = [
     shortDescription:
       "Купить ХТЗ-150. Усовершенствованная модель трактора ХТЗ-150 - ВЗГМ 150, созданного на базе Харьковского тракторного завода (ХТЗ) в далеком 1974 г. ",
 
-    img: vzgm150,
+    img: vzgm_150_base_4,
     alt: "ВЗГМ-150 – усовершенствованная модель трактора ХТЗ-150",
     promo: [
       {
@@ -515,11 +517,17 @@ const tractorData = [
     name: "гусеничный ДТ-75 с отвалом",
     shortName: "ДТ-75",
     url: "DT-75",
-    price: "3 400 000",
+    price: "3 370 000",
     img: vzgm90,
     inStock: true,
     alt: "Гусеничный трактор ВЗГМ-90 – усовершенствованная модель трактора ДТ-75",
-    gallery: [vzgm_90_otval_1, vzgm_90_otval_4, vzgm_90_otval_3],
+    gallery: [
+      vzgm_90_otval_6,
+      vzgm_90_otval_5,
+      vzgm_90_otval_1,
+      vzgm_90_otval_4,
+      vzgm_90_otval_3,
+    ],
     shortDescription:
       "Купить ДТ 75 с отвалом. Усовершенствованная модель трактор ВЗГМ 90 с отвалом классического ДТ 75 с отвалом, который был очень популярен в СССР. ",
     metaDescription:
@@ -738,7 +746,7 @@ const tractorData = [
     name: "колесный ХТЗ-150 с отвалом",
     shortName: "ХТЗ-150",
     url: "XTZ-150",
-    price: "6 100 000",
+    price: "5 900 000",
     inStock: true,
     gallery: [
       vzgm_150_otval_4,
@@ -977,7 +985,7 @@ const tractorData = [
     name: "ДТ-75 с навесным оборудованием",
     shortName: "ДТ-75",
     url: "DT-75",
-    price: "3 500 000",
+    price: "3 495 000",
     img: vzgm90,
     inStock: false,
     alt: "Гусеничный трактор ВЗГМ-90 – усовершенствованная модель трактора ДТ-75",
@@ -1198,7 +1206,7 @@ const tractorData = [
     name: "ХТЗ-150 с навесным оборудованием",
     shortName: "ХТЗ-150",
     url: "XTZ-150",
-    price: "6 100 000",
+    price: "6 095 000",
     inStock: true,
     gallery: [vzgm_150_spec_1, vzgm_150_spec_2, vzgm_150_spec_3],
     shortDescription:
