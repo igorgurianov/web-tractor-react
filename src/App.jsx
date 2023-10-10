@@ -20,6 +20,7 @@ import Footer from "./layouts/Footer";
 import ScrollToTop from "./utils/scrollToTop";
 import { setContent } from "./services/actions/content";
 import tractorData from "./utils/data";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -51,7 +52,7 @@ function App() {
             <Route path="/services/:id" element={<SingleServicePage />} />
             <Route path="/news" element={<NewsCatalogue />} />
             <Route path="/news/:id" element={<SingleNewsPage />} />
-            <Route path="*" element={<HomePage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
           <Footer />
         </div>
