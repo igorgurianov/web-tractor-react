@@ -31,7 +31,7 @@ const SingleServicePage = () => {
                 name="description"
                 content="Профессиональный капитальный ремонт для тракторов ВЗГМ-90, ВЗГМ-150 и других марок. Восстановление работоспособности и потребительских свойств до уровня новой машины. Разборка, замена узлов, обкатка и гарантия 1 год. Капитальный ремонт гусеничных и колесных тракторов разных комплектаций."
               />
-              <link rel="canonical" href="https://vzgm.ru/services/capital" />
+              <link rel="canonical" href="https://vzgm.ru/services/capital/" />
             </Helmet>
           )}
 
@@ -43,7 +43,10 @@ const SingleServicePage = () => {
                 content="Качественное техническое обслуживание тракторов ВЗГМ-150 и других марок. Профессиональные виды ТО и ремонтов. Опытные специалисты, замена масла, смазка, регулировка, проверка системы. Сезонное обслуживание."
               />
 
-              <link rel="canonical" href="https://vzgm.ru/services/technical" />
+              <link
+                rel="canonical"
+                href="https://vzgm.ru/services/technical/"
+              />
             </Helmet>
           )}
           {service.url === "profilactic" && (
@@ -55,7 +58,7 @@ const SingleServicePage = () => {
               />
               <link
                 rel="canonical"
-                href="https://vzgm.ru/services/profilactic"
+                href="https://vzgm.ru/services/profilactic/"
               />
             </Helmet>
           )}

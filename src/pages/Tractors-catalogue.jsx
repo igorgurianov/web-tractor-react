@@ -91,7 +91,7 @@ const TractorsCataloguePage = () => {
               alt={activeTractor.name}
             />
             <div>
-              <h1 className="mt-5 md:mt-0 text-left md:col-start-2 md:text-xl">
+              <h1 className="text-base mt-5 md:mt-0 text-left md:col-start-2 md:text-xl">
                 {activeTractor.name}
               </h1>
               <p className="text-left mt-4 md:col-start-2 md:mt-6 md:row-start-2">
