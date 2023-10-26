@@ -19,10 +19,13 @@ const breadCrumbsTranslate = [
   { en: "blade", ru: "Навесное оборудование" },
   { en: "spare", ru: "Запчасти" },
   { en: "DT-75", ru: "ДТ-75" },
+  { en: "XTZ-150", ru: "ХТЗ-150" },
   { en: "description", ru: "Описание" },
   { en: "leasing", ru: "Лизинг" },
   { en: "modifications", ru: "Модификации" },
   { en: "characteristics", ru: "Характеристики" },
+  { en: "DT-75-s-navesnym", ru: "ДТ-75" },
+  { en: "XTZ-150-s-navesnym", ru: "ДТ-75" },
 ];
 
 const Breadcrumbs = () => {

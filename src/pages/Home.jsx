@@ -18,6 +18,7 @@ import LinkBtn from "../UI/LinkBtn";
 import CallBackForm from "../call-to-action/CallBackForm";
 import { Helmet } from "react-helmet";
 import AnyProblems from "../call-to-action/Any-problems";
+import Discount from "../call-to-action/Discount";
 
 const HomePage = () => {
   return (
@@ -38,9 +39,9 @@ const HomePage = () => {
 
       <Section styles="md:my-14 lg:my-20">
         <SectionHeader
-          headerText="НОВЫЕ МОДЕЛИ ТРАКТОРОВ ДТ 75 И ХТЗ 150"
+          headerText="НОВЫЕ МОДЕЛИ ТРАКТОРОВ ДТ-75 И ХТЗ-150"
           subheaderText="предлагаем классическая технику в базовом исполнении без навесного оборудования"
-          styles="lg:mb-12"
+          styles="lg:mb-10"
         />
 
         <div className="grid grid-row-2 md:grid-cols-2 items-center justify-center gap-6">
@@ -48,10 +49,11 @@ const HomePage = () => {
           <OurTractor data={tractorData[1]} className="VZGM-150-home" />
         </div>
       </Section>
-      <div className="bg-color_light_gray">
-        <Section styles="py-10 md:py-14 lg:py-20">
+      <Discount />
+      <div className="">
+        <Section styles="py-0 md:py-2 lg:py-8">
           <SectionHeader
-            headerText="ТРАКТОР ДТ 75 И ХТЗ 150 С ОТВАЛОМ"
+            headerText="ТРАКТОР ДТ-75 И ХТЗ-150 С ОТВАЛОМ"
             subheaderText="Оборудуем Ваш трактор поворотным, прямым или универсальным отвалом."
             styles="lg:mb-12"
           />

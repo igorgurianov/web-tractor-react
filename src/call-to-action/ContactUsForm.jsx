@@ -7,6 +7,7 @@ import TelegramIcon from "../UI/TelegramIcon";
 import WhatsAppIcon from "../UI/WhatsAppIcon";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import ReCAPTCHA from "react-google-recaptcha";
+import icon from "../assets/icons/powerIcon.svg";
 
 const ContactUsForm = () => {
   const recaptchaRef = createRef();
@@ -82,10 +83,51 @@ const ContactUsForm = () => {
           <h3 className="uppercase text-lg md:text-3xl mt-8 md:mt-5">
             Оставьте заявку и мы перезвоним
           </h3>
+          <div className="mt-4 text-left">
+            <span className="m-0">
+              Акция только до
+              <strong className="text-color_accent_red"> 01.12.2023 </strong>
+            </span>
+            <span className="m-0">выберите свой бонус в подарок:</span>
+          </div>
+          <div className="flex flex-col items-start justify-between py-1 md:py-4">
+            {/* <div className="h-40 w-40 p-2 border bg-color_middle_gray hover:bg-color_accent_green cursor-pointer">
+              <img src={icon} className="h-1/2 w-1/2 mx-auto" />
+              <span>Бесплатная доставка в пределах 500км</span>
+            </div>
+            <div className="h-40 w-40 p-2 border bg-color_middle_gray hover:bg-color_accent_green cursor-pointer">
+              <img src={icon} className="h-1/2 w-1/2 mx-auto" />
+              <span>Комплектующие для ТО-1</span>
+            </div>
+            <div className="h-40 w-40 p-2 border bg-color_middle_gray hover:bg-color_accent_green cursor-pointer">
+              <img src={icon} className="h-1/2 w-1/2 mx-auto" />
+              <span>Бесплатная доставка в пределах 500км</span>
+            </div> */}
+            <div className="py-1">
+              <input type="radio" name="discount" id="option_2" />
+              <label className="ml-2 cursor-pointer" htmlFor="option_2">
+                Расходники для ТО - 1
+              </label>
+            </div>
+
+            <div className="py-1 text-left">
+              <input type="radio" name="discount" id="option_1" />
+              <label className="ml-2 cursor-pointer" htmlFor="option_1">
+                Бесплатная доставка до 500км
+              </label>
+            </div>
+
+            <div className="py-1">
+              <input type="radio" name="discount" id="option_3" />
+              <label className="ml-2 cursor-pointer" htmlFor="option_3">
+                Скидка 2%
+              </label>
+            </div>
+          </div>
 
           <form
             action=""
-            className="flex flex-col gap-4 mt-6"
+            className="flex flex-col gap-4"
             onSubmit={(e) => {
               submitHandler(e);
             }}

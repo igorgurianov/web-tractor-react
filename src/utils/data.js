@@ -20,6 +20,7 @@ import vzgm_150_base_4 from "../assets/images/tractors/vzgm-150/base/VZGM-150-4.
 import vzgm_90_otval_1 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-4.png";
 // import vzgm_90_otval_2 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-5.png";
 import vzgm_90_otval_3 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-6.png";
+import vzgm_90_otval_11 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-11.png";
 import vzgm_90_otval_4 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-7.png";
 import vzgm_90_otval_5 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-9.png";
 import vzgm_90_otval_6 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-10.png";
@@ -68,16 +69,16 @@ const tractorData = [
       "Купить ДТ 75. Усовершенствованная модель трактор ВЗГМ 90 классического ДТ 75, который был очень популярен в СССР.",
     promo: [
       {
-        name: "ТО - 1",
-        description: "в подарок",
+        name: "1 год гарантии",
+        description: "производителя",
       },
       {
         name: "ПОГРУЗКА",
         description: "в подарок",
       },
       {
-        name: "РАСХОДНИКИ",
-        description: "в подарок",
+        name: "ТЕХПОДДЕРЖКА",
+        description: "онлайн",
       },
     ],
     keySpecs: [
@@ -294,16 +295,16 @@ const tractorData = [
     alt: "ВЗГМ-150 – усовершенствованная модель трактора ХТЗ-150",
     promo: [
       {
-        name: "ТО - 1",
-        description: "в подарок",
+        name: "1 год гарантии",
+        description: "производителя",
       },
       {
         name: "ПОГРУЗКА",
         description: "в подарок",
       },
       {
-        name: "РАСХОДНИКИ",
-        description: "в подарок",
+        name: "ТЕХПОДДЕРЖКА",
+        description: "онлайн",
       },
     ],
     keySpecs: [
@@ -522,6 +523,7 @@ const tractorData = [
     inStock: true,
     alt: "Гусеничный трактор ВЗГМ-90 – усовершенствованная модель трактора ДТ-75",
     gallery: [
+      vzgm_90_otval_11,
       vzgm_90_otval_6,
       vzgm_90_otval_5,
       vzgm_90_otval_1,
@@ -534,16 +536,16 @@ const tractorData = [
       "Купить Гусеничный трактор ВЗГМ-90 – усовершенствованная модель трактора ДТ-75, который был очень популярен в СССР.",
     promo: [
       {
-        name: "ТО - 1",
-        description: "в подарок",
+        name: "1 год гарантии",
+        description: "производителя",
       },
       {
         name: "ПОГРУЗКА",
         description: "в подарок",
       },
       {
-        name: "РАСХОДНИКИ",
-        description: "в подарок",
+        name: "ТЕХПОДДЕРЖКА",
+        description: "онлайн",
       },
     ],
 
@@ -762,16 +764,16 @@ const tractorData = [
     alt: "ВЗГМ-150 – усовершенствованная модель трактора ХТЗ-150",
     promo: [
       {
-        name: "ТО - 1",
-        description: "в подарок",
+        name: "1 год гарантии",
+        description: "производителя",
       },
       {
         name: "ПОГРУЗКА",
         description: "в подарок",
       },
       {
-        name: "РАСХОДНИКИ",
-        description: "в подарок",
+        name: "ТЕХПОДДЕРЖКА",
+        description: "онлайн",
       },
     ],
     keySpecs: [
@@ -984,7 +986,7 @@ const tractorData = [
   {
     name: "ДТ-75 с навесным оборудованием",
     shortName: "ДТ-75",
-    url: "DT-75",
+    url: "DT-75-s-navesnym",
     price: "3 495 000",
     img: vzgm90,
     inStock: false,
@@ -994,16 +996,16 @@ const tractorData = [
       "Гусеничный трактор ВЗГМ-90 – усовершенствованная модель трактора ДТ-75, который был очень популярен в СССР. ",
     promo: [
       {
-        name: "ТО - 1",
-        description: "в подарок",
+        name: "1 год гарантии",
+        description: "производителя",
       },
       {
         name: "ПОГРУЗКА",
         description: "в подарок",
       },
       {
-        name: "РАСХОДНИКИ",
-        description: "в подарок",
+        name: "ТЕХПОДДЕРЖКА",
+        description: "онлайн",
       },
     ],
 
@@ -1205,7 +1207,7 @@ const tractorData = [
   {
     name: "ХТЗ-150 с навесным оборудованием",
     shortName: "ХТЗ-150",
-    url: "XTZ-150",
+    url: "XTZ-150-s-navesnym",
     price: "6 095 000",
     inStock: true,
     gallery: [vzgm_150_spec_1, vzgm_150_spec_2, vzgm_150_spec_3],
@@ -1216,16 +1218,16 @@ const tractorData = [
     alt: "ВЗГМ-150 – усовершенствованная модель трактора ХТЗ-150",
     promo: [
       {
-        name: "ТО - 1",
-        description: "в подарок",
+        name: "1 год гарантии",
+        description: "производителя",
       },
       {
         name: "ПОГРУЗКА",
         description: "в подарок",
       },
       {
-        name: "РАСХОДНИКИ",
-        description: "в подарок",
+        name: "ТЕХПОДДЕРЖКА",
+        description: "онлайн",
       },
     ],
     keySpecs: [

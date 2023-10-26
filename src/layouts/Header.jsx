@@ -85,7 +85,7 @@ const Header = () => {
           </li>
           <li>
             <CustomLink
-              to="/tractors"
+              to="/tractors/"
               defaultStyle={defaultStyle}
               activeStyle={activeStyle}
               style={style}
@@ -95,7 +95,7 @@ const Header = () => {
           </li>
           <li>
             <CustomLink
-              to="/services"
+              to="/services/"
               defaultStyle={defaultStyle}
               activeStyle={activeStyle}
               style={style}
@@ -105,7 +105,7 @@ const Header = () => {
           </li>
           <li>
             <CustomLink
-              to="/eqipment"
+              to="/eqipment/"
               defaultStyle={defaultStyle}
               activeStyle={activeStyle}
               style={style}
@@ -115,7 +115,7 @@ const Header = () => {
           </li>
           <li>
             <CustomLink
-              to="/about"
+              to="/about/"
               defaultStyle={defaultStyle}
               activeStyle={activeStyle}
               style={style}
@@ -125,7 +125,7 @@ const Header = () => {
           </li>
           <li>
             <CustomLink
-              to="/gallery"
+              to="/gallery/"
               defaultStyle={defaultStyle}
               activeStyle={activeStyle}
               style={style}
@@ -135,7 +135,7 @@ const Header = () => {
           </li>
           <li>
             <CustomLink
-              to="/news"
+              to="/news/"
               defaultStyle={defaultStyle}
               activeStyle={activeStyle}
               style={style}
@@ -177,7 +177,7 @@ const Header = () => {
             </li>
             <li onClick={handleNav}>
               <CustomLink
-                to="/tractors"
+                to="/tractors/"
                 defaultStyle={defaultStyle}
                 activeStyle={activeStyle}
                 style={`${styleMobile}`}
@@ -187,7 +187,7 @@ const Header = () => {
             </li>
             <li onClick={handleNav}>
               <CustomLink
-                to="/services"
+                to="/services/"
                 defaultStyle={defaultStyle}
                 activeStyle={activeStyle}
                 style={`${styleMobile}`}
@@ -197,7 +197,7 @@ const Header = () => {
             </li>
             <li onClick={handleNav}>
               <CustomLink
-                to="/eqipment"
+                to="/eqipment/"
                 defaultStyle={defaultStyle}
                 activeStyle={activeStyle}
                 style={`${styleMobile}`}
@@ -207,7 +207,7 @@ const Header = () => {
             </li>
             <li onClick={handleNav}>
               <CustomLink
-                to="/about"
+                to="/about/"
                 defaultStyle={defaultStyle}
                 activeStyle={activeStyle}
                 style={`${styleMobile}`}
@@ -217,7 +217,7 @@ const Header = () => {
             </li>
             <li onClick={handleNav}>
               <CustomLink
-                to="/gallery"
+                to="/gallery/"
                 defaultStyle={defaultStyle}
                 activeStyle={activeStyle}
                 style={`${styleMobile}`}
@@ -227,7 +227,7 @@ const Header = () => {
             </li>
             <li onClick={handleNav}>
               <CustomLink
-                to="/news"
+                to="/news/"
                 defaultStyle={defaultStyle}
                 activeStyle={activeStyle}
                 style={`${styleMobile}`}

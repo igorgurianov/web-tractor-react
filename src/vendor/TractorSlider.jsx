@@ -30,7 +30,7 @@ const TractorSlider = ({ data, className, model }) => {
             <SwiperSlide className="" key={index}>
               <img
                 src={slide}
-                className={`mx-auto max-h-[200px] object-contain tractor-slider-img`}
+                className={`mx-auto max-h-[280px] md:max-h-[300px] object-contain tractor-slider-img`}
                 alt="Купить трактор ДТ 75. Купить трактор ХТЗ 150"
               />
             </SwiperSlide>
