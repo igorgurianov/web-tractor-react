@@ -5,10 +5,10 @@ export const FORM_FAILED = "ORDER_DETAILS_FAILED";
 export const OPEN_CONTACT_POPUP = "OPEN_CONTACT_POPUP";
 export const CLOSE_CONTACT_POPUP = "CLOSE_CONTACT_POPUP";
 
-export function sendForm(data) {
+export function sendForm(data, token) {
   return function (dispatch) {
     dispatch({ type: FORM_SEND });
-    sendEmail(data)
+    sendEmail(data, token)
       .then(() => {
         dispatch({ type: FORM_SUCCESS });
       })

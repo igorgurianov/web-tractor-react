@@ -8,7 +8,7 @@ const checkResponse = (res) => {
   return res.ok ? res : res.then((err) => Promise.reject(err));
 };
 
-export const sendEmail = (form) => {
+export const sendEmail = (form, token) => {
   return fetch(`${EMAIL_JS_API}`, {
     method: "POST",
     headers: {
@@ -21,6 +21,7 @@ export const sendEmail = (form) => {
       template_params: {
         name: form.name,
         phone: form.phone,
+        "g-recaptcha-response": token,
       },
     }),
   }).then(checkResponse);

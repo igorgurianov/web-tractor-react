@@ -41,7 +41,7 @@ const TractorsCataloguePage = () => {
             name="description"
             content="Купить гусеничный трактор ДТ 75 или обновленную модель ВЗГМ 90. Купить колесный трактор ХТЗ 150 или обновленную версию ВЗГМ 150. Цена трактора ДТ 75 - 3 100 000 рублей. Цена трактора ХТЗ 150 - 5 800 000 рублей."
           />
-          <link rel="canonical" href="https://vzgm.ru/tractors" />
+          <link rel="canonical" href="https://vzgm.ru/tractors/" />
         </Helmet>
         <Section styles="md:my-6 lg:my-8 xl:my-12 lg:mb-20">
           <Breadcrumbs />

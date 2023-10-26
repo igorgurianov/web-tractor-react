@@ -1,7 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { useNavigate, Navigate } from "react-router-dom";
 
 function NotFoundPage() {
+  const navigate = useNavigate();
+
   return (
     <div>
       <Helmet>
@@ -14,6 +17,10 @@ function NotFoundPage() {
       </Helmet>
       Страница не найдена
     </div>
+    // navigate("https://vzgm.ru/404.html")
+    // <div>
+    //   <Navigate to="/https://vzgm.ru/404.html"></Navigate>
+    // </div>
   );
 }
 

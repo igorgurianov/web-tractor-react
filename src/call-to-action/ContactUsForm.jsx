@@ -1,12 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
+import { createRef } from "react";
 import { sendForm } from "../services/actions/form";
 import { useForm } from "../hooks/useForm";
 import { closePopup } from "../services/actions/form";
 import TelegramIcon from "../UI/TelegramIcon";
 import WhatsAppIcon from "../UI/WhatsAppIcon";
 import { AiOutlineCloseCircle } from "react-icons/ai";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactUsForm = () => {
+  const recaptchaRef = createRef();
   const dispatch = useDispatch();
   const { contactPopup, isSending, success } = useSelector(
     (store) => store.form
@@ -18,10 +21,24 @@ const ContactUsForm = () => {
     dispatch(closePopup());
   };
 
+  // function onSubmit(token) {
+  //   debugger;
+  //   console.log("onSubmit");
+  //   submitHandler(token);
+  // }
+
   const submitHandler = (e) => {
     e.preventDefault();
-    window.ym(94606235, "reachGoal", "lead");
-    dispatch(sendForm(values));
+    recaptchaRef.current.execute();
+  };
+
+  const handleReCaptchaChange = (value) => {
+    if (value === "") {
+      console.log("Вы не прошли капчу");
+    } else {
+      window.ym(94606235, "reachGoal", "lead");
+      dispatch(sendForm(values, value));
+    }
   };
 
   const cursor = isSending ? "cursor-wait" : "cursor-auto";
@@ -73,6 +90,13 @@ const ContactUsForm = () => {
               submitHandler(e);
             }}
           >
+            <ReCAPTCHA
+              style={{ display: "inline-block" }}
+              ref={recaptchaRef}
+              size="invisible"
+              sitekey="6LcOIc8oAAAAAKq31Zp9lOjnJ5hIj7RuR4aAnuGz"
+              onChange={handleReCaptchaChange}
+            />
             <input
               className="bg-color_white bg-opacity-70 py-2 pl-7 placeholder:text-color_placeholder"
               required
@@ -99,6 +123,9 @@ const ContactUsForm = () => {
             />
             {/* <input type="email" name="" id="" placeholder="Ваш e-mail" /> */}
             <input
+              //class="g-recaptcha"
+              //data-sitekey=""
+              //data-callback="onSubmit"
               className="bg-color_accent_yellow py-3 font-bold text-xs tracking-widest cursor-pointer hover:bg-color_dark_gray hover:text-color_white duration-200"
               type="submit"
               value={
