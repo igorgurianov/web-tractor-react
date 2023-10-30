@@ -19,6 +19,8 @@ const SingleTractorPage = () => {
   const { id, tab } = useParams();
   const [tractor, setTractor] = useState(null);
 
+  //console.log(tractor.url);
+
   useEffect(() => {
     const tractor = tractors.find((singleTractor) => singleTractor.url === id);
     setTractor(tractor);
@@ -29,21 +31,45 @@ const SingleTractorPage = () => {
       {tractor && tractors && (
         <div>
           <div>
-            {tractor.url === "VZGM-90" && (
+            {tractor.url === "DT-75" && (
               <Helmet>
-                <title>ВЗГМ - Купить гусеничный трактор ДТ 75</title>
+                <title>
+                  Купить бульдозер ДТ-75 без навесного оборудования - ВЗГМ
+                </title>
                 <meta
                   name="description"
-                  content="Купить ДТ 75 дешево от производителя с гарантией и доставкой. Цена трактора ДТ 75 - 3 100 000 руб. ВЗГМ 90 - усовершенствованная модель легендарного трактора ДТ 75."
+                  content="Трактор ДТ-75 без навесного оборудования предназначен для широкого спектра сельхоз работ. Может быть представлен в модификации болотник, торфяник с болотоходными гусеницами."
                 />
               </Helmet>
             )}
-            {tractor.url === "VZGM-150" && (
+            {tractor.url === "XTZ-150" && (
               <Helmet>
                 <title>ВЗГМ - Купить гусеничный трактор ХТЗ 150</title>
                 <meta
                   name="description"
                   content="Купить ХТХ 150 дешево от производителя с гарантией и доставкой. Цена трактора ХТЗ 150 - 5 800 000 руб. ВЗГМ 150 - усовершенствованная модель легендарного трактора ХТЗ 150."
+                />
+              </Helmet>
+            )}
+            {tractor.url === "DT-75-s-otvalom" && (
+              <Helmet>
+                <title>
+                  Купить бульдозер ДТ-75 с неповоротным отвалом - ВЗГМ
+                </title>
+                <meta
+                  name="description"
+                  content="Продажа трактора, бульдозера ДТ-75 с неповоротным отвалом. Комплектуется разными двигателями мощностью до 100 л.с. Погрузка, доставка."
+                />
+              </Helmet>
+            )}
+            {tractor.url === "DT-75-s-navesnym" && (
+              <Helmet>
+                <title>
+                  Купить бульдозер ДТ-75 с навесным оборудованием - ВЗГМ
+                </title>
+                <meta
+                  name="description"
+                  content="Продажа трактора ДТ-75 с оборудованием. Простой и доступный ДТ-75 для сельскохозяйственных работ с доставкой в РФ и СНГ."
                 />
               </Helmet>
             )}
@@ -89,7 +115,7 @@ const SingleTractorPage = () => {
                   })}
                 </ul>
               </div>
-              <div className="flex overflow-scroll md:overflow-auto mt-6 md:mt-12 justify-between">
+              {/* <div className="flex overflow-scroll md:overflow-auto mt-6 md:mt-12 justify-between">
                 <Tab to={`/tractors/${id}/description`} text="Описание" />
                 <Tab to={`/tractors/${id}/leasing`} text="Лизинг" />
                 <Tab
@@ -97,9 +123,13 @@ const SingleTractorPage = () => {
                   text="Характеристики"
                 />
                 <Tab to={`/tractors/${id}/modifications`} text="Модификации" />
-              </div>
-              <div className="border border-color_accent_yellow mt-2 p-2">
-                <Information tab={tab} tractor={tractor} />
+              </div> */}
+              <div className="mt-2 p-2">
+                <Information tab="description" tractor={tractor} />
+                <Information tab="characteristics" tractor={tractor} />
+
+                <Information tab="modifications" tractor={tractor} />
+                <Information tab="leasing" tractor={tractor} />
               </div>
             </Section>
             <CallBackForm />

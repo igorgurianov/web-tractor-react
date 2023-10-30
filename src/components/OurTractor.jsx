@@ -44,7 +44,7 @@ const OurTractor = ({ data, className }) => {
         />
         <LinkBtn
           style=" w-full h-full text-color_white bg-color_dark hover:bg-color_accent_yellow hover:text-color_dark basis-1/2"
-          to={`/tractors/${url}/description`}
+          to={`/tractors/${url}/`}
           text="Описание"
         />
       </div>

@@ -39,7 +39,7 @@ const CallBackForm = () => {
             <p className="text-color_white text-left">
               Получите
               <span className="text-color_accent_yellow"> скидку </span>
-              при заказе трактора :
+              при заказе трактора
             </p>
             <form
               action=""
