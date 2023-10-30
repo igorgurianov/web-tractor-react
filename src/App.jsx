@@ -47,7 +47,6 @@ function App() {
             <Route path="/eqipment/blade/:id/" element={<SingleSparePage />} />
             <Route path="/tractors/" element={<TractorsCataloguePage />} />
             <Route path="/tractors/:id/" element={<SingleTractorPage />} />
-            <Route path="/tractors/:id/:tab/" element={<SingleTractorPage />} />
             <Route path="/services/" element={<ServicesCatalogue />} />
             <Route path="/services/:id/" element={<SingleServicePage />} />
             <Route path="/news/" element={<NewsCatalogue />} />

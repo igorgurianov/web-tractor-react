@@ -12,7 +12,7 @@ import Discount from "../call-to-action/Discount";
 const TractorsCataloguePage = () => {
   const tractors = useSelector((store) => store.content.content);
 
-  const [tractor, setTractor] = useState("VZGM-90");
+  const [tractor, setTractor] = useState("DT-75");
   const [activeTractor, setActiveTractor] = useState(null);
 
   useEffect(() => {
@@ -52,20 +52,20 @@ const TractorsCataloguePage = () => {
           />
           <div className="flex gap-2 md:gap-6 justify-center">
             <button
-              className={renderButtonSelect("VZGM-90")}
+              className={renderButtonSelect("DT-75")}
               onClick={() => {
-                setTractor("VZGM-90");
+                setTractor("DT-75");
               }}
             >
-              ВЗГМ-90
+              ДТ-75
             </button>
             <button
-              className={renderButtonSelect("VZGM-150")}
+              className={renderButtonSelect("XTZ-150")}
               onClick={() => {
-                setTractor("VZGM-150");
+                setTractor("XTZ-150");
               }}
             >
-              ВЗГМ-150
+              ХТЗ-150
             </button>
             {/* <button
             className={renderButtonSelect("DT-75")}
@@ -106,7 +106,7 @@ const TractorsCataloguePage = () => {
                 <LinkBtn
                   text="ПОДРОБНЕЕ О МОДЕЛИ"
                   style="w-full text-sm mt-6 py-3 px-8 lg:px-8 block md:mt-0 hover:bg-color_dark hover:text-color_white"
-                  to={`/tractors/${tractor}/characteristics`}
+                  to={`/tractors/${tractor}/`}
                 />
               </div>
             </div>

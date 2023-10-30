@@ -26,6 +26,9 @@ const breadCrumbsTranslate = [
   { en: "characteristics", ru: "Характеристики" },
   { en: "DT-75-s-navesnym", ru: "ДТ-75" },
   { en: "XTZ-150-s-navesnym", ru: "ДТ-75" },
+  { en: "XTZ-150-s-otvalom", ru: "ХТЗ-150 с отвалом" },
+  { en: "DT-75-s-otvalom", ru: "ДТ-75 с отвалом" },
+  {},
 ];
 
 const Breadcrumbs = () => {
@@ -59,7 +62,7 @@ const Breadcrumbs = () => {
           backgroundSize: "cover",
         }}
       ></div>
-      <Link to="/" className=" hover:text-color_dark">
+      <Link to="/" className=" hover:text-color_dark text-xs md:text-base">
         Главная
       </Link>
       {crumbsRu.map((crumb, index) => {
@@ -77,7 +80,10 @@ const Breadcrumbs = () => {
                 backgroundSize: "cover",
               }}
             ></div>
-            <Link to={currentLink} className="hover:text-color_dark">
+            <Link
+              to={currentLink}
+              className="hover:text-color_dark text-xs md:text-base"
+            >
               {crumb.ru}
             </Link>
           </div>

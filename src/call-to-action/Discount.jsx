@@ -14,15 +14,13 @@ const Discount = () => {
           <h3 className="text-color_white">350 000 ₽</h3>
         </div> */}
         <div className="text-left px-3 absolute top-[30%] md:top-1">
-          <h2 className="text-color_accent_red">
-            Акция !{" "}
-            <h4 className="my-2">
-              Выбери бонус при заказе до{" "}
-              <span className="text-color_accent_red">
-                1 декабря 2023 <small>г.</small>
-              </span>
-            </h4>
-          </h2>
+          <h2 className="text-color_accent_red">Акция ! </h2>
+          <h4 className="my-2">
+            Выбери бонус при заказе до{" "}
+            <span className="text-color_accent_red">
+              1 декабря 2023 <small>г.</small>
+            </span>
+          </h4>
 
           <div>
             <ul className="my-2 flex flex-col gap-3">
