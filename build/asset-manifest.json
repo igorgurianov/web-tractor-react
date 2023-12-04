@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.38f162de.css",
-    "main.js": "/static/js/main.d11959a0.js",
+    "main.css": "/static/css/main.3ca450a8.css",
+    "main.js": "/static/js/main.14dc61bf.js",
     "static/media/form-bg-md.png": "/static/media/form-bg-md.7d2909256250704f69a7.png",
     "static/media/VZGM-90-2.png": "/static/media/VZGM-90-2.aba3ccb0be16dbfb7fde.png",
     "static/media/VZGM-90-1.png": "/static/media/VZGM-90-1.2f72023c60c861f4b64b.png",
@@ -81,7 +81,7 @@
     "static/media/Gilroy-Semibold.woff": "/static/media/Gilroy-Semibold.5b042906a8b58ec4633e.woff",
     "static/media/Gilroy-Regular.woff": "/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
     "static/media/VZGM-90-4.png": "/static/media/VZGM-90-4.4795217477507af4e3d3.png",
-    "static/media/трактор_правки-02.svg": "/static/media/трактор_правки-02.6265e406bda90eeaa64c99e8ba9f11ed.svg",
+    "static/media/icon2.svg": "/static/media/icon2.6265e406bda90eeaa64c99e8ba9f11ed.svg",
     "static/media/ImageTechnical2.jpg": "/static/media/ImageTechnical2.13e2787e916a99f26398.jpg",
     "static/media/VZGM-150.jpg": "/static/media/VZGM-150.24d74f38fc1bed382d54.jpg",
     "static/media/roboto-v30-latin_cyrillic-ext_cyrillic-500.woff2": "/static/media/roboto-v30-latin_cyrillic-ext_cyrillic-500.57ca36f8f4b5686aac9b.woff2",
@@ -95,10 +95,10 @@
     "static/media/Gilroy-Semibold.woff2": "/static/media/Gilroy-Semibold.7726b19d33f1b7f4135a.woff2",
     "static/media/Gilroy-Regular.woff2": "/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
     "static/media/photo_2023-11-25 20.42-3-2.jpg": "/static/media/photo_2023-11-25 20.42-3-2.71abd3f48f62971608c8.jpg",
-    "static/media/трактор_правки-04.svg": "/static/media/трактор_правки-04.f65989aa6bedb25fac0fefda8879f42f.svg",
+    "static/media/icon4.svg": "/static/media/icon4.f65989aa6bedb25fac0fefda8879f42f.svg",
     "static/media/capital-2.jpg": "/static/media/capital-2.d948108254d168f9af71.jpg",
-    "static/media/трактор_правки_Монтажная область 1.svg": "/static/media/трактор_правки_Монтажная область 1.83ef0538cf57e8b22563bb6b1d82cd78.svg",
-    "static/media/трактор_правки-03.svg": "/static/media/трактор_правки-03.29526d103de48c9eaa13086ed2359c0f.svg",
+    "static/media/icon1.svg": "/static/media/icon1.83ef0538cf57e8b22563bb6b1d82cd78.svg",
+    "static/media/icon3.svg": "/static/media/icon3.29526d103de48c9eaa13086ed2359c0f.svg",
     "static/media/expert3.png": "/static/media/expert3.f6d7b80930e23f88cfc5.png",
     "static/media/capital-4.jpg": "/static/media/capital-4.c2de1e70d932d9eddca7.jpg",
     "static/media/expert4.png": "/static/media/expert4.01a97eaf40a5d5301077.png",
@@ -145,11 +145,11 @@
     "static/media/info-svgrepo-com.svg": "/static/media/info-svgrepo-com.e54d768c242dc87d75ddb24f23683e91.svg",
     "static/media/top-arrow-5-svgrepo-com.svg": "/static/media/top-arrow-5-svgrepo-com.99f248f8e71b053fbf0c86c19356cbda.svg",
     "static/media/breadCrumb.svg": "/static/media/breadCrumb.afa1dbafeb536be9f7c083f3b4f29ca8.svg",
-    "main.38f162de.css.map": "/static/css/main.38f162de.css.map",
-    "main.d11959a0.js.map": "/static/js/main.d11959a0.js.map"
+    "main.3ca450a8.css.map": "/static/css/main.3ca450a8.css.map",
+    "main.14dc61bf.js.map": "/static/js/main.14dc61bf.js.map"
   },
   "entrypoints": [
-    "static/css/main.38f162de.css",
-    "static/js/main.d11959a0.js"
+    "static/css/main.3ca450a8.css",
+    "static/js/main.14dc61bf.js"
   ]
 }
