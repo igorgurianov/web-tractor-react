@@ -1,5 +1,6 @@
 import { sendEmail } from "../../utils/email";
 export const FORM_SEND = "ORDER_DETAILS_REQUEST";
+export const FORM_SEND_TO_BACKEND = "FORM_SEND_TO_BACKEND";
 export const FORM_SUCCESS = "ORDER_DETAILS_SUCCESS";
 export const FORM_FAILED = "ORDER_DETAILS_FAILED";
 export const OPEN_CONTACT_POPUP = "OPEN_CONTACT_POPUP";

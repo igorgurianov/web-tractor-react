@@ -20,6 +20,8 @@ module.exports = {
       color_dark_gray: "#5E5E5E",
       color_middle_gray: "#DADADA",
       color_light_gray: "#F5F5F5",
+      color_lighter_gray: "#454545B3",
+      color_test_bg: "#808080",
       color_accent_red: "#FF4200",
       color_accent_blue: "#1A73E9",
       color_accent_yellow: "#FEC513",
