@@ -104,7 +104,9 @@ const RepairForm = () => {
           <div className="mt-4">
             <span className="">
               Оставьте заявку на бесплатную консультацию или позвоните по номеру
-              <strong className=""> 8 (902) 386-80-00</strong>
+              <strong className="">
+                <br />8 (902) 386-80-00
+              </strong>
             </span>
           </div>
 
@@ -147,12 +149,19 @@ const RepairForm = () => {
               id=""
               placeholder="Ваш телефон"
             />
-
-            <span className="md:mt-3 text-sm text-left">
-              Я даю согласие на обработку персональных данных в соответствии с
-              политикой конфиденциальности.
-            </span>
-
+            <div className="flex gap-2 md:gap-5 md:mt-3">
+              <input
+                type="checkbox"
+                name=""
+                id=""
+                className="h-8 min-h-[18px] min-w-[18px] w-8 ml-1"
+                required
+              />
+              <span className=" text-sm text-left">
+                Я даю согласие на обработку персональных данных в соответствии с
+                политикой конфиденциальности.
+              </span>
+            </div>
             <input
               //class="g-recaptcha"
               //data-sitekey=""

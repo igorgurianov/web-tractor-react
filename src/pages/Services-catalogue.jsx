@@ -19,6 +19,7 @@ import { numberFormatConverter } from "../utils/numberFormatConverter";
 import topBannerTablet from "../assets/images/services/768х350_0.jpg";
 import topBannerMobile from "../assets/images/services/320х350_0.jpg";
 import tickIcon from "../assets/icons/tick.svg";
+import tickIconNoframe from "../assets/icons/tickNoFrame.svg";
 import ContactUsBtn from "../UI/ContactUsBtn";
 import { FiFileText } from "react-icons/fi";
 import photoIcon from "../assets/icons/photo.svg";
@@ -603,28 +604,28 @@ const ServicesCatalogue = () => {
               <li className="grid grid-cols-[24px_1fr] gap-3">
                 <div
                   className="block min-w-min w-6 h-6 bg-no-repeat bg-cover"
-                  style={{ backgroundImage: `url(${tickIcon})` }}
+                  style={{ backgroundImage: `url(${tickIconNoframe})` }}
                 ></div>
                 <p className="block text-color_white">Установка отопителя</p>
               </li>
               <li className="grid grid-cols-[24px_1fr] gap-3">
                 <span
                   className="block w-6 h-6 bg-no-repeat bg-cover"
-                  style={{ backgroundImage: `url(${tickIcon})` }}
+                  style={{ backgroundImage: `url(${tickIconNoframe})` }}
                 ></span>
                 <p className=" text-color_white">Установка новой кабины</p>
               </li>
               <li className="grid grid-cols-[24px_1fr] gap-3">
                 <span
                   className="block w-6 h-6 bg-no-repeat bg-cover"
-                  style={{ backgroundImage: `url(${tickIcon})` }}
+                  style={{ backgroundImage: `url(${tickIconNoframe})` }}
                 ></span>
                 <p className=" text-color_white">Установка кондиционера</p>
               </li>
               <li className="grid grid-cols-[24px_1fr] gap-3">
                 <span
                   className="block w-6 h-6 bg-no-repeat bg-cover"
-                  style={{ backgroundImage: `url(${tickIcon})` }}
+                  style={{ backgroundImage: `url(${tickIconNoframe})` }}
                 ></span>
                 <p className=" text-color_white">
                   Модернизация системы управления;
@@ -633,14 +634,14 @@ const ServicesCatalogue = () => {
               <li className="grid grid-cols-[24px_1fr] gap-3">
                 <span
                   className="block w-6 h-6 bg-no-repeat bg-cover"
-                  style={{ backgroundImage: `url(${tickIcon})` }}
+                  style={{ backgroundImage: `url(${tickIconNoframe})` }}
                 ></span>
                 <p className=" text-color_white">Звуко/виброизоляция</p>
               </li>
               <li className="grid grid-cols-[24px_1fr] gap-3">
                 <span
                   className="block w-6 h-6 bg-no-repeat bg-cover"
-                  style={{ backgroundImage: `url(${tickIcon})` }}
+                  style={{ backgroundImage: `url(${tickIconNoframe})` }}
                 ></span>
                 <p className=" text-color_white">
                   Дополнительное навесное оборудование

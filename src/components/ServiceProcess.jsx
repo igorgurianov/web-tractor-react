@@ -17,17 +17,19 @@ export default function ServiceProcess() {
         styles="mt-6 lg:mt-8"
         subheaderText="Несколько шагов помогут вернуть ваш трактор в рабочее состояние"
       />
-      <ul className="mt-20 flex flex-col md:flex-row">
+      <ul className="md:mt-20 flex flex-col md:flex-row gap-4 md:gap-0 text-center">
         <li className="flex flex-col md:max-w-[230px] md:flex-1 md:flex-row">
           <div className="flex flex-col items-center md:w-[90%]">
             <div
               className="block min-w-min w-20 h-20 bg-no-repeat bg-cover"
               style={{ backgroundImage: `url(${searchIcon})` }}
             ></div>
-            <h4 className="md:text-sm mt-3">Осмотр / фотоотчет</h4>
-            <p className="md:text-base md:leading-5 mt-1">
+            <h4 className="md:text-sm mt-4 font-normal text-center">
+              Осмотр / фотоотчет
+            </h4>
+            <p className="md:text-base md:leading-5 mt-2 font-semibold text-center">
               Анализируем изношенность силовых агрегатов при необходимости
-              выезжает специалист.
+              выезжает специалист
             </p>
           </div>
           <FiTriangle
@@ -41,8 +43,8 @@ export default function ServiceProcess() {
               className="block w-20 h-20 bg-no-repeat bg-cover"
               style={{ backgroundImage: `url(${agreementIcon})` }}
             ></div>
-            <h4 className=" md:text-sm mt-3">Договор</h4>
-            <p className="md:text-base md:leading-5 mt-1">
+            <h4 className="md:text-sm mt-4 font-normal">Договор</h4>
+            <p className="md:text-base md:leading-5 mt-2 font-semibold text-center">
               Составляем договор, фиксируем срок
             </p>
           </div>
@@ -57,8 +59,8 @@ export default function ServiceProcess() {
               className="block min-w-min w-20 h-20 bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${deliveryIcon})` }}
             ></div>
-            <h4 className=" md:text-sm mt-3">Доставка в ремонт</h4>
-            <p className="md:text-base md:leading-5 mt-1">
+            <h4 className="md:text-sm mt-4 font-normal">Доставка в ремонт</h4>
+            <p className="md:text-base md:leading-5 mt-2 font-semibold text-center">
               Берем на себя до 50% транспортных расходов по доставке трактора к
               нам и обратно.
             </p>
@@ -74,8 +76,8 @@ export default function ServiceProcess() {
               className="block min-w-min w-20 h-20 bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${repairIcon})` }}
             ></div>
-            <h4 className=" md:text-sm mt-3">Капитальный ремонт</h4>
-            <p className="md:text-base md:leading-5 mt-1">
+            <h4 className="md:text-sm mt-4 font-normal">Капитальный ремонт</h4>
+            <p className="md:text-base md:leading-5 mt-2 font-semibold text-center">
               В соответствии с договором комплекс согласованных работ
             </p>
           </div>
@@ -90,8 +92,8 @@ export default function ServiceProcess() {
               className="block w-20 h-20 bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${runningInIcon})` }}
             ></div>
-            <h4 className="md:text-sm mt-3">Обкатка</h4>
-            <p className="md:text-base md:leading-5 mt-1">
+            <h4 className="md:text-sm mt-4 font-normal">Обкатка</h4>
+            <p className="md:text-base md:leading-5 mt-2 font-semibold text-center">
               Полная проверка все х агрегатов и механизмов
             </p>
           </div>
