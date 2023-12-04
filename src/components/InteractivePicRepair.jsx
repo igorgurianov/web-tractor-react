@@ -55,13 +55,13 @@ export default function InteractivePicRepair() {
             subheaderText="изучите подробности услуги в интерактивной карточке"
           />
           <div>
-            <ul className="overflow-y-scroll md:overflow-visible flex gap-1 md:gap-6">
-              <li className="flex flex-1 flex-col bg">
+            <ul className="overflow-y-scroll md:overflow-visible flex gap-1">
+              <li className="flex flex-1 flex-col">
                 <button
                   type="button"
                   onClick={(e) => iconClickHandler(e)}
                   value="tank"
-                  className={`p-1 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
+                  className={`p-1 md:py-3 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
                     element === "tank"
                       ? "bg-color_accent_yellow"
                       : "bg-color_light_gray"
@@ -71,7 +71,7 @@ export default function InteractivePicRepair() {
                     className="w-10 h-10 md:w-12 md:h-12 bg-contain bg-no-repeat bg-center z-10"
                     style={{ backgroundImage: `url(${hydraulucs})` }}
                   ></div>
-                  <span>Гидравлика</span>
+                  <span className="mt-1">Гидравлика</span>
                 </button>
               </li>
               <li className="flex flex-1 flex-col">
@@ -79,7 +79,7 @@ export default function InteractivePicRepair() {
                   type="button"
                   value="engine"
                   onClick={(e) => iconClickHandler(e)}
-                  className={`p-1 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
+                  className={`p-1 md:py-3 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
                     element === "engine"
                       ? "bg-color_accent_yellow"
                       : "bg-color_light_gray"
@@ -89,7 +89,7 @@ export default function InteractivePicRepair() {
                     className="w-10 h-10 md:w-12 md:h-12 bg-contain bg-no-repeat bg-center z-10"
                     style={{ backgroundImage: `url(${engine})` }}
                   ></div>
-                  <span>Двигатель</span>
+                  <span className="mt-1">Двигатель</span>
                 </button>
               </li>
               <li className="flex flex-1 flex-col">
@@ -97,7 +97,7 @@ export default function InteractivePicRepair() {
                   type="button"
                   value="cabin"
                   onClick={(e) => iconClickHandler(e)}
-                  className={`p-1 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
+                  className={`p-1 md:py-3 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
                     element === "cabin"
                       ? "bg-color_accent_yellow"
                       : "bg-color_light_gray"
@@ -107,7 +107,7 @@ export default function InteractivePicRepair() {
                     className="w-10 h-10 md:w-12 md:h-12 bg-contain bg-no-repeat bg-center z-10"
                     style={{ backgroundImage: `url(${cabin})` }}
                   ></div>
-                  <span>Кабина</span>
+                  <span className="mt-1">Кабина</span>
                 </button>
               </li>
 
@@ -116,7 +116,7 @@ export default function InteractivePicRepair() {
                   type="button"
                   value="transmission"
                   onClick={(e) => iconClickHandler(e)}
-                  className={`p-1 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
+                  className={`p-1 md:py-3 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
                     element === "transmission"
                       ? "bg-color_accent_yellow"
                       : "bg-color_light_gray"
@@ -126,7 +126,7 @@ export default function InteractivePicRepair() {
                     className="w-10 h-10 md:w-12 md:h-12 bg-contain bg-no-repeat bg-center z-10"
                     style={{ backgroundImage: `url(${transmission})` }}
                   ></div>
-                  <span>Трансмиссия</span>
+                  <span className="mt-1">Трансмиссия</span>
                 </button>
               </li>
 
@@ -135,7 +135,7 @@ export default function InteractivePicRepair() {
                   type="button"
                   value="chassis"
                   onClick={(e) => iconClickHandler(e)}
-                  className={`p-1 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
+                  className={`p-1 md:py-3 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
                     element === "chassis"
                       ? "bg-color_accent_yellow"
                       : "bg-color_light_gray"
@@ -145,7 +145,7 @@ export default function InteractivePicRepair() {
                     className="w-10 h-10 md:w-12 md:h-12 bg-contain bg-no-repeat bg-center z-10"
                     style={{ backgroundImage: `url(${chassis})` }}
                   ></div>
-                  <span>Ходовая</span>
+                  <span className="mt-1">Ходовая</span>
                 </button>
               </li>
             </ul>
@@ -210,7 +210,7 @@ export default function InteractivePicRepair() {
                 type="button"
                 onClick={(e) => iconClickHandler(e)}
                 value="tank"
-                className={`p-2 md:p-3 absolute rounded-full border inline-block top-[47%] left-[10%] hover:bg-color_accent_yellow ${
+                className={`p-2 md:p-3 absolute rounded-full border inline-block top-[53%] left-[14%] hover:bg-color_accent_yellow ${
                   element === "tank"
                     ? "bg-color_accent_yellow"
                     : "bg-color_white"
@@ -228,7 +228,7 @@ export default function InteractivePicRepair() {
                 type="button"
                 value="engine"
                 onClick={(e) => iconClickHandler(e)}
-                className={`p-2 md:p-3 absolute rounded-full border inline-block top-[57%] left-[30%] hover:bg-color_accent_yellow ${
+                className={`p-2 md:p-3 absolute rounded-full border inline-block top-[40%] left-[73%] hover:bg-color_accent_yellow ${
                   element === "engine"
                     ? "bg-color_accent_yellow"
                     : "bg-color_white"
@@ -246,7 +246,7 @@ export default function InteractivePicRepair() {
                 type="button"
                 value="cabin"
                 onClick={(e) => iconClickHandler(e)}
-                className={`p-2 md:p-3 absolute rounded-full border inline-block top-[27%] left-[40%] hover:bg-color_accent_yellow ${
+                className={`p-2 md:p-3 absolute rounded-full border inline-block top-[40%] left-[29%] hover:bg-color_accent_yellow ${
                   element === "cabin"
                     ? "bg-color_accent_yellow"
                     : "bg-color_white"
@@ -264,7 +264,7 @@ export default function InteractivePicRepair() {
                 type="button"
                 value="transmission"
                 onClick={(e) => iconClickHandler(e)}
-                className={`p-2 md:p-3 absolute rounded-full border inline-block top-[37%] left-[60%] hover:bg-color_accent_yellow ${
+                className={`p-2 md:p-3 absolute rounded-full border inline-block top-[58%] left-[60%] hover:bg-color_accent_yellow ${
                   element === "transmission"
                     ? "bg-color_accent_yellow"
                     : "bg-color_white"
@@ -281,7 +281,7 @@ export default function InteractivePicRepair() {
                 type="button"
                 value="chassis"
                 onClick={(e) => iconClickHandler(e)}
-                className={`p-2 md:p-3 absolute rounded-full border inline-block top-[67%] left-[50%] hover:bg-color_accent_yellow ${
+                className={`p-2 md:p-3 absolute rounded-full border inline-block top-[62%] left-[42%] hover:bg-color_accent_yellow ${
                   element === "chassis"
                     ? "bg-color_accent_yellow"
                     : "bg-color_white"
