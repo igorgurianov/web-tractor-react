@@ -6,11 +6,8 @@ import OurSpareParts from "../components/OurSpareParts";
 import Brands from "../call-to-action/Brands";
 import Breadcrumbs from "../UI/Breadcrumbs";
 import { Helmet } from "react-helmet";
-
 import InteractivePicRepair from "../components/InteractivePicRepair";
-
 import { useEffect, useState } from "react";
-
 import { priceListRepair, repairCalculator } from "../utils/const";
 import {
   ADD_REPAIR_SERVICE,
@@ -36,10 +33,10 @@ import guaranteeIcon from "../assets/icons/guarantee.svg";
 import { MdOutlineAddAPhoto } from "react-icons/md";
 import tractorAsNewIcon from "../assets/icons/asNew.svg";
 import image from "../assets/images/gallery/ImageGallery1.png";
-import whoNeedsIcon1 from "../assets/icons/tractorIcons/трактор_правки-02.svg";
-import whoNeedsIcon2 from "../assets/icons/tractorIcons/трактор_правки-03.svg";
-import whoNeedsIcon3 from "../assets/icons/tractorIcons/трактор_правки-04.svg";
-import whoNeedsIcon4 from "../assets/icons/tractorIcons/трактор_правки_Монтажная область 1.svg";
+import whoNeedsIcon1 from "../assets/icons/tractorIcons/icon1.svg";
+import whoNeedsIcon2 from "../assets/icons/tractorIcons/icon2.svg";
+import whoNeedsIcon3 from "../assets/icons/tractorIcons/icon3.svg";
+import whoNeedsIcon4 from "../assets/icons/tractorIcons/icon4.svg";
 import testImage1 from "../assets/images/services/gallery/capital-3.jpg";
 import testImage2 from "../assets/images/services/gallery/capital-6.jpg";
 import { ImgComparisonSlider } from "@img-comparison-slider/react";
@@ -271,8 +268,8 @@ const ServicesCatalogue = () => {
           subheaderText="Несколько шагов помогут вернуть ваш трактор в рабочее состояние"
         />
         <div className="md:mt-20">
-          <ul className="grid grid-flow-row md:grid-rows-none md:grid-cols-5 gap-8 md:gap-0 justify-center">
-            <li className="flex md:flex-1 flex-col md:flex-row md:max-w-[230px]">
+          <ul className="grid grid-rows-5 md:grid-cols-5 md:grid-rows-1 gap-8 md:gap-0 justify-center">
+            <li className="flex flex-col md:max-w-[230px] md:flex-1 md:flex-row">
               <div className="flex flex-col items-center md:w-[90%]">
                 <div
                   className="block min-w-min w-20 h-20 bg-no-repeat bg-cover"
@@ -362,81 +359,61 @@ const ServicesCatalogue = () => {
           subheaderText="посмотрите фото наших ремонтов"
         />
         <div>
-          <ul className="flex flex-col md:grid md:grid-cols-3 gap-10 mx-auto">
-            <li>
+          <ul className="flex flex-col md:flex-row gap-10 mx-auto">
+            <li className="flex-1">
               <div>
                 <ImgComparisonSlider className="hover:cursor-pointer">
                   <img slot="first" src={engineBefore} />
                   <img slot="second" src={engineAfter} />
                 </ImgComparisonSlider>
-                <div>
-                  <h3 className="text-base font-bold mt-2">
-                    Капитальный ремонт двигателя А 41
-                  </h3>
-                  <p className="">
-                    Все детали зачищены, установлена новая поршневая система,
-                    головка блока опрессована, отшлифована и собрана с новыми
-                    клапанами и направляющими.
-                  </p>
-                  <p>С обязательной последующей обкаткой после ремонта.</p>
-                  <p>Гарантия на ремонт 1 год.</p>
-                  {/* <ul className="pl-10">
-                    <li className="list-disc">Сварка силовых соединений</li>
-                    <li className="list-disc">Устранение коррозии</li>
-                    <li className="list-disc">Замена изношенных участков</li>
-                  </ul> */}
-                </div>
+
+                <h3 className="text-base font-bold mt-2">
+                  Капитальный ремонт двигателя А 41
+                </h3>
+                <p>
+                  Все детали зачищены, установлена новая поршневая система,
+                  головка блока опрессована, отшлифована и собрана с новыми
+                  клапанами и направляющими.
+                </p>
+                <p>С обязательной последующей обкаткой после ремонта.</p>
+                <p>Гарантия на ремонт 1 год.</p>
               </div>
             </li>
-            <li>
+            <li className="flex-1">
               <div>
                 <ImgComparisonSlider className="hover:cursor-pointer">
                   <img slot="first" src={tracksBefore} />
                   <img slot="second" src={tracksAfter} />
                 </ImgComparisonSlider>
-                <div>
-                  <h3 className="text-base font-bold mt-2">
-                    Ремонт ходовой части.
-                  </h3>
 
-                  <p>Ремонт опорных катков, рессорной пружины.</p>
-                  <p>Регулирование зазоров каретки.</p>
-                  <p>Замена пальцев.</p>
-                  <p>Восстановлено покрытие механизмов.</p>
-                  {/* <ul className="pl-10">
-                    <li className="list-disc">Сварка силовых соединений</li>
-                    <li className="list-disc">Устранение коррозии</li>
-                    <li className="list-disc">Замена изношенных участков</li>
-                  </ul> */}
-                </div>
+                <h3 className="text-base font-bold mt-2">
+                  Ремонт ходовой части.
+                </h3>
+                <p>Ремонт опорных катков, рессорной пружины.</p>
+                <p>Регулирование зазоров каретки.</p>
+                <p>Замена пальцев.</p>
+                <p>Восстановлено покрытие механизмов.</p>
               </div>
             </li>
-            <li>
+            <li className="flex-1">
               <div>
                 <ImgComparisonSlider className="hover:cursor-pointer">
                   <img slot="first" src={wholeBefore} />
                   <img slot="second" src={wholeAfter} />
                 </ImgComparisonSlider>
-                <div>
-                  <h3 className="text-base font-bold mt-2">
-                    Капитальный ремонт ДТ-75.
-                  </h3>
-                  <p>Восстановлен после длительного простоя</p>
-                  <p>
-                    Ржавчина с пылью и грязью сделали свое дело обездвижив
-                    ходовую. Двигатель прошел капремонт.{" "}
-                  </p>
-                  <p>
-                    Фактически новый трактор за половину стоимости нового.
-                    Никаких чудес, просто экономия.{" "}
-                  </p>
 
-                  {/* <ul className="pl-10">
-                    <li className="list-disc">Сварка силовых соединений</li>
-                    <li className="list-disc">Устранение коррозии</li>
-                    <li className="list-disc">Замена изношенных участков</li>
-                  </ul> */}
-                </div>
+                <h3 className="text-base font-bold mt-2">
+                  Капитальный ремонт ДТ-75.
+                </h3>
+                <p>Восстановлен после длительного простоя</p>
+                <p>
+                  Ржавчина с пылью и грязью сделали свое дело обездвижив
+                  ходовую. Двигатель прошел капремонт.
+                </p>
+                <p>
+                  Фактически новый трактор за половину стоимости нового. Никаких
+                  чудес, просто экономия.
+                </p>
               </div>
             </li>
           </ul>

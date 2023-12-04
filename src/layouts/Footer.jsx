@@ -81,7 +81,7 @@ const Footer = () => {
                     </li>
                     <li className="text-left my-1">
                       <CustomLink
-                        to="/services"
+                        to="/services/"
                         defaultStyle={defaultStyle}
                         activeStyle={activeStyle}
                       >
@@ -133,28 +133,9 @@ const Footer = () => {
                 </h6>
                 <div className="w-[66px] h-px border-solid border-color_white border-t"></div>
                 <ul className="">
-                  <li className="text-left mt-6 text-color_white">
-                    <CustomLink
-                      to={"/services/technical"}
-                      activeStyle={activeStyle}
-                    >
-                      Техническое обслуживание
-                    </CustomLink>
-                  </li>
                   <li className="text-left my-1 text-color_white">
-                    <CustomLink
-                      to={"/services/capital"}
-                      activeStyle={activeStyle}
-                    >
+                    <CustomLink to={"/services/"} activeStyle={activeStyle}>
                       Капитальный ремонт
-                    </CustomLink>
-                  </li>
-                  <li className="text-left my-1 text-color_white">
-                    <CustomLink
-                      to={"/services/profilactic"}
-                      activeStyle={activeStyle}
-                    >
-                      Профилактическое обслуживание
                     </CustomLink>
                   </li>
                 </ul>

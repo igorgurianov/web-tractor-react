@@ -119,31 +119,31 @@ const whatWeDo = [
     img: ourServicesImg,
     caption: "Сервисы",
     text: "Обслуживаем и ремонтируем",
-    to: "/services",
+    to: "/services/",
     alt: "Техническое обслуживание, ремонт и сервис сельскохозяйственной техники",
   },
 ];
 
-const ourServices = [
-  {
-    img: technicalService,
-    to: "/services/technical",
-    caption: "Техническое обслуживание",
-    alt: "Мы проводим техническое обслуживание тракторов и другой сельскохозяйственной техники",
-  },
-  {
-    img: capitalService,
-    to: "/services/capital",
-    caption: "Капитальный ремонт",
-    alt: "Мы проводим капитальный ремонт тракторов и другой сельскохозяйственной техники",
-  },
-  {
-    img: profilacticService,
-    to: "/services/profilactic",
-    caption: "Профилактическое обслуживание",
-    alt: "Мы проводим профилактическое обслуживание тракторов и другой сельскохозяйственной техники",
-  },
-];
+// const ourServices = [
+//   {
+//     img: technicalService,
+//     to: "/services/technical",
+//     caption: "Техническое обслуживание",
+//     alt: "Мы проводим техническое обслуживание тракторов и другой сельскохозяйственной техники",
+//   },
+//   {
+//     img: capitalService,
+//     to: "/services/capital",
+//     caption: "Капитальный ремонт",
+//     alt: "Мы проводим капитальный ремонт тракторов и другой сельскохозяйственной техники",
+//   },
+//   {
+//     img: profilacticService,
+//     to: "/services/profilactic",
+//     caption: "Профилактическое обслуживание",
+//     alt: "Мы проводим профилактическое обслуживание тракторов и другой сельскохозяйственной техники",
+//   },
+// ];
 
 const equipmentData = [
   {
@@ -693,7 +693,6 @@ export {
   servicesImages,
   organizationInfo,
   whatWeDo,
-  ourServices,
   equipmentData,
   interactivePicRepair,
   priceListRepair,
