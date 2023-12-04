@@ -20,14 +20,7 @@ import topBannerTablet from "../assets/images/services/768х350_0.jpg";
 import topBannerMobile from "../assets/images/services/320х350_0.jpg";
 import tickIcon from "../assets/icons/tick.svg";
 import ContactUsBtn from "../UI/ContactUsBtn";
-import {
-  FiHeadphones,
-  FiUsers,
-  FiFileText,
-  FiPackage,
-  FiTruck,
-  FiTriangle,
-} from "react-icons/fi";
+import { FiFileText } from "react-icons/fi";
 import photoIcon from "../assets/icons/photo.svg";
 import guaranteeIcon from "../assets/icons/guarantee.svg";
 import { MdOutlineAddAPhoto } from "react-icons/md";
@@ -40,8 +33,7 @@ import whoNeedsIcon4 from "../assets/icons/tractorIcons/icon4.svg";
 import testImage1 from "../assets/images/services/gallery/capital-3.jpg";
 import testImage2 from "../assets/images/services/gallery/capital-6.jpg";
 import { ImgComparisonSlider } from "@img-comparison-slider/react";
-import imageTechnical1 from "../assets/images/services/ImageTechnical1.jpg";
-import imageTechnical2 from "../assets/images/services/ImageTechnical2.jpg";
+
 import deliveryTimeIcon from "../assets/icons/deliveryTime.svg";
 import wrenchTimeIcon from "../assets/icons/wrenchTime.svg";
 import engineBefore from "../assets/images/services/comparisonGallery/engine/photo_2023-11-25 20.42-3-2.jpg";
@@ -55,11 +47,9 @@ import wholeBefore from "../assets/images/services/comparisonGallery/whole/after
 
 import newDTtractor from "../assets/images/services/photo-dt-75-8.jpg";
 import dt75modernization from "../assets/images/services/dt75modernization-2.png";
-import searchIcon from "../assets/icons/howWeWork/search.svg";
-import agreementIcon from "../assets/icons/howWeWork/agreement.svg";
-import deliveryIcon from "../assets/icons/howWeWork/delivery.svg";
-import repairIcon from "../assets/icons/howWeWork/repair.svg";
-import runningInIcon from "../assets/icons/howWeWork/running-in.svg";
+
+import ServiceProcess from "../components/ServiceProcess";
+import HowWeDoRepair from "../components/HowWeDoRepair";
 
 const ServicesCatalogue = () => {
   const dispatch = useDispatch();
@@ -67,8 +57,6 @@ const ServicesCatalogue = () => {
   const { services, subTotal, discount, total } = useSelector(
     (store) => store.repair
   );
-
-  // console.log(elementInfo);
 
   const checkboxHandler = (e) => {
     const serviceItem = priceListRepair.find((item) => item.id === e.target.id);
@@ -261,95 +249,9 @@ const ServicesCatalogue = () => {
       </Section>
 
       <InteractivePicRepair />
-      <Section styles="md:mb-14 md:mt-6 lg:mb-20">
-        <SectionHeader
-          headerText="Как мы работаем"
-          styles="mt-6 lg:mt-8"
-          subheaderText="Несколько шагов помогут вернуть ваш трактор в рабочее состояние"
-        />
-        <div className="md:mt-20">
-          <ul className="grid grid-rows-5 md:grid-cols-5 md:grid-rows-1 gap-8 md:gap-0 justify-center">
-            <li className="flex flex-col md:max-w-[230px] md:flex-1 md:flex-row">
-              <div className="flex flex-col items-center md:w-[90%]">
-                <div
-                  className="block min-w-min w-20 h-20 bg-no-repeat bg-cover"
-                  style={{ backgroundImage: `url(${searchIcon})` }}
-                ></div>
-                <h4 className=" md:text-sm mt-3">Осмотр / фотоотчет</h4>
-                <p className="md:text-base md:leading-5 mt-1">
-                  Анализируем изношенность силовых агрегатов при необходимости
-                  выезжает специалист.
-                </p>
-              </div>
-              <FiTriangle
-                className="mt-4 md:mt-0 rotate-180 md:rotate-90 md:h-12 md:w-12 self-center md:self-start"
-                color="#FEC513"
-              />
-            </li>
-            <li className="flex md:flex-1 flex-col md:flex-row md:max-w-[230px]">
-              <div className="flex flex-col items-center md:w-[90%]">
-                <div
-                  className="block w-20 h-20 bg-no-repeat bg-cover"
-                  style={{ backgroundImage: `url(${agreementIcon})` }}
-                ></div>
-                <h4 className=" md:text-sm mt-3">Договор</h4>
-                <p className="md:text-base md:leading-5 mt-1">
-                  Составляем договор, фиксируем срок
-                </p>
-              </div>
-              <FiTriangle
-                className="mt-4 md:mt-0 rotate-180 md:rotate-90 md:h-12 md:w-12 self-center md:self-start"
-                color="#FEC513"
-              />
-            </li>
-            <li className="flex md:flex-1 flex-col md:flex-row md:max-w-[230px]">
-              <div className="flex flex-col items-center md:w-[90%]">
-                <div
-                  className="block min-w-min w-20 h-20 bg-no-repeat bg-contain"
-                  style={{ backgroundImage: `url(${deliveryIcon})` }}
-                ></div>
-                <h4 className=" md:text-sm mt-3">Доставка в ремонт</h4>
-                <p className="md:text-base md:leading-5 mt-1">
-                  Берем на себя до 50% транспортных расходов по доставке
-                  трактора к нам и обратно.
-                </p>
-              </div>
-              <FiTriangle
-                className="mt-4 md:mt-0 rotate-180 md:rotate-90 md:h-12 md:w-12 self-center md:self-start"
-                color="#FEC513"
-              />
-            </li>
-            <li className="flex md:flex-1 flex-col md:flex-row md:max-w-[230px]">
-              <div className="flex flex-col items-center md:w-[90%]">
-                <div
-                  className="block min-w-min w-20 h-20 bg-no-repeat bg-contain"
-                  style={{ backgroundImage: `url(${repairIcon})` }}
-                ></div>
-                <h4 className=" md:text-sm mt-3">Капитальный ремонт</h4>
-                <p className="md:text-base md:leading-5 mt-1">
-                  В соответствии с договором комплекс согласованных работ
-                </p>
-              </div>
-              <FiTriangle
-                className="mt-4 md:mt-0 rotate-180 md:rotate-90 md:h-12 md:w-12 self-center md:self-start"
-                color="#FEC513"
-              />
-            </li>
-            <li className="flex md:flex-1 flex-col md:flex-row md:max-w-[230px]">
-              <div className="flex flex-col items-center md:w-[90%]">
-                <div
-                  className="block w-20 h-20 bg-no-repeat bg-contain"
-                  style={{ backgroundImage: `url(${runningInIcon})` }}
-                ></div>
-                <h4 className="md:text-sm mt-3">Обкатка</h4>
-                <p className="md:text-base md:leading-5 mt-1">
-                  Полная проверка все х агрегатов и механизмов
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </Section>
+
+      <ServiceProcess />
+      <HowWeDoRepair />
 
       {/* подобрать картинки  с шириной больше 320px */}
       <Section styles="md:mb-14 md:mt-6 lg:mb-20">
@@ -417,74 +319,6 @@ const ServicesCatalogue = () => {
               </div>
             </li>
           </ul>
-        </div>
-      </Section>
-
-      <Section styles="md:mb-14 md:mt-6 lg:mb-20">
-        <SectionHeader
-          headerText="Как мы делаем ремонт"
-          styles="mt-6 lg:mt-8"
-          subheaderText="мы являемся сертифицированным производителем гусеничных тракторов"
-        />
-
-        <div className="flex flex-col gap-10">
-          <div className="flex flex-col md:flex-row gap-5 md:gap-10">
-            <img
-              src={imageTechnical1}
-              className="md:w-1/3 object-cover md:grayscale hover:cursor-pointer hover:grayscale-0 hover:duration-200 rounded-sm"
-              alt="Капитальный ремонт трактора ДТ-75"
-            />
-            <div>
-              <p>
-                Периодичность капитального ремонта трактора ДТ составляет
-                4500...6500 мото-ч., взависимости от условий эксплуатации.
-              </p>
-              <p>
-                В соответствии с требованием к капитальному ремонту
-                восстанавливается работоспособность и ресурс, обеспечивающий его
-                пробег не менее 80% от нормы пробега для нового трактора и его
-                агрегатов.
-              </p>
-              <p>
-                В ходе капитального ремонта трактора ДТ-75 мы разбираем его до
-                базового узла – рамы.
-              </p>
-              <p>
-                Все детали промываются и проходят дефектацию. Детали не
-                прошедшие дефектацию, заменяются новыми. После разборки и
-                анализа деталей и узлов, машину собирают заново.
-              </p>
-              <p>
-                Проводится регулировка узлов и механизмов, с последующей их
-                обкаткой. После обкатки и испытания трактора, его красят он
-                готов к дальнейшей эксплуатации.
-              </p>
-            </div>
-          </div>
-          <div className="flex md:flex-row-reverse flex-col gap-5 md:gap-10">
-            <img
-              src={imageTechnical2}
-              className="md:w-1/3 object-cover md:grayscale hover:cursor-pointer hover:grayscale-0 hover:duration-200 rounded-sm"
-              alt="Капитальный ремонт трактора ДТ-75"
-            />
-            <div>
-              <p>
-                ООО “ВЗГМ” является сертифицированным производителем гусеничных
-                тракторов.
-              </p>
-              <p>
-                Мы преобразовали и интегрировали наш многолетний опыт в услуги
-                по проведению капитального ремонта.
-              </p>
-              <p>
-                Мы проводим капремонт всех тракторов семейства ДТ-75, ВгТЗ, ВЗГМ
-                и их модификаций. Ремонтируем также и другие колесные и
-                гусеничные тракторы, которые производились и производятся на
-                территории России и Белоруссии.
-              </p>
-              <p>Гарантия на капитальный ремонт 1 год.</p>
-            </div>
-          </div>
         </div>
       </Section>
 

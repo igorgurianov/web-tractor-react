@@ -55,7 +55,7 @@ export default function InteractivePicRepair() {
             subheaderText="изучите подробности услуги в интерактивной карточке"
           />
           <div>
-            <ul className="overflow-y-scroll flex gap-1 md:gap-6">
+            <ul className="overflow-y-scroll md:overflow-visible flex gap-1 md:gap-6">
               <li className="flex flex-1 flex-col bg">
                 <button
                   type="button"
