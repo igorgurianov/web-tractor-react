@@ -1,13 +1,31 @@
 import { OPEN_CONTACT_POPUP } from "../services/actions/form";
+import { OPEN_REPAIR_FORM_POPUP } from "../services/actions/repairs";
 import { useDispatch } from "react-redux";
 
 // Кнопка открытия попапа с формой обратной связи
 
-const ContactUsBtn = ({ text, style }) => {
+const ContactUsBtn = ({ text, style, onClick, type }) => {
   const dispatch = useDispatch();
 
   const handleButtonClick = () => {
-    dispatch({ type: OPEN_CONTACT_POPUP });
+    switch (type) {
+      case "repair":
+        dispatch({ type: OPEN_REPAIR_FORM_POPUP });
+        console.log("repair");
+        break;
+      case "tractor_purchase":
+        dispatch({ type: OPEN_CONTACT_POPUP });
+        console.log("tractor purchase");
+        break;
+      default:
+        dispatch({ type: OPEN_CONTACT_POPUP });
+        break;
+    }
+
+    if (onClick) {
+      onClick();
+    }
+
     // document.body.style.overflow = "hidden";
   };
 

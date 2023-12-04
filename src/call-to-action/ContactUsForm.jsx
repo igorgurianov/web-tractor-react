@@ -86,7 +86,7 @@ const ContactUsForm = () => {
           <div className="mt-4 text-left">
             <span className="m-0">
               Акция только до
-              <strong className="text-color_accent_red"> 01.12.2023 </strong>
+              <strong className="text-color_accent_red"> 31.12.2023 </strong>
             </span>
             <span className="m-0">выберите свой бонус в подарок:</span>
           </div>

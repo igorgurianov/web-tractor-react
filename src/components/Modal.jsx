@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import ModalOverlay from "./ModalOverlay";
 import { closePopup } from "../services/actions/form";
 import { useDispatch } from "react-redux";
+import { CLOSE_ADDITIONAL_INFO_POPUP } from "../services/actions/repairs";
 
 const modalRoot = document.getElementById("react-modals");
 
@@ -14,6 +15,7 @@ const Modal = ({ children }) => {
     const closePopupOnBtn = (evt) => {
       if (evt.key === "Escape") {
         dispatch(closePopup());
+        dispatch({ type: CLOSE_ADDITIONAL_INFO_POPUP });
       }
     };
 

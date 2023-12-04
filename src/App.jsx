@@ -21,10 +21,15 @@ import ScrollToTop from "./utils/scrollToTop";
 import { setContent } from "./services/actions/content";
 import tractorData from "./utils/data";
 import NotFoundPage from "./pages/NotFoundPage";
+import RepairPopup from "./components/RepairPopup";
+import RepairForm from "./call-to-action/RepairForm";
 
 function App() {
   const dispatch = useDispatch();
   const { contactSuccess, contactPopup } = useSelector((store) => store.form);
+  const { repairPopup, repairForm, repairFormSuccess } = useSelector(
+    (store) => store.repair
+  );
 
   useEffect(() => {
     dispatch(setContent(tractorData));
@@ -48,7 +53,6 @@ function App() {
             <Route path="/tractors/" element={<TractorsCataloguePage />} />
             <Route path="/tractors/:id/" element={<SingleTractorPage />} />
             <Route path="/services/" element={<ServicesCatalogue />} />
-            <Route path="/services/:id/" element={<SingleServicePage />} />
             <Route path="/news/" element={<NewsCatalogue />} />
             <Route path="/news/:id" element={<SingleNewsPage />} />
             <Route path="*" element={<NotFoundPage />} />
@@ -63,6 +67,21 @@ function App() {
         {contactSuccess && (
           <Modal>
             <ContactUsForm />
+          </Modal>
+        )}
+        {repairPopup && (
+          <Modal>
+            <RepairPopup />
+          </Modal>
+        )}
+        {repairForm && (
+          <Modal>
+            <RepairForm />
+          </Modal>
+        )}
+        {repairFormSuccess && (
+          <Modal>
+            <RepairForm />
           </Modal>
         )}
       </BrowserRouter>

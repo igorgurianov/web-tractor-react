@@ -25,7 +25,7 @@ const breadCrumbsTranslate = [
   { en: "modifications", ru: "Модификации" },
   { en: "characteristics", ru: "Характеристики" },
   { en: "DT-75-s-navesnym", ru: "ДТ-75" },
-  { en: "XTZ-150-s-navesnym", ru: "ДТ-75" },
+  { en: "XTZ-150-s-navesnym", ru: "ХТЗ-150 с навесным" },
   { en: "XTZ-150-s-otvalom", ru: "ХТЗ-150 с отвалом" },
   { en: "DT-75-s-otvalom", ru: "ДТ-75 с отвалом" },
   {},

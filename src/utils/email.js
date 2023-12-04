@@ -26,3 +26,21 @@ export const sendEmail = (form, token) => {
     }),
   }).then(checkResponse);
 };
+
+const BACKEND_API_NEW = "https://mailservice20231202163932.azurewebsites.net";
+
+export const sendEmailToBackend = (values, token) => {
+  return fetch(`${BACKEND_API_NEW}`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: values.name,
+      phone: values.phone,
+      captchaResponse: token,
+    }),
+  }).then((res) => res.json());
+  // .then((res) => console.log(res))
+  // .catch((error) => console.log("error", error))
+};

@@ -9,6 +9,8 @@ import tankIcon from "../assets/icons/tankIcon.svg";
 import vzgm_90_base_1 from "../assets/images/tractors/vzgm-90/base/VZGM-90-1.png";
 import vzgm_90_base_2 from "../assets/images/tractors/vzgm-90/base/VZGM-90-2.png";
 import vzgm_90_base_3 from "../assets/images/tractors/vzgm-90/base/VZGM-90-3.png";
+import vzgm_90_base_4 from "../assets/images/tractors/vzgm-90/base/xconvert.com-2-2.png";
+import vzgm_90_base_5 from "../assets/images/tractors/vzgm-90/base/xconvert.com-3-2.png";
 
 //VZGM-150 base
 import vzgm_150_base_1 from "../assets/images/tractors/vzgm-150/base/VZGM-150-1.png";
@@ -20,10 +22,13 @@ import vzgm_150_base_4 from "../assets/images/tractors/vzgm-150/base/VZGM-150-4.
 import vzgm_90_otval_1 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-4.png";
 // import vzgm_90_otval_2 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-5.png";
 import vzgm_90_otval_3 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-6.png";
-import vzgm_90_otval_11 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-11.png";
 import vzgm_90_otval_4 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-7.png";
+import vzgm_90_otval_11 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-11.png";
 import vzgm_90_otval_5 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-9.png";
 import vzgm_90_otval_6 from "../assets/images/tractors/vzgm-90/otval/VZGM-90-10.png";
+//import vzgm_90_otval_7 from "../assets/images/tractors/vzgm-90/otval/1-2-2.png";
+import vzgm_90_otval_8 from "../assets/images/tractors/vzgm-90/otval/xconvert.com-4-2.png";
+import vzgm_90_otval_12 from "../assets/images/tractors/vzgm-90/otval/xconvert.com-5.png";
 
 //VZGM-150 otval
 import vzgm_150_otval_1 from "../assets/images/tractors/vzgm-150/otval/VZGM-150-4.png";
@@ -62,7 +67,13 @@ const tractorData = [
     img: vzgm_90_base_1,
     inStock: true,
     alt: "Гусеничный трактор ВЗГМ-90 – усовершенствованная модель трактора ДТ-75",
-    gallery: [vzgm_90_base_1, vzgm_90_base_2, vzgm_90_base_3],
+    gallery: [
+      vzgm_90_base_1,
+      vzgm_90_base_2,
+      vzgm_90_base_3,
+      vzgm_90_base_4,
+      vzgm_90_base_5,
+    ],
     shortDescription:
       "ВЗГМ 90 - усовершенствованная модель классического классического ДТ 75, который был очень популярен в СССР. ",
     metaDescription:
@@ -525,11 +536,15 @@ const tractorData = [
     alt: "Гусеничный трактор ВЗГМ-90 – усовершенствованная модель трактора ДТ-75",
     gallery: [
       vzgm_90_otval_11,
+      vzgm_90_otval_12,
       vzgm_90_otval_6,
       vzgm_90_otval_5,
       vzgm_90_otval_1,
-      vzgm_90_otval_4,
-      vzgm_90_otval_3,
+      //vzgm_90_otval_4,
+      //vzgm_90_otval_3,
+      //vzgm_90_otval_7,
+      vzgm_90_otval_8,
+      ,
     ],
     shortDescription:
       "Купить ДТ 75 с отвалом. Усовершенствованная модель трактор ВЗГМ 90 с отвалом классического ДТ 75 с отвалом, который был очень популярен в СССР. ",

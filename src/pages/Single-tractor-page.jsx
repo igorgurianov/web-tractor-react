@@ -12,6 +12,9 @@ import CallBackForm from "../call-to-action/CallBackForm";
 import TractorSlider from "../vendor/TractorSlider";
 import Information from "../components/Information";
 import Tab from "../UI/Tab";
+import RecommendedItems from "../components/RecommendedItems";
+import Accordion from "../components/Accordion";
+import { tractorFaqList } from "../utils/faqList";
 
 const SingleTractorPage = () => {
   const tractors = useSelector((store) => store.content.content);
@@ -127,12 +130,13 @@ const SingleTractorPage = () => {
               <div className="mt-2 p-2">
                 <Information tab="description" tractor={tractor} />
                 <Information tab="characteristics" tractor={tractor} />
-
                 <Information tab="modifications" tractor={tractor} />
                 <Information tab="leasing" tractor={tractor} />
               </div>
             </Section>
             <CallBackForm />
+            <RecommendedItems />
+            {/* <Accordion faqList={tractorFaqList} /> */}
             <OurSpareParts />
           </div>
         </div>
