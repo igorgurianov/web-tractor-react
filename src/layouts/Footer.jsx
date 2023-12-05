@@ -174,6 +174,13 @@ const Footer = () => {
                       href={`#`}
                     />
                   </li>
+                  <li className="text-left py-2 pt-1 max-w-[221px]">
+                    <ContactItem
+                      text={organizationInfo.address2}
+                      icon={<FiMapPin size={34} />}
+                      href={`#`}
+                    />
+                  </li>
                 </ul>
               </div>
             </div>
@@ -184,9 +191,14 @@ const Footer = () => {
             <p className="text-xs text-color_white">
               © 2023 ВЗГМ. All right reserved.
             </p>
-            <p className="text-xs text-color_white">
-              Политика конфиденциальности
-            </p>
+            <div>
+              <p className="text-xs text-color_white">
+                Политика конфиденциальности
+              </p>
+              <p className="text-xs text-color_white">
+                Информация на сайте не является публичной офертой
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -61,7 +61,7 @@ export default function InteractivePicRepair() {
                   type="button"
                   onClick={(e) => iconClickHandler(e)}
                   value="tank"
-                  className={`p-1 md:py-3 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
+                  className={`p-1 md:py-2 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
                     element === "tank"
                       ? "bg-color_accent_yellow"
                       : "bg-color_light_gray"
@@ -79,7 +79,7 @@ export default function InteractivePicRepair() {
                   type="button"
                   value="engine"
                   onClick={(e) => iconClickHandler(e)}
-                  className={`p-1 md:py-3 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
+                  className={`p-1 md:py-2 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
                     element === "engine"
                       ? "bg-color_accent_yellow"
                       : "bg-color_light_gray"
@@ -97,7 +97,7 @@ export default function InteractivePicRepair() {
                   type="button"
                   value="cabin"
                   onClick={(e) => iconClickHandler(e)}
-                  className={`p-1 md:py-3 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
+                  className={`p-1 md:py-2 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
                     element === "cabin"
                       ? "bg-color_accent_yellow"
                       : "bg-color_light_gray"
@@ -116,7 +116,7 @@ export default function InteractivePicRepair() {
                   type="button"
                   value="transmission"
                   onClick={(e) => iconClickHandler(e)}
-                  className={`p-1 md:py-3 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
+                  className={`p-1 md:py-2 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
                     element === "transmission"
                       ? "bg-color_accent_yellow"
                       : "bg-color_light_gray"
@@ -135,7 +135,7 @@ export default function InteractivePicRepair() {
                   type="button"
                   value="chassis"
                   onClick={(e) => iconClickHandler(e)}
-                  className={`p-1 md:py-3 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
+                  className={`p-1 md:py-2 flex flex-col items-center border border-color_lighter_gray hover:bg-color_accent_yellow ${
                     element === "chassis"
                       ? "bg-color_accent_yellow"
                       : "bg-color_light_gray"
