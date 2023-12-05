@@ -422,7 +422,7 @@ const ServicesCatalogue = () => {
               </li>
               <li className="flex items-center flex-col md:flex-row gap-8">
                 <img
-                  src={whoNeedsIcon2}
+                  src={whoNeedsIcon3}
                   className="w-full md:w-1/2 max-w-[300px]"
                   alt=""
                 />
@@ -431,24 +431,7 @@ const ServicesCatalogue = () => {
                     Желающим модернизировать трактор
                   </h4>
                   <h5 className="mt-2 md:mt-4 font-medium">
-                    У кого старая техника необходимо произвести полный перебор и
-                    капитальный ремонт
-                  </h5>
-                </div>
-              </li>
-              <li className="flex items-center flex-col md:flex-row gap-8">
-                <img
-                  src={whoNeedsIcon3}
-                  className="w-full md:w-1/2 max-w-[300px]"
-                  alt=""
-                />
-                <div>
-                  <h4 className="font-semibold">
-                    Перед открытием рабочего сезона
-                  </h4>
-                  <h5 className="mt-2 md:mt-4 font-medium">
-                    У кого старая техника необходимо произвести полный перебор и
-                    капитальный ремонт
+                    Если необходимо добавить новых функций или улучшить комфорт.
                   </h5>
                 </div>
               </li>
@@ -459,10 +442,25 @@ const ServicesCatalogue = () => {
                   alt=""
                 />
                 <div>
+                  <h4 className="font-semibold">
+                    Перед открытием рабочего сезона
+                  </h4>
+                  <h5 className="mt-2 md:mt-4 font-medium">
+                    Классическое ТО-1 и ТО-2, межсезонные работы и прочее
+                  </h5>
+                </div>
+              </li>
+              <li className="flex items-center flex-col md:flex-row gap-8">
+                <img
+                  src={whoNeedsIcon2}
+                  className="w-full md:w-1/2 max-w-[300px]"
+                  alt=""
+                />
+                <div>
                   <h4 className="font-semibold">В случае острой поломки</h4>
                   <h5 className="mt-2 md:mt-4 font-medium">
-                    У кого старая техника необходимо произвести полный перебор и
-                    капитальный ремонт
+                    Оперативный выезд к вам или срочная транспортировка к нам в
+                    ремонтный цех.
                   </h5>
                 </div>
               </li>
