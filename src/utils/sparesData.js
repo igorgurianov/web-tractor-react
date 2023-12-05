@@ -218,7 +218,7 @@ const sparesData = [
   {
     name: "Кабина",
     url: "cabin",
-    category: "cabin",
+    category: "spare",
     price: "230 000",
     img: cabin,
     alt: "Кабина ДТ-75 для трактора",

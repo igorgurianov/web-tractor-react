@@ -18,7 +18,7 @@ const Discount = () => {
           <h4 className="my-2">
             Выбери бонус при заказе до{" "}
             <span className="text-color_accent_red">
-              1 декабря 2023 <small>г.</small>
+              15 декабря 2023 <small>г.</small>
             </span>
           </h4>
 

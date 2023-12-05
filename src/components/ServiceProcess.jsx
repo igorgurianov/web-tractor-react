@@ -24,10 +24,10 @@ export default function ServiceProcess() {
               className="block min-w-min w-20 h-20 bg-no-repeat bg-cover"
               style={{ backgroundImage: `url(${searchIcon})` }}
             ></div>
-            <h4 className="md:text-sm mt-4 font-normal text-center">
+            <h4 className="md:text-sm mt-4 text-center font-bold">
               Осмотр / фотоотчет
             </h4>
-            <p className="md:text-base md:leading-5 mt-2 font-semibold text-center">
+            <p className="md:text-base md:leading-5 mt-2  text-center">
               Анализируем изношенность силовых агрегатов при необходимости
               выезжает специалист
             </p>
@@ -43,8 +43,8 @@ export default function ServiceProcess() {
               className="block w-20 h-20 bg-no-repeat bg-cover"
               style={{ backgroundImage: `url(${agreementIcon})` }}
             ></div>
-            <h4 className="md:text-sm mt-4 font-normal">Договор</h4>
-            <p className="md:text-base md:leading-5 mt-2 font-semibold text-center">
+            <h4 className="md:text-sm mt-4 font-bold">Договор</h4>
+            <p className="md:text-base md:leading-5 mt-2 text-center">
               Составляем договор, фиксируем срок
             </p>
           </div>
@@ -59,8 +59,8 @@ export default function ServiceProcess() {
               className="block min-w-min w-20 h-20 bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${deliveryIcon})` }}
             ></div>
-            <h4 className="md:text-sm mt-4 font-normal">Доставка в ремонт</h4>
-            <p className="md:text-base md:leading-5 mt-2 font-semibold text-center">
+            <h4 className="md:text-sm mt-4 ont-bold">Доставка в ремонт</h4>
+            <p className="md:text-base md:leading-5 mt-2 text-center">
               Берем на себя до 50% транспортных расходов по доставке трактора к
               нам и обратно.
             </p>
@@ -76,8 +76,8 @@ export default function ServiceProcess() {
               className="block min-w-min w-20 h-20 bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${repairIcon})` }}
             ></div>
-            <h4 className="md:text-sm mt-4 font-normal">Капитальный ремонт</h4>
-            <p className="md:text-base md:leading-5 mt-2 font-semibold text-center">
+            <h4 className="md:text-sm mt-4 font-bold">Капитальный ремонт</h4>
+            <p className="md:text-base md:leading-5 mt-2  text-center">
               В соответствии с договором комплекс согласованных работ
             </p>
           </div>
@@ -92,8 +92,8 @@ export default function ServiceProcess() {
               className="block w-20 h-20 bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${runningInIcon})` }}
             ></div>
-            <h4 className="md:text-sm mt-4 font-normal">Обкатка</h4>
-            <p className="md:text-base md:leading-5 mt-2 font-semibold text-center">
+            <h4 className="md:text-sm mt-4 font-bold">Обкатка</h4>
+            <p className="md:text-base md:leading-5 mt-2 text-center">
               Полная проверка все х агрегатов и механизмов
             </p>
           </div>

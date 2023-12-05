@@ -52,6 +52,8 @@ import dt75modernization from "../assets/images/services/dt75modernization-2.png
 import ServiceProcess from "../components/ServiceProcess";
 import HowWeDoRepair from "../components/HowWeDoRepair";
 
+import { RepairData } from "../utils/totalCounter";
+
 const ServicesCatalogue = () => {
   const dispatch = useDispatch();
 
@@ -119,7 +121,8 @@ const ServicesCatalogue = () => {
                   Скидка на капитальный ремонт:
                 </h2>
                 <h3 className="text-color_light_gray md:text-xl">
-                  1 800 000 руб - 1 600 000 руб
+                  <span className="line-through">1 800 000 руб</span> 1 600 000
+                  руб
                 </h3>
               </div>
             </li>
@@ -133,7 +136,7 @@ const ServicesCatalogue = () => {
                   Регионы:
                 </h2>
                 <h3 className="text-color_light_gray md:text-xl">
-                  Москва, Московская область, Волгоград
+                  Поможем с доставкой из любого региона
                 </h3>
               </div>
             </li>
@@ -222,7 +225,7 @@ const ServicesCatalogue = () => {
                     style={{ backgroundImage: `url(${wrenchTimeIcon})` }}
                   ></span>
                   <span className="text-sm text-color_dark_gray">
-                    Выполним: 15.01.2023
+                    Выполним: {RepairData()}
                   </span>
                 </div>
                 <div className="flex gap-2 mt-1">
