@@ -169,18 +169,18 @@ const Footer = () => {
                   </li>
                   <li className="text-left py-2 pt-5 max-w-[221px]">
                     <ContactItem
-                      text={organizationInfo.address}
+                      text={organizationInfo.address2}
                       icon={<FiMapPin size={34} />}
-                      href={`#`}
+                      href="https://yandex.ru/maps/org/volgogradskiy_zavod_gusenichnykh_mashin/143044221128/?from=mapframe&ll=44.516979%2C48.707071&z=10"
                     />
                   </li>
-                  <li className="text-left py-2 pt-1 max-w-[221px]">
+                  {/* <li className="text-left py-2 pt-1 max-w-[221px]">
                     <ContactItem
                       text={organizationInfo.address2}
                       icon={<FiMapPin size={34} />}
                       href={`#`}
                     />
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

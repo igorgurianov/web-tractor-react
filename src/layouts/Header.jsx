@@ -40,7 +40,7 @@ const Header = () => {
           </div>
           <div className="hidden md:block max-w-[400px]">
             <ContactItem
-              text={organizationInfo.address}
+              text={organizationInfo.address2}
               icon={<FiMapPin size={24} />}
               // Заменить адрес на карточку бизнеса я Яндекс картах
               href="https://yandex.ru/maps/org/volgogradskiy_zavod_gusenichnykh_mashin/143044221128/?ll=44.516979%2C48.707071&z=10"
@@ -61,9 +61,9 @@ const Header = () => {
 
           <div className="hidden md:block">
             <ContactItem
-              text={organizationInfo.phone.callNow.toShow}
+              text={organizationInfo.phone.aroundClock.toShow}
               icon={<FiPhoneCall size={24} />}
-              href={`tel:${organizationInfo.phone.callNow.toLink}`}
+              href={`tel:${organizationInfo.phone.aroundClock.toLink}`}
             />
           </div>
         </div>
