@@ -10,6 +10,7 @@ import React from "react";
 import ContactUsBtn from "../UI/ContactUsBtn";
 import Brands from "../call-to-action/Brands";
 import Breadcrumbs from "../UI/Breadcrumbs";
+import Information from "../components/Information";
 import { Helmet } from "react-helmet";
 
 const SingleSparePage = () => {
@@ -42,7 +43,7 @@ const SingleSparePage = () => {
             <title>{`ВЗГМ - ${tractor.name}`}</title>
             <meta
               name="description"
-              content={`купить запчасти ${tractor.name} для трактора ДТ-75 ХТЗ-150 Т-150`}
+              content={`купить ${tractor.name} для трактора ДТ-75 ХТЗ-150 Т-150 и другие запчасти`}
             />
             <link
               rel="canonical"
@@ -53,7 +54,11 @@ const SingleSparePage = () => {
         <Section styles="lg:my-8 xl:my-12">
           <Breadcrumbs />
           <div>
-            <SectionHeader headerText={tractor.name} styles="mt-6 lg:mt-8" />
+            <SectionHeader
+              type="h1"
+              headerText={tractor.name}
+              styles="mt-6 lg:mt-8"
+            />
             <div className="grid grid-cols-2 auto-rows-min md:grid-cols-[40%_35%_1fr] md:gap-x-6 md:gap-y-3">
               <img
                 src={tractor.img}
@@ -85,7 +90,7 @@ const SingleSparePage = () => {
                 })}
               </ul>
             </div>
-            <div className="flex overflow-scroll md:overflow-auto mt-6 lg:mt-8 justify-between">
+            {/* <div className="flex overflow-scroll md:overflow-auto mt-6 lg:mt-8 justify-between">
               <button
                 className={buttonClass(0)}
                 onClick={() => handleTabClick(0)}
@@ -113,8 +118,14 @@ const SingleSparePage = () => {
               >
                 Сфера применения
               </button>
+            </div> */}
+            <div className="mt-2 p-2">
+              <Information tab="fullDescription" tractor={tractor} />
+              <Information tab="characteristics" tractor={tractor} />
+              <Information tab="advantages" tractor={tractor} />
+              <Information tab="scope" tractor={tractor} />
             </div>
-            <div className="border border-color_accent_yellow p-2 mt-4 text-color_dark">
+            {/* <div className="border border-color_accent_yellow p-2 mt-4 text-color_dark">
               {activeTab === 0 && (
                 <div className="text-left">
                   {tractor.fullDescription.map((item) => {
@@ -173,7 +184,7 @@ const SingleSparePage = () => {
                   })}
                 </ul>
               )}
-            </div>
+            </div> */}
           </div>
         </Section>
         <div className="bg-color_light_gray">
