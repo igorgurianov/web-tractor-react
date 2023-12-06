@@ -40,7 +40,10 @@ const SingleSparePage = () => {
         <div>
           <Helmet>
             <title>{`ВЗГМ - ${tractor.name}`}</title>
-            <meta name="description" content={tractor.metaDescription} />
+            <meta
+              name="description"
+              content={`купить запчасти ${tractor.name} для трактора ДТ-75 ХТЗ-150 Т-150`}
+            />
             <link
               rel="canonical"
               href={`https://vzgm.ru/eqipment/${tractor.category}/${tractor.url}/`}
