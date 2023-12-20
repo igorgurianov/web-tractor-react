@@ -12,6 +12,7 @@ import React from "react";
 import { CLOSE_ADDITIONAL_INFO_POPUP } from "../services/actions/repairs";
 import { priceListRepair } from "../utils/const";
 import ContactUsBtn from "../UI/ContactUsBtn";
+import tickIconNoframe from "../assets/icons/tickNoFrame.svg";
 
 export default function RepairPopup() {
   const dispatch = useDispatch();
@@ -78,7 +79,7 @@ export default function RepairPopup() {
           </div>
 
           <div className="py-1 md:py-4 md:w-1/2">
-            <h3 className="">Цена</h3>
+            <h3 className="">Виды работ</h3>
             <table className="table-auto w-full ">
               <tbody className="">
                 {activeDetails.details.content.priceTable.map((row, index) => (
@@ -94,7 +95,11 @@ export default function RepairPopup() {
                       {row.column1}
                     </td>
                     <td className="text-s p-2 w-[70%] text-left md:text-base ">
-                      {row.column2}
+                      {/* {row.column2} */}
+                      <span
+                        className="block mx-auto w-6 h-6 bg-no-repeat bg-cover"
+                        style={{ backgroundImage: `url(${tickIconNoframe})` }}
+                      ></span>
                     </td>
                   </tr>
                 ))}

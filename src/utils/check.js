@@ -2,7 +2,7 @@ const sparesData = [
   {
     name: "Дизельный двигатель А-41",
     url: "engine-A41",
-    price: "540 000",
+    price: "480 000",
     img: engine,
     keySpecs: [
       {

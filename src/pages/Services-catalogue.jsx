@@ -174,18 +174,26 @@ const ServicesCatalogue = () => {
                     <td className="text-s p-2 w-[70%] text-left md:text-base ">
                       {row.description}
                     </td>
-                    <td className="text-s p-2 text-left md:text-base min-w-[100px]">
+                    {/* <td className="text-s p-2 text-left md:text-base min-w-[100px]">
                       {numberFormatConverter(row.price)}
-                    </td>
+                    </td> */}
                     <td className="text-s text-left md:text-base ">
-                      <input
+                      {/* <span
+                        className="block w-8 h-8 bg-no-repeat bg-cover"
+                        style={{ backgroundImage: `url(${tickIcon})` }}
+                      ></span> */}
+                      <span
+                        className="block w-6 h-6 bg-no-repeat bg-cover"
+                        style={{ backgroundImage: `url(${tickIconNoframe})` }}
+                      ></span>
+                      {/* <input
                         className="w-5 h-5 p-2 hover:cursor-pointer"
                         type="checkbox"
                         name=""
                         id={row.id}
                         defaultChecked
                         onChange={(e) => checkboxHandler(e)}
-                      />
+                      /> */}
                     </td>
                   </tr>
                 ))}
@@ -195,8 +203,8 @@ const ServicesCatalogue = () => {
               {/* TOTAL SECTION */}
               <div className="flex gap-4">
                 <div>
-                  <span className="font-bold text-xl md:text-3xl text-color_accent_green">
-                    {numberFormatConverter(total)}
+                  <span className="font-bold text-base md:text-3xl text-color_accent_green">
+                    {/* {numberFormatConverter(total)} */}1 600 000
                     <span className="text-sm md:text-xl">&#8381;</span>
                   </span>
                 </div>
@@ -204,12 +212,13 @@ const ServicesCatalogue = () => {
                   <div className="flex gap-4">
                     <div className="flex items-center bg-color_accent_red rounded-lg px-1">
                       <span className="text-color_white font-medium text-xs">
-                        - {numberFormatConverter(discount)} &#8381;
+                        {/* - {numberFormatConverter(discount)}  */}- 200 000
+                        &#8381;
                       </span>
                     </div>
                     <div className="flex justify-between mt-2">
-                      <span className="font-bold text-color_dark_gray line-through">
-                        {numberFormatConverter(subTotal)}
+                      <span className="font-bold text-base text-color_dark_gray line-through">
+                        {/* {numberFormatConverter(subTotal)} */}1 800 000
                       </span>
                     </div>
                   </div>
