@@ -67,9 +67,7 @@ const SingleSparePage = () => {
               />
               <div className="flex flex-col items-end md:row-span-2 md:col-start-3 md:justify-between">
                 <div className="flex items-center justify-end">
-                  <h2 className="text-color_accent_red">
-                    {tractor.price} &#x20bd;
-                  </h2>
+                  <h2 className="text-color_accent_red">{tractor.price}</h2>
                 </div>
                 <h5 className="font-normal tracking-normal text-right">
                   В кредит <br /> ОТ 12 000 &#x20bd;/МЕС.

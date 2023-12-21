@@ -20,7 +20,7 @@ const sparesData = [
     name: "Дизельный двигатель А-41",
     url: "engine-A41",
     category: "engine",
-    price: "540 000",
+    price: "480 000 руб.",
     img: engineA41,
     alt: "Дизельный двигатель А-41 для трактора",
     position: "regular",
@@ -140,7 +140,7 @@ const sparesData = [
   {
     name: "Дизельный двигатель ЯМЗ-238",
     url: "engine-YMZ-238",
-    price: "580 000",
+    price: "580 000 руб.",
     category: "engine",
     img: engineYMZ238,
     alt: "Дизельный двигатель ЯМЗ-238 для трактора",
@@ -239,7 +239,7 @@ const sparesData = [
     name: "Кабина",
     url: "cabin",
     category: "spare",
-    price: "230 000",
+    price: "по запросу",
     img: cabin,
     alt: "Кабина ДТ-75 для трактора",
     position: "regular",
@@ -332,7 +332,7 @@ const sparesData = [
   {
     name: "Коробка передач Т-150К",
     url: "gear-T-150K",
-    price: "500 000",
+    price: "280 000 руб.",
     category: "spare",
     img: gearbox,
     position: "span-2",
@@ -405,7 +405,7 @@ const sparesData = [
   {
     name: "Реверс редуктор",
     url: "revers",
-    price: "75 000",
+    price: "75 000 руб.",
     category: "spare",
     img: reverseReductor,
     alt: "Реверс редуктор для трактора",
@@ -472,7 +472,7 @@ const sparesData = [
   {
     name: "Трансмиссия на ДТ 75",
     url: "transmision",
-    price: "230 000",
+    price: "160 000 руб.",
     category: "spare",
     img: transmision,
     alt: "Трансмиссия ДТ 75 для трактора",
@@ -536,7 +536,7 @@ const sparesData = [
   {
     name: "Прямой отвал БНДТ-10",
     url: "otval-direct",
-    price: "245 000",
+    price: "245 000 руб.",
     category: "blade",
     img: otval1,
     alt: "Отвал прямой для трактора",
@@ -604,7 +604,7 @@ const sparesData = [
   {
     name: "Прямой отвал БНДТ-20",
     url: "otval-BNDT-20",
-    price: "245 000",
+    price: "245 000 руб.",
     category: "blade",
     img: otval2,
     alt: "Отвал прямой для трактора",
@@ -672,7 +672,7 @@ const sparesData = [
   {
     name: "Поворотный отвал БПДТ",
     url: "otval-povorotniy-BPDT",
-    price: "245 000",
+    price: "245 000 руб.",
     category: "blade",
     img: otvalPovorot,
     alt: "Отвал прямой для трактора",
@@ -740,7 +740,7 @@ const sparesData = [
   {
     name: "Универсальный отвал БУДТ",
     url: "otval-universla-BUDT",
-    price: "245 000",
+    price: "245 000 руб.",
     category: "blade",
     img: otvalUniversal,
     alt: "Отвал прямой для трактора",
