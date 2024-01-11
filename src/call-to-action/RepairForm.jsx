@@ -32,33 +32,39 @@ const RepairForm = () => {
 
   //   }, [recaptchaRef]);
 
+  // const submitHandler = (e) => {
+  //   e.preventDefault();
+
+  //   window.ym(94606235, "reachGoal", "lead");
+  //   dispatch(sendForm(values, value));
+
+  //   recaptchaRef.current.executeAsync().then((res) => {
+  //     dispatch(sendRepairForm(values, res));
+  //   });
+
+  //   console.log(token);
+
+  //   if (!captchaValue) {
+  //     alert("Please complete the reCAPTCHA.");
+  //     return;
+  //   }
+  //   dispatch(sendRepairForm(values, captchaValue));
+  //     window.ym(94606235, "reachGoal", "lead");
+  //   recaptchaRef.current.execute();
+  // };
+
   const submitHandler = (e) => {
     e.preventDefault();
-
-    recaptchaRef.current.executeAsync().then((res) => {
-      dispatch(sendRepairForm(values, res));
-    });
-
-    // console.log(token);
-
-    // if (!captchaValue) {
-    //   alert("Please complete the reCAPTCHA.");
-    //   return;
-    // }
-    //dispatch(sendRepairForm(values, captchaValue));
-    //   window.ym(94606235, "reachGoal", "lead");
-    //recaptchaRef.current.execute();
+    recaptchaRef.current.execute();
   };
 
   const handleReCaptchaChange = (value) => {
-    // if (value === "") {
-    //   console.log("Вы не прошли капчу");
-    // } else {
-
-    //   //   window.ym(94606235, "reachGoal", "lead");
-    //   //   dispatch(sendForm(values, value));
-    // }
-    setCaptchaValue(value);
+    if (value === "") {
+      console.log("Вы не прошли капчу");
+    } else {
+      window.ym(94606235, "reachGoal", "lead");
+      dispatch(sendRepairForm(values, value));
+    }
   };
 
   const cursor = repairFormPending ? "cursor-wait" : "cursor-auto";
@@ -117,6 +123,8 @@ const RepairForm = () => {
               submitHandler(e);
             }}
           >
+            {/* 
+            капча через бэкенд
             <ReCAPTCHA
               style={{ display: "inline-block" }}
               ref={recaptchaRef}
@@ -124,6 +132,14 @@ const RepairForm = () => {
               sitekey="6Ldhs9goAAAAAFfjVwDW0dUrqC2frWNHZk3D9mDs"
               //   onChange={handleReCaptchaChange}
               //   data-action="submit"
+            /> */}
+
+            <ReCAPTCHA
+              style={{ display: "inline-block" }}
+              ref={recaptchaRef}
+              size="invisible"
+              sitekey="6LcOIc8oAAAAAKq31Zp9lOjnJ5hIj7RuR4aAnuGz"
+              onChange={handleReCaptchaChange}
             />
             <input
               className="bg-color_white bg-opacity-70 mt-3 py-2 pl-7 placeholder:text-color_placeholder"

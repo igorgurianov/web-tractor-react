@@ -92,12 +92,27 @@ const HomePage = () => {
               return (
                 <div className="h-full" key={index}>
                   <Link to={item.to}>
-                    <Card
-                      img={item.img}
-                      alt={item.alt}
-                      caption={item.caption}
-                      captionStyle="p-2 pl-4"
-                    />
+                    <figure
+                      className={`relative w-full h-full hover:cursor-pointer
+                      `}
+                    >
+                      <img
+                        src={item.img}
+                        alt={item.alt}
+                        className={`w-full h-full object-cover object-center`}
+                      />
+                      <div
+                        className={`absolute bottom-0  w-full h-full duration-300 ease-in-out z-0 `}
+                      ></div>
+                      <figcaption
+                        className={`p-2 pl-4 absolute bottom-0 uppercase font-bold tracking-wider text-xs  bg-color_xl_dark_gray bg-opacity-[45%]
+                         lg:text-xl xl:text-3xl w-full text-left text-color_white `}
+                      >
+                        {item.caption}
+                      </figcaption>
+                      {/* <div className=" w-10 h-10"></div> */}
+                    </figure>
+
                     <p className="text-left mt-4 mb-6">{item.text}</p>
                   </Link>
                 </div>

@@ -1,6 +1,6 @@
 import { Children, useState } from "react";
 
-const FooterFrame = ({ icon, text, href }) => {
+const FooterFrame = ({ icon, text, href, textBottom }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
@@ -19,6 +19,8 @@ const FooterFrame = ({ icon, text, href }) => {
     >
       {icon}
       {text}
+      <br />
+      {textBottom}
     </a>
   );
 };
