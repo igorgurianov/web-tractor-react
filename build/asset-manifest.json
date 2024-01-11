@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a8b2130f.css",
-    "main.js": "/static/js/main.75199186.js",
+    "main.css": "/static/css/main.b3bc8dfb.css",
+    "main.js": "/static/js/main.e18c13c5.js",
     "static/media/form-bg-md.png": "/static/media/form-bg-md.7d2909256250704f69a7.png",
     "static/media/VZGM-90-2.png": "/static/media/VZGM-90-2.aba3ccb0be16dbfb7fde.png",
     "static/media/VZGM-90-1.png": "/static/media/VZGM-90-1.2f72023c60c861f4b64b.png",
@@ -116,6 +116,7 @@
     "static/media/Universal-otval.webp": "/static/media/Universal-otval.fa79d35051f4738982fe.webp",
     "static/media/agreement.svg": "/static/media/agreement.157ce46514ad54e4d4ec07c16b059e3d.svg",
     "static/media/asNew.svg": "/static/media/asNew.247115b4ea5c02bdb77b4530f24c0a85.svg",
+    "static/media/tractorIcon.svg": "/static/media/tractorIcon.231534b1cc9e5b3ad415159a5cd1f593.svg",
     "static/media/chassiss.svg": "/static/media/chassiss.0619c81c6a67a4e5ee41668840f00fa4.svg",
     "static/media/running-in.svg": "/static/media/running-in.de8f7d262db6f0265e8ceb088c41220f.svg",
     "static/media/repair.svg": "/static/media/repair.e9194790055577019a60c0a69b9d0a3e.svg",
@@ -146,11 +147,11 @@
     "static/media/info-svgrepo-com.svg": "/static/media/info-svgrepo-com.e54d768c242dc87d75ddb24f23683e91.svg",
     "static/media/top-arrow-5-svgrepo-com.svg": "/static/media/top-arrow-5-svgrepo-com.99f248f8e71b053fbf0c86c19356cbda.svg",
     "static/media/breadCrumb.svg": "/static/media/breadCrumb.afa1dbafeb536be9f7c083f3b4f29ca8.svg",
-    "main.a8b2130f.css.map": "/static/css/main.a8b2130f.css.map",
-    "main.75199186.js.map": "/static/js/main.75199186.js.map"
+    "main.b3bc8dfb.css.map": "/static/css/main.b3bc8dfb.css.map",
+    "main.e18c13c5.js.map": "/static/js/main.e18c13c5.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8b2130f.css",
-    "static/js/main.75199186.js"
+    "static/css/main.b3bc8dfb.css",
+    "static/js/main.e18c13c5.js"
   ]
 }

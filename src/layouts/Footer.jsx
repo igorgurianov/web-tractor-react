@@ -8,6 +8,7 @@ import FooterFrame from "../components/FooterFrame";
 import { organizationInfo } from "../utils/const";
 import ContactItem from "../UI/ContactItem";
 import Logo from "../components/Logo";
+import tractorLogo from "../assets/icons/tractorIcon.svg";
 
 const Footer = () => {
   const defaultStyle = "text-color_white text-base";
@@ -23,7 +24,8 @@ const Footer = () => {
           <ul className="flex gap-2 md:gap-0 md:px-6 py-3 px-2 mx-auto md:max-w-[1200px] md:py-5 flex-col md:flex-row justify-between items-center">
             <li className="">
               <FooterFrame
-                text={organizationInfo.address}
+                text={organizationInfo.address.textTop}
+                textBottom={organizationInfo.address.textBottom}
                 href="#"
                 icon={<FiMapPin className="w-6 h-6 " />}
               />
@@ -47,7 +49,14 @@ const Footer = () => {
         <div className="bg-[#2D2D2D]">
           <div className="flex justify-between mx-auto md:max-w-[1200px] px-14 md:px-6 py-4 md:py-7 lg:py-9 section-container">
             <div className="flex w-full justify-between items-center md:w-auto md:flex-col md:justify-normal md:items-start">
-              <Logo styles=" w-[156px] h-[46px] md:w-[190px] md:h-[56px] lg:w-[263px] lg:h-[78px] " />
+              <div className="flex flex-col">
+                <Logo styles=" w-[156px] h-[46px] md:w-[190px] md:h-[56px] lg:w-[263px] lg:h-[78px] " />
+                <div
+                  className="w-[80px] h-[80px] bg-no-repeat"
+                  style={{ backgroundImage: `url(${tractorLogo})` }}
+                ></div>
+              </div>
+
               <div className="flex gap-5 md:gap-7 md:mt-4">
                 <WhatsAppIcon size="41" />
                 <TelegramIcon size="41" />
@@ -169,11 +178,21 @@ const Footer = () => {
                   </li>
                   <li className="text-left py-2 pt-5 max-w-[221px]">
                     <ContactItem
-                      text={organizationInfo.address2}
+                      text={organizationInfo.address.textTop}
+                      textBottom={organizationInfo.address.textBottom}
                       icon={<FiMapPin size={34} />}
                       href="https://yandex.ru/maps/org/volgogradskiy_zavod_gusenichnykh_mashin/143044221128/?from=mapframe&ll=44.516979%2C48.707071&z=10"
                     />
                   </li>
+                  <li className="text-left py-2 pt-5 max-w-[221px]">
+                    <ContactItem
+                      text={organizationInfo.address2.textTop}
+                      textBottom={organizationInfo.address2.textBottom}
+                      icon={<FiMapPin size={34} />}
+                      href="https://yandex.ru/maps/org/volgogradskiy_zavod_gusenichnykh_mashin/143044221128/?from=mapframe&ll=44.516979%2C48.707071&z=10"
+                    />
+                  </li>
+
                   {/* <li className="text-left py-2 pt-1 max-w-[221px]">
                     <ContactItem
                       text={organizationInfo.address2}

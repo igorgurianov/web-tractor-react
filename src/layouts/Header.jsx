@@ -9,6 +9,7 @@ import ContactUsBtn from "../UI/ContactUsBtn";
 import ContactItem from "../UI/ContactItem";
 import { organizationInfo } from "../utils/const";
 import Logo from "../components/Logo";
+import tractorLogo from "../assets/icons/tractorIcon.svg";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -38,39 +39,59 @@ const Header = () => {
           <div className="md:hidden">
             <Logo />
           </div>
-          <div className="hidden md:block max-w-[400px]">
+          <div className="hidden md:block max-w-[350px]">
             <ContactItem
-              text={organizationInfo.address2}
+              text={organizationInfo.address2.textTop}
+              textBottom={organizationInfo.address2.textBottom}
               icon={<FiMapPin size={24} />}
               // Заменить адрес на карточку бизнеса я Яндекс картах
               href="https://yandex.ru/maps/org/volgogradskiy_zavod_gusenichnykh_mashin/143044221128/?ll=44.516979%2C48.707071&z=10"
             />
           </div>
+          <div className="hidden md:block max-w-[300px]">
+            <ContactItem
+              text={organizationInfo.address.textTop}
+              textBottom={organizationInfo.address.textBottom}
+              icon={<FiMapPin size={24} />}
+              // Заменить адрес на карточку бизнеса я Яндекс картах
+              href="https://yandex.ru/maps/org/volgogradskiy_zavod_gusenichnykh_mashin/143044221128/?ll=44.516979%2C48.707071&z=10"
+            />
+          </div>
+
           <div className="hidden md:block">
             <ContactItem
-              text={organizationInfo.hours}
+              text={organizationInfo.hours.textTop}
+              textBottom={organizationInfo.hours.textBottom}
               icon={<BiTimeFive size={24} />}
               // Заменить адрес на карточку бизнеса я Яндекс картах
               href={"/"}
             />
           </div>
-          <div className="flex gap-4">
-            <TelegramIcon size="24" />
-            <WhatsAppIcon size="24" />
-          </div>
+          <div className="flex flex-col ">
+            <div className="flex gap-4 ">
+              <TelegramIcon size="24" />
+              <WhatsAppIcon size="24" />
+            </div>
 
-          <div className="hidden md:block">
-            <ContactItem
-              text={organizationInfo.phone.aroundClock.toShow}
-              icon={<FiPhoneCall size={24} />}
-              href={`tel:${organizationInfo.phone.aroundClock.toLink}`}
-            />
+            <div className="hidden md:block mt-1">
+              <ContactItem
+                text={organizationInfo.phone.aroundClock.toShow}
+                icon={<FiPhoneCall size={24} />}
+                href={`tel:${organizationInfo.phone.aroundClock.toLink}`}
+              />
+            </div>
           </div>
         </div>
       </div>
 
       <nav className="hidden w-full max-w-[1200px] md:justify-between mx-auto py-6 md:flex md:items-center md:py-2 md:px-6 lg:py-5">
-        <Logo />
+        <div className="flex items-center">
+          <Logo />
+          <div
+            className="w-[50px] h-[50px] bg-contain bg-no-repeat hidden md:block"
+            style={{ backgroundImage: `url(${tractorLogo})` }}
+          ></div>
+        </div>
 
         <ul className="md:flex justify-between items-center">
           <li>

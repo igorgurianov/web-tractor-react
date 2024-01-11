@@ -1,4 +1,5 @@
 import { sendEmailToBackend } from "../../utils/email";
+import { sendEmail } from "../../utils/email";
 export const ADD_REPAIR_SERVICE = "ADD_REPAIR_SERVICE";
 export const REMOVE_REPAIR_SERVICES = "REMOVE_REPAIR_SERVICES";
 
@@ -15,7 +16,7 @@ export const SEND_REPAIR_FORM_FAILED = "SEND_REPAIR_FORM_FAILED";
 export function sendRepairForm(values, token) {
   return function (dispatch) {
     dispatch({ type: SEND_REPAIR_FORM_PENDING });
-    sendEmailToBackend(values, token)
+    sendEmail(values, token)
       .then(() => {
         dispatch({ type: SEND_REPAIR_FORM_SUCCESS });
       })
