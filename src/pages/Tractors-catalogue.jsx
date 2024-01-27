@@ -112,7 +112,7 @@ const TractorsCataloguePage = () => {
             </div>
           </div>
         </Section>
-        <Discount />
+        {/* <Discount /> */}
       </div>
     );
   }
