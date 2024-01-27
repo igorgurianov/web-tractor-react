@@ -83,26 +83,14 @@ const ContactUsForm = () => {
           <h3 className="uppercase text-lg md:text-3xl mt-8 md:mt-5">
             Оставьте заявку и мы перезвоним
           </h3>
-          <div className="mt-4 text-left">
+          {/* <div className="mt-4 text-left">
             <span className="m-0">
               Акция только до
               <strong className="text-color_accent_red"> 25.01.2024 </strong>
             </span>
             <span className="m-0">выберите свой бонус в подарок:</span>
-          </div>
-          <div className="flex flex-col items-start justify-between py-1 md:py-4">
-            {/* <div className="h-40 w-40 p-2 border bg-color_middle_gray hover:bg-color_accent_green cursor-pointer">
-              <img src={icon} className="h-1/2 w-1/2 mx-auto" />
-              <span>Бесплатная доставка в пределах 500км</span>
-            </div>
-            <div className="h-40 w-40 p-2 border bg-color_middle_gray hover:bg-color_accent_green cursor-pointer">
-              <img src={icon} className="h-1/2 w-1/2 mx-auto" />
-              <span>Комплектующие для ТО-1</span>
-            </div>
-            <div className="h-40 w-40 p-2 border bg-color_middle_gray hover:bg-color_accent_green cursor-pointer">
-              <img src={icon} className="h-1/2 w-1/2 mx-auto" />
-              <span>Бесплатная доставка в пределах 500км</span>
-            </div> */}
+          </div> */}
+          {/* <div className="flex flex-col items-start justify-between py-1 md:py-4">
             <div className="py-1">
               <input type="radio" name="discount" id="option_2" />
               <label className="ml-2 cursor-pointer" htmlFor="option_2">
@@ -123,7 +111,7 @@ const ContactUsForm = () => {
                 Скидка 2%
               </label>
             </div>
-          </div>
+          </div> */}
 
           <form
             action=""
@@ -140,7 +128,7 @@ const ContactUsForm = () => {
               onChange={handleReCaptchaChange}
             />
             <input
-              className="bg-color_white bg-opacity-70 py-2 pl-7 placeholder:text-color_placeholder"
+              className="bg-color_white bg-opacity-70 py-2 pl-7 placeholder:text-color_placeholder border border-color_accent_yellow"
               required
               maxLength={20}
               disabled={isSending}
@@ -149,10 +137,10 @@ const ContactUsForm = () => {
               type="text"
               name="name"
               id=""
-              placeholder="Ваше имя"
+              placeholder="Введите имя"
             />
             <input
-              className="bg-color_white bg-opacity-70 py-2 pl-7 placeholder:text-color_placeholder"
+              className="bg-color_white bg-opacity-70 py-2 pl-7 placeholder:text-color_placeholder border border-color_accent_yellow"
               required
               maxLength={20}
               disabled={isSending}
@@ -161,7 +149,7 @@ const ContactUsForm = () => {
               type="tel"
               name="phone"
               id=""
-              placeholder="Ваш телефон"
+              placeholder="Введите телефон"
             />
             {/* <input type="email" name="" id="" placeholder="Ваш e-mail" /> */}
             <input

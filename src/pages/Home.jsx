@@ -51,7 +51,7 @@ const HomePage = () => {
           <OurTractor data={tractorData[1]} className="VZGM-150-home" />
         </div>
       </Section>
-      <Discount />
+      {/* <Discount /> */}
       <div className="">
         <Section styles="py-0 md:py-2 lg:py-8">
           <SectionHeader
