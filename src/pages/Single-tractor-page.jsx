@@ -33,8 +33,9 @@ const SingleTractorPage = () => {
     const tractor = tractors.find((singleTractor) => singleTractor.url === id);
     setTractor(tractor);
     //console.log(`${tractor.pageTitle} ${tractor.pageDescription}`);
+    console.log(tractor);
   }, [tractor, id]);
-
+  console.log(tractor);
   return (
     <div>
       {tractor && tractors && (
@@ -164,19 +165,47 @@ const SingleTractorPage = () => {
             {/* <Accordion faqList={tractorFaqList} /> */}
             {/* <OurSpareParts /> */}
             <div className="bg-color_light_gray">
-              <Section styles="py-10 md:py-14 lg:py-20">
-                <SectionHeader headerText="Посмотрите на наши трактора в деле" />
-                <iframe
-                  width="100%"
-                  height="100%"
-                  className="w-[300px] h-[200px] md:w-[560px] md:h-[315px]"
-                  src="https://www.youtube.com/embed/6qe5K5Oi04M?si=fSIJUTh-ohZxr9RR"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  style={{ margin: "0 auto 0 auto" }}
-                ></iframe>
+              <Section styles="py-10 md:py-14 ">
+                <SectionHeader headerText="Посмотрите наши трактора в деле" />
+                {tractor.type === "dt-75" && (
+                  <div className="flex flex-col md:flex-row gap-10">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      className="w-[300px] h-[200px] md:w-[560px] md:h-[315px]"
+                      src="https://www.youtube.com/embed/K9ObIh_13AY?si=1VjErRyp7IrKlcgi"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      style={{ margin: "0 auto 0 auto" }}
+                    ></iframe>
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      className="w-[300px] h-[200px] md:w-[560px] md:h-[315px]"
+                      src="https://www.youtube.com/embed/D89RaF-neIY?si=t3-gL4C4Rc-bOsPA"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      style={{ margin: "0 auto 0 auto" }}
+                    ></iframe>
+                  </div>
+                )}
+                {tractor.type === "t-150" && (
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    className="w-[300px] h-[200px] md:w-[560px] md:h-[315px]"
+                    src="https://www.youtube.com/embed/6qe5K5Oi04M?si=fSIJUTh-ohZxr9RR"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    style={{ margin: "0 auto 0 auto" }}
+                  ></iframe>
+                )}
               </Section>
             </div>
           </div>

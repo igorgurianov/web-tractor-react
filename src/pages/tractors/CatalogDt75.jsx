@@ -143,7 +143,7 @@ function CatalogDt75() {
         </Section>
 
         <div className="bg-color_light_gray">
-          <Section styles="py-10 md:py-14 lg:py-20">
+          <Section styles="py-10 md:py-10">
             <div className="flex flex-col md:flex-row justify-center gap-10">
               <div>
                 <p>Не нашли подходящий? Свяжитесь с нами!</p>
