@@ -1,7 +1,7 @@
 import React from "react";
-// import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-// SwiperCore.use([Navigation]);
+import { openLicencePopup } from "../services/actions/license";
+import { useDispatch } from "react-redux";
 
 const BaseSwiper = ({
   slides,
@@ -9,7 +9,14 @@ const BaseSwiper = ({
   slidesPerViewSmallScreen = "1",
   slidesPerViewMdScreen = "3",
   slideHeigth,
+  isClickable = false,
 }) => {
+  const dispatch = useDispatch();
+
+  const clickHandler = (content) => {
+    dispatch(openLicencePopup(content));
+  };
+
   return (
     <div className="relative mt-10 md:mt-0">
       <Swiper
@@ -33,7 +40,14 @@ const BaseSwiper = ({
         preventClicksPropagation={true}
       >
         {slides.map((slide, index) => (
-          <SwiperSlide className="swiper-slide" key={index}>
+          <SwiperSlide
+            //className=" "
+            className={`${
+              isClickable ? "hover:cursor-pointer hover:shadow-lg" : ""
+            } swiper-slide`}
+            key={index}
+            onClick={isClickable ? () => clickHandler(slide.imgLg) : null}
+          >
             <div
               className="h-full w-full"
               style={

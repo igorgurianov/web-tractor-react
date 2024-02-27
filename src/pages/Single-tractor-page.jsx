@@ -15,6 +15,11 @@ import Tab from "../UI/Tab";
 import RecommendedItems from "../components/RecommendedItems";
 import Accordion from "../components/Accordion";
 import { tractorFaqList } from "../utils/faqList";
+import ProductSwiper from "../vendor/ProductSwiper";
+import tickIcon from "../assets/icons/tick.svg";
+import oneIcon from "../assets/icons/number-circle/one.svg";
+import SectionHeader from "../components/SectionHeader";
+import OrderSteps from "../components/OrderSteps";
 
 const SingleTractorPage = () => {
   const tractors = useSelector((store) => store.content.content);
@@ -27,96 +32,113 @@ const SingleTractorPage = () => {
   useEffect(() => {
     const tractor = tractors.find((singleTractor) => singleTractor.url === id);
     setTractor(tractor);
+    //console.log(`${tractor.pageTitle} ${tractor.pageDescription}`);
   }, [tractor, id]);
 
   return (
     <div>
       {tractor && tractors && (
         <div>
-          <div>
-            {tractor.url === "DT-75" && (
-              <Helmet>
-                <title>
-                  Купить бульдозер ДТ-75 без навесного оборудования - ВЗГМ
-                </title>
-                <meta
-                  name="description"
-                  content="Трактор ДТ-75 без навесного оборудования предназначен для широкого спектра сельхоз работ. Может быть представлен в модификации болотник, торфяник с болотоходными гусеницами."
-                />
-              </Helmet>
-            )}
-            {tractor.url === "XTZ-150" && (
-              <Helmet>
-                <title>ВЗГМ - Купить гусеничный трактор ХТЗ 150</title>
-                <meta
-                  name="description"
-                  content="Купить ХТХ 150 дешево от производителя с гарантией и доставкой. Цена трактора ХТЗ 150 - 5 800 000 руб. ВЗГМ 150 - усовершенствованная модель легендарного трактора ХТЗ 150."
-                />
-              </Helmet>
-            )}
-            {tractor.url === "DT-75-s-otvalom" && (
-              <Helmet>
-                <title>
-                  Купить бульдозер ДТ-75 с неповоротным отвалом - ВЗГМ
-                </title>
-                <meta
-                  name="description"
-                  content="Продажа трактора, бульдозера ДТ-75 с неповоротным отвалом. Комплектуется разными двигателями мощностью до 100 л.с. Погрузка, доставка."
-                />
-              </Helmet>
-            )}
-            {tractor.url === "DT-75-s-navesnym" && (
-              <Helmet>
-                <title>
-                  Купить бульдозер ДТ-75 с навесным оборудованием - ВЗГМ
-                </title>
-                <meta
-                  name="description"
-                  content="Продажа трактора ДТ-75 с оборудованием. Простой и доступный ДТ-75 для сельскохозяйственных работ с доставкой в РФ и СНГ."
-                />
-              </Helmet>
-            )}
-          </div>
+          <Helmet
+            title={tractor.pageTitle}
+            meta={[
+              {
+                name: "description",
+                content: `${tractor.pageDescription}`,
+              },
+            ]}
+            //pageDescription={tractor.pageDescription}
+          />
           <div>
             <Section styles="md:my-6 lg:my-8 xl:my-12">
               <Breadcrumbs />
-              <div className="mt-6 lg:mt-8 grid grid-cols-2 md:grid-cols-4 md:gap-6 auto-rows-min">
-                <div className="col-span-2 md:col-start-3">
-                  <h1 className="text-left text-xl xl:text-3xl">
-                    {tractor.name}
+
+              <div className="mt-6 lg:mt-8 grid md:grid-rows-none md:grid-cols-[50%_50%] min-w-0 md:gap-6">
+                <div className="flex flex-col min-w-0">
+                  <h1 className="mt-10 md:mt-0 text-left text-2xl xl:text-3xl">
+                    Купить новый {tractor.name}
                   </h1>
+                  <ul className="mt-8 md:pl-10">
+                    <li className="flex gap-2">
+                      <div
+                        style={{ backgroundImage: `url(${tickIcon})` }}
+                        className="h-8 w-8"
+                      />
+                      <p className=" max-w-[80%]">
+                        Сертифицированный производитель
+                      </p>
+                    </li>
+                    <li className="flex gap-2 mt-3">
+                      <div
+                        style={{ backgroundImage: `url(${tickIcon})` }}
+                        className="h-8 w-8"
+                      />
+                      <p className=" max-w-[80%]">Гарантия 1 год</p>
+                    </li>
+                    <li className="flex gap-2 mt-3">
+                      <div
+                        style={{ backgroundImage: `url(${tickIcon})` }}
+                        className="h-8 w-8 bg-no-repeat bg-cover"
+                      />
+                      <p className=" max-w-[80%]">
+                        Срок эксплуатации от 10 лет
+                      </p>
+                    </li>
+                    <li className="flex gap-2 mt-3">
+                      <div
+                        style={{ backgroundImage: `url(${tickIcon})` }}
+                        className="h-8 w-8 bg-no-repeat bg-cover"
+                      />
+                      <p className=" max-w-[80%]">
+                        Консультации по ТО и ремонту в течение всего срока
+                        эксплуатации
+                      </p>
+                    </li>
+                    <li className="flex gap-2 mt-3">
+                      <div
+                        style={{ backgroundImage: `url(${tickIcon})` }}
+                        className="h-8 w-8"
+                      />
+                      <p className=" max-w-[80%]">
+                        Доставка в любой регион от 0 руб.
+                      </p>
+                    </li>
+                  </ul>
+
+                  <span className="text-color_accent_red text-center text-lg font-semibold mt-8">
+                    цена {tractor.price} руб.
+                  </span>
+                  <div></div>
+                  <ContactUsBtn
+                    text="КУПИТЬ"
+                    style="w-full md:max-w-[300px] mx-auto hover:bg-color_dark hover:text-color_white md:px-20 md:py-2 mt-8"
+                  />
                 </div>
 
-                <div className="col-span-2 md:order-[-1] md:mt-0 md:row-span-3 ">
-                  <TractorSlider data={tractor} className={tractor.url} />
+                <div className="order-[-1] md:mt-0 min-w-0">
+                  <ProductSwiper data={tractor} />
                 </div>
-                <ul className="flex mt-5 md:mt-0 gap-6 md:gap-2 flex-col md:order-0 md:justify-between lg:flex-row lg:row-start-3 lg:col-start-3 lg:col-span-2 lg:mt-0 lg:items-center">
+                {/* <ul className="flex mt-5 md:mt-0 gap-6 md:gap-2 flex-col md:order-0 md:justify-between lg:flex-row lg:row-start-3 lg:col-start-3 lg:col-span-2 lg:mt-0 lg:items-center">
                   {tractor.promo.map((promoItem, index) => {
                     return <PromoTag data={promoItem} key={index} />;
                   })}
-                </ul>
-                <div className="mt-5 flex gap-2 items-end flex-col justify-between md:mt-0">
+                </ul> */}
+                {/* <div className="mt-5 flex gap-2 flex-col justify-between md:mt-0 md:cols-start-[2]">
                   <div className="flex flex-col justify-end">
                     <p className="text-sm text-color_dark_gray text-right">
                       Базовая комплектация:
                     </p>
-                    <h2 className="text-color_accent_red text-right">
-                      {tractor.price} &#x20bd;
-                    </h2>
+                    
                   </div>
                   <h5 className="font-normal tracking-normal text-right">
                     В кредит <br /> ОТ 12 000 &#x20bd;/МЕС.
                   </h5>
-                  <ContactUsBtn
-                    text="КУПИТЬ"
-                    style="w-full hover:bg-color_dark hover:text-color_white md:px-20 md:py-2"
-                  />
-                </div>
-                <ul className=" mt-6 md:mt-0 flex gap-2 col-span-2 flex-wrap lg:col-start-3 lg:col-span-1 lg:row-start-2 md:content-start">
+                </div> */}
+                {/* <ul className=" mt-6 md:mt-0 flex gap-2 col-span-2 flex-wrap lg:col-start-3 lg:col-span-1 lg:row-start-2 md:content-start">
                   {tractor.keySpecs.map((spec, index) => {
                     return <SpecTag data={spec} key={index} />;
                   })}
-                </ul>
+                </ul> */}
               </div>
               {/* <div className="flex overflow-scroll md:overflow-auto mt-6 md:mt-12 justify-between">
                 <Tab to={`/tractors/${id}/description`} text="Описание" />
@@ -130,14 +152,33 @@ const SingleTractorPage = () => {
               <div className="mt-2 p-2">
                 <Information tab="description" tractor={tractor} />
                 <Information tab="characteristics" tractor={tractor} />
-                <Information tab="modifications" tractor={tractor} />
-                <Information tab="leasing" tractor={tractor} />
+                {/* <Information tab="modifications" tractor={tractor} /> */}
+                {/* <Information tab="leasing" tractor={tractor} /> */}
               </div>
             </Section>
-            <CallBackForm />
+            {/* <CallBackForm /> */}
+            <div className="bg-color_light_gray">
+              <OrderSteps />
+            </div>
             <RecommendedItems />
             {/* <Accordion faqList={tractorFaqList} /> */}
-            <OurSpareParts />
+            {/* <OurSpareParts /> */}
+            <div className="bg-color_light_gray">
+              <Section styles="py-10 md:py-14 lg:py-20">
+                <SectionHeader headerText="Посмотрите на наши трактора в деле" />
+                <iframe
+                  width="100%"
+                  height="100%"
+                  className="w-[300px] h-[200px] md:w-[560px] md:h-[315px]"
+                  src="https://www.youtube.com/embed/6qe5K5Oi04M?si=fSIJUTh-ohZxr9RR"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  style={{ margin: "0 auto 0 auto" }}
+                ></iframe>
+              </Section>
+            </div>
           </div>
         </div>
       )}

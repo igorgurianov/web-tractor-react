@@ -6,7 +6,7 @@ function Information({ tab, tractor }) {
       {tab === "description" && (
         <div className="text-left ">
           <h2 className="text-lg my-3 border-b-2 border-color_accent_yellow">
-            описание {tractor.shortName}
+            Устройство {tractor.shortName}
           </h2>
           {tractor.description.map((item, index) => {
             if (item.type === "paragraph") {
@@ -32,11 +32,13 @@ function Information({ tab, tractor }) {
             } else if (item.type === "table") {
               return (
                 <table className="table-auto w-full my-3">
-                  <tr>
-                    <th>Марка двигателя</th>
-                    <th>Мощность, л.с.</th>
-                    <th>Производитель</th>
-                  </tr>
+                  <thead>
+                    <tr>
+                      <th>Марка двигателя</th>
+                      <th>Мощность, л.с.</th>
+                      <th>Производитель</th>
+                    </tr>
+                  </thead>
                   <tbody className="">
                     {item.content.map((row, index) => (
                       <tr
@@ -95,11 +97,13 @@ function Information({ tab, tractor }) {
             } else if (item.type === "table") {
               return (
                 <table className="table-auto w-full my-3">
-                  <tr>
-                    <th>Марка двигателя</th>
-                    <th>Мощность, л.с.</th>
-                    <th>Производитель</th>
-                  </tr>
+                  <thead>
+                    <tr>
+                      <th>Марка двигателя</th>
+                      <th>Мощность, л.с.</th>
+                      <th>Производитель</th>
+                    </tr>
+                  </thead>
                   <tbody className="">
                     {item.content.map((row, index) => (
                       <tr
@@ -219,7 +223,7 @@ function Information({ tab, tractor }) {
       {tab === "characteristics" && (
         <div className="mt-8">
           <h2 className="text-lg my-3 border-b-2 border-color_accent_yellow">
-            Характеристики {tractor.shortName}
+            Технические Характеристики {tractor.shortName}
           </h2>
           <div className="md:columns-2">
             <table className="table-auto w-full ">

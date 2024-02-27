@@ -16,7 +16,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <div>
+      <div className="hidden md:block">
         <LocationMaps />
       </div>
       <div className="">
@@ -81,7 +81,7 @@ const Footer = () => {
                     </li>
                     <li className="text-left my-1">
                       <CustomLink
-                        to="/tractors"
+                        to="/tractors/"
                         defaultStyle={defaultStyle}
                         activeStyle={activeStyle}
                       >

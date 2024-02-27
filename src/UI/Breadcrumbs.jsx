@@ -25,9 +25,11 @@ const breadCrumbsTranslate = [
   { en: "modifications", ru: "Модификации" },
   { en: "characteristics", ru: "Характеристики" },
   { en: "DT-75-s-navesnym", ru: "ДТ-75" },
-  { en: "XTZ-150-s-navesnym", ru: "ХТЗ-150 с навесным" },
+  { en: "XTZ-150-s-navesnym", ru: "ХТЗ-150" },
   { en: "XTZ-150-s-otvalom", ru: "ХТЗ-150 с отвалом" },
   { en: "DT-75-s-otvalom", ru: "ДТ-75 с отвалом" },
+  { en: "catalog-htz-t150", ru: "Каталог Т-150" },
+  { en: "catalog-dt-75", ru: "Каталог ДТ-75" },
   {},
 ];
 
@@ -53,23 +55,27 @@ const Breadcrumbs = () => {
   });
 
   return (
-    <div className="flex text-color_dark_gray gap-2 lg:gap-3 items-center">
-      <div
-        className="h-4 w-4 lg:h-6 lg:w-6 bg-no-repeat bg-cover"
-        style={{
-          background: `url(${homeIcon})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      ></div>
-      <Link to="/" className=" hover:text-color_dark text-xs md:text-base">
-        Главная
+    <div className="flex text-color_dark_gray gap-1 md:gap-3 items-center">
+      <Link
+        to="/"
+        className=" hover:text-color_dark text-xs md:text-base flex gap-2 items-center"
+      >
+        <div
+          className="h-4 w-4 lg:h-6 lg:w-6 bg-no-repeat bg-cover"
+          style={{
+            background: `url(${homeIcon})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+        />
+        <span className="hidden md:block">Главная</span>
       </Link>
+
       {crumbsRu.map((crumb, index) => {
         currentLink += `/${crumb.en}`;
         return (
           <div
-            className="flex items-center gap-2 lg:gap-3 last-of-type:text-color_accent_red"
+            className="flex items-center  gap-1 md:gap-3 last-of-type:text-color_accent_red"
             key={index}
           >
             <div
@@ -79,10 +85,10 @@ const Breadcrumbs = () => {
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}
-            ></div>
+            />
             <Link
               to={currentLink}
-              className="hover:text-color_dark text-xs md:text-base"
+              className="hover:text-color_dark text-sm md:text-base text-center"
             >
               {crumb.ru}
             </Link>

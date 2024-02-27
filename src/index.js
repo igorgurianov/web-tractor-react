@@ -1,6 +1,6 @@
 import React from "react";
 import App from "./App";
-import { hydrate, render } from "react-dom";
+import { hydrate } from "react-dom";
 import "./index.css";
 import ReactDOM from "react-dom/client";
 // import ReactDOM, { createRoot } from "react-dom/client";

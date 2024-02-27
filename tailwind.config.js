@@ -29,7 +29,9 @@ module.exports = {
       color_dark: "#2D2D2D",
       color_xl_dark_gray: "#171717",
       color_white: "#FFFFFF",
-      color_placeholder: "#262626",
+      color_placeholder: "#5E5E5E",
+      color_whatsapp_green: "#25D366",
+      color_telegram_blue: "#0088CC",
     },
     extend: {
       fontFamily: {

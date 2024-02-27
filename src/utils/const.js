@@ -20,6 +20,9 @@ import ourSparePartsImg from "../assets/images/whatWeDo/ourSpareParts.png";
 import ourTractorsImg from "../assets/images/whatWeDo/ourTractors.png";
 
 import sertificate from "../assets/images/sertificates/sertificate.png";
+import sertificateLG from "../assets/images/sertificates/sertificateLG.jpg";
+import sertificateHTZ from "../assets/images/sertificates/sertificate_11zon_2.webp";
+import sertificateHTZLG from "../assets/images/sertificates/sertificate_11zon_1.webp";
 
 import partner1 from "../assets/images/partners/bank1.png";
 import partner2 from "../assets/images/partners/bank2.png";
@@ -81,7 +84,22 @@ const galleryData = [
   { img: gallery15, title: "", subtitle: "" },
 ];
 
-const sertificates = [{ img: sertificate, id: "001", title: "", subtitle: "" }];
+const sertificates = [
+  {
+    img: sertificate,
+    imgLg: sertificateLG,
+    id: "001",
+    title: "",
+    subtitle: "",
+  },
+  {
+    img: sertificateHTZ,
+    imgLg: sertificateHTZLG,
+    id: "001",
+    title: "",
+    subtitle: "",
+  },
+];
 
 const partners = [
   { img: partner1, title: "", subtitle: "" },

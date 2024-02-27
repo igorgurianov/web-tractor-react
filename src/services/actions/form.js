@@ -8,7 +8,7 @@ export const CLOSE_CONTACT_POPUP = "CLOSE_CONTACT_POPUP";
 
 export function sendForm(data, token) {
   return function (dispatch) {
-    dispatch({ type: FORM_SEND });
+    dispatch({ type: FORM_SEND, payload: data });
     sendEmail(data, token)
       .then(() => {
         dispatch({ type: FORM_SUCCESS });

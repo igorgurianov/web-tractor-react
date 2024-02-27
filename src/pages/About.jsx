@@ -2,7 +2,6 @@ import Section from "../components/Section";
 import SectionHeader from "../components/SectionHeader";
 import about from "../assets/images/about/about-img.jpg";
 import Numbers from "../components/Numbers";
-import Experts from "../components/Experts";
 import Licenses from "../components/Licenses";
 import Breadcrumbs from "../UI/Breadcrumbs";
 import { Helmet } from "react-helmet";
@@ -81,7 +80,7 @@ const AboutPage = () => {
         </div>
       </Section>
       <Numbers />
-      {/* <Experts /> */}
+
       <div className="bg-color_light_gray">
         <Licenses />
       </div>
