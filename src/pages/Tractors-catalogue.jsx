@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Helmet } from "react-helmet";
 import Section from "../components/Section";
+import OurTractor from "../components/OurTractor";
+import bannerImg2 from "../assets/images/main-banner/banner1.jpg";
+import ContactUsBtn from "../UI/ContactUsBtn";
+import OrderSteps from "../components/OrderSteps";
 import SectionHeader from "../components/SectionHeader";
 import tractorData from "../utils/data";
 import SpecTag from "../components/SpecTag";
@@ -9,32 +13,42 @@ import LinkBtn from "../UI/LinkBtn";
 import Breadcrumbs from "../UI/Breadcrumbs";
 import Discount from "../call-to-action/Discount";
 
+import TractorSlider from "../vendor/TractorSlider";
+
+import tickIcon from "../assets/icons/tick.svg";
+import oneIcon from "../assets/icons/number-circle/one.svg";
+import twoIcon from "../assets/icons/number-circle/two.svg";
+import threeIcon from "../assets/icons/number-circle/three.svg";
+import fourIcon from "../assets/icons/number-circle/four.svg";
+import fiveIcon from "../assets/icons/number-circle/five.svg";
+import sixIcon from "../assets/icons/number-circle/six.svg";
+
 const TractorsCataloguePage = () => {
   const tractors = useSelector((store) => store.content.content);
 
-  const [tractor, setTractor] = useState("DT-75");
-  const [activeTractor, setActiveTractor] = useState(null);
+  // const [tractor, setTractor] = useState("DT-75");
+  // const [activeTractor, setActiveTractor] = useState(null);
 
-  useEffect(() => {
-    const showData = tractors.find(
-      (tractorItem) => tractorItem.url === tractor
-    );
-    setActiveTractor(showData);
-  }, [activeTractor, tractor]);
+  // useEffect(() => {
+  //   const showData = tractors.find(
+  //     (tractorItem) => tractorItem.url === tractor
+  //   );
+  //   setActiveTractor(showData);
+  // }, [activeTractor, tractor]);
 
-  const renderButtonSelect = (button) => {
-    const classes =
-      "btn text-sm p-2 md:p-3 w-[153px] font-bold hover:bg-color_dark hover:text-color_white hover:border";
-    if (button === tractor) {
-      return classes + " bg-color_accent_yellow";
-    } else {
-      return classes + " bg-color_white border border-color_accent_yellow";
-    }
-  };
+  // const renderButtonSelect = (button) => {
+  //   const classes =
+  //     "btn text-sm p-2 md:p-3 w-[153px] font-bold hover:bg-color_dark hover:text-color_white hover:border";
+  //   if (button === tractor) {
+  //     return classes + " bg-color_accent_yellow";
+  //   } else {
+  //     return classes + " bg-color_white border border-color_accent_yellow";
+  //   }
+  // };
 
-  if (activeTractor && tractors) {
+  if (tractors) {
     return (
-      <div>
+      <>
         <Helmet>
           <title>ВЗГМ - Купить трактор ДТ 75 | Купить трактор ХТЗ 150</title>
           <meta
@@ -43,77 +57,98 @@ const TractorsCataloguePage = () => {
           />
           <link rel="canonical" href="https://vzgm.ru/tractors/" />
         </Helmet>
-        <Section styles="md:my-6 lg:my-8 xl:my-12 lg:mb-20">
-          <Breadcrumbs />
-          <SectionHeader
-            headerText="Наша Техника"
-            subheaderText="У нас налажено собственное производство 2 видов надежных тракторов: ВЗГМ-90 (улучшенный ДТ-75) и ВЗГМ-150 (улучшенный ХТЗ-150). А также Вы можете приобрести полностью обслуженные б/у модели классических тракторов ДТ-75 и ХТЗ-150."
-            styles="mt-6 lg:mt-8"
-          />
-          <div className="flex gap-2 md:gap-6 justify-center">
-            <button
-              className={renderButtonSelect("DT-75")}
-              onClick={() => {
-                setTractor("DT-75");
-              }}
-            >
-              ДТ-75
-            </button>
-            <button
-              className={renderButtonSelect("XTZ-150")}
-              onClick={() => {
-                setTractor("XTZ-150");
-              }}
-            >
-              ХТЗ-150
-            </button>
-            {/* <button
-            className={renderButtonSelect("DT-75")}
-            onClick={() => {
-              setTractor("DT-75");
-            }}
-          >
-            ДТ-75
-          </button>
-          <button
-            className={renderButtonSelect("XTZ-150")}
-            onClick={() => {
-              setTractor("XTZ-150");
-            }}
-          >
-            ХТЗ-150
-          </button> */}
-          </div>
-          <div className="md:grid  md:grid-cols-2 md:gap-6 mt-6 md:mt-10">
-            <img
-              className="mt-6 mx-auto w-auto max-h-[370px] md:row-start-1 md:mt-0"
-              src={activeTractor.img}
-              alt={activeTractor.name}
-            />
-            <div>
-              <h1 className="text-base mt-5 md:mt-0 text-left md:col-start-2 md:text-xl">
-                {activeTractor.name}
+
+        <div
+          style={{ backgroundImage: `url(${bannerImg2})` }}
+          className="w-full h-full bg-cover bg-no-repeat bg-center"
+        >
+          <div className="bg-gradient-to-r from-20% from-[#171717] to-[#3B3B3B4D] to-100% w-full h-full">
+            <div className="flex flex-col items-start text-left px-4 pt-4 pb-9 mx-auto md:pt-14 md:pb-10 lg:pt-16 lg:pb-28 pl-[5%] lg:pl-0  lg:max-w-[1200px]">
+              {/* <p className="text-color_accent_yellow md:text-2xl">qweqwe</p> */}
+              <h1 className="text-2xl text-color_light_gray mt-4 lg:mt-6  md:text-4xl max-w-[700px]">
+                Купить тракторы ДТ-75 и ХТЗ Т-150 <br />
+                от производителя
               </h1>
-              <p className="text-left mt-4 md:col-start-2 md:mt-6 md:row-start-2">
-                {activeTractor.shortDescription}
-              </p>
-              <ul className="flex gap-2 flex-wrap mt-6 md:col-start-2 md:row-start-3 md:mt-6 md:items-center">
-                {activeTractor.keySpecs.map((spec, index) => {
-                  return <SpecTag data={spec} key={index} />;
-                })}
+              {/* <h1 className="text-color_white text-base mt-6 md:text-xl lg:mt-10 font-normal lowercase font-primary">
+                  
+                </h1> */}
+              <ul className="md:max-w-[500px] mt-5">
+                <li>
+                  <p className="text-color_white md:text-xl ">
+                    Сертифицированный производитель
+                  </p>
+                </li>
+                <li>
+                  <p className="text-color_white md:text-xl ">
+                    Гарантия 1 год, консультация по обслуживанию в течение всего
+                    срока эксплуатации
+                  </p>
+                </li>
+                <li>
+                  <p className="text-color_white md:text-xl ">Есть лизинг</p>
+                </li>
+                <li>
+                  <p className="text-color_white md:text-xl ">
+                    Работаем с НДС и без
+                  </p>
+                </li>
+                <li>
+                  <p className="text-color_white md:text-xl ">
+                    Бесплатная доставка
+                  </p>
+                </li>
               </ul>
-              <div className=" flex justify-center mx-auto md:col-start-2 md:row-start-4 md:justify-start md:mt-6 self-center">
-                <LinkBtn
-                  text="ПОДРОБНЕЕ О МОДЕЛИ"
-                  style="w-full text-sm mt-6 py-3 px-8 lg:px-8 block md:mt-0 hover:bg-color_dark hover:text-color_white"
-                  to={`/tractors/${tractor}/`}
-                />
-              </div>
+
+              <ContactUsBtn
+                text="Связаться с нами"
+                style="mt-14 lg:mt-20 lg:py-5 lg:px-16 lg:text-base hover:bg-color_dark hover:text-color_white"
+              />
             </div>
           </div>
+        </div>
+        <Section>
+          <Breadcrumbs />
+          <div>
+            {tractors && (
+              <ul className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-7 mt-10">
+                {tractors.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <OurTractor data={item} className={item.url} />
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </div>
         </Section>
+
+        <div className="bg-color_light_gray">
+          <Section styles="py-10 md:py-14 lg:py-20">
+            <div className="flex items-center flex-col md:flex-row justify-center gap-10">
+              <div>
+                <p>Не нашли подходящий? Свяжитесь с нами!</p>
+                <p> Изготовим трактор специально под ваши задачи</p>
+              </div>
+              <ContactUsBtn
+                text="Связаться"
+                style=" hover:bg-color_dark hover:text-color_white basis-1/2 px-12 max-w-[300px]"
+              />
+            </div>
+          </Section>
+        </div>
+        {/* <div className="bg-color_light_gray"> */}
+
+        <OrderSteps />
+        {/* <ContactUsBtn
+              text="Заявка на капитальный ремонт"
+              style="mt-6 hover:bg-color_dark hover:text-color_white"
+              type="repair"
+            /> */}
+
+        {/* </div> */}
         {/* <Discount /> */}
-      </div>
+      </>
     );
   }
 };

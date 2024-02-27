@@ -10,7 +10,7 @@ const SectionHeader = ({ headerText, subheaderText, styles, type }) => {
           <h2 className="text-left">{headerText}</h2>
         )}
 
-        <h3 className="text-left text-color_dark font-normal lowercase font-primary tracking-normal">
+        <h3 className="text-left text-color_dark font-normal  font-primary tracking-normal">
           {subheaderText}
         </h3>
       </div>

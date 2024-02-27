@@ -5,14 +5,17 @@ import BaseSwiper from "../vendor/BaseSwiper";
 
 const Licenses = () => {
   return (
-    <Section styles="md:py-14">
-      <SectionHeader headerText="Сертификаты и лицензии" />
+    <Section styles="md:py-10">
+      <SectionHeader
+        headerText="Лицензии и сертификаты"
+        subheaderText="Наши трактора прошли испытания и сертифицированы на соответствие требованиям ЕАЭС"
+      />
       <BaseSwiper
         slides={sertificates}
         slidesPerViewSmallScreen="2"
         slidesPerViewMdScreen="4"
         sliderName="sertificates"
-        isClickable="true"
+        isClickable={true}
       />
     </Section>
   );

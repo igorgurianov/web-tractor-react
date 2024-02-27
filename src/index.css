@@ -95,10 +95,10 @@ body {
 
   h3 {
     font-family: "Gilroy";
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.03rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: #2d2d2d;
   }
 
@@ -153,10 +153,10 @@ body {
 
 }
 
-.swiper {
-  /* padding-top: 50px; */
+/* .swiper {
+  padding-top: 50px;
   margin-top: 20px;
-}
+} */
 
 
 
@@ -229,7 +229,7 @@ body {
   display: none;
 }
 
-.swiper-pagination-main>.swiper-horizontal>.swiper-pagination-bullets,
+/* .swiper-pagination-main>.swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
@@ -237,6 +237,15 @@ body {
   right: 6%;
   left: auto;
   width: auto
+} */
+
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0px;
+
 }
 
 /* Main slider*/
@@ -246,16 +255,16 @@ body {
   padding: 0;
 }
 
-.swiper-pagination-main {
+/* .swiper-pagination-main {
   position: absolute;
   z-index: 1;
-}
+} */
 
-.swiper-pagination-main>.swiper-pagination-bullet {
+/* .swiper-pagination-main>.swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   background-color: #FFC513;
-}
+} */
 
 
 .swiper-button-next-main,
@@ -326,11 +335,11 @@ body {
     height: 30px;
   }
 
-  .mySwiper {
-
+  /* .mySwiper {
+    max-height: 100px;
     margin-right: 64px;
     margin-left: 64px;
-  }
+  } */
 }
 
 @media screen and (min-width: 1440px) {
@@ -347,20 +356,21 @@ body {
 }
 
 
-.swiper-slide {
+/* .swiper-slide {
   height: auto;
-}
+} */
 
-.swiper-slide {
+/* .swiper-slide {
   background-size: cover;
   background-position: center;
-}
+} */
 
-.mySwiper2 {
-  /* height: 70%;
-  width: 100%; */
+/* .mySwiper2 {
+   height: 70%;
+  width: 100%; 
   margin-top: 0;
-}
+} 
+*/
 
 .mySwiper {
   /* height: 20%;
@@ -385,11 +395,20 @@ body {
 }
 
 
-@media screen and (min-width: 1000px) {
+/* @media screen and (min-width: 1000px) {
 
   .tractor-slider-img {
     height: 300px;
   }
 
 
+} */
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: 0;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: 0;
 }

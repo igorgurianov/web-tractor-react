@@ -12,6 +12,7 @@ const initialState = {
   contactPopup: false,
   contactSuccess: false,
   contactFail: false,
+  phone: "",
 };
 
 export const formReducer = (state = initialState, action) => {
@@ -29,7 +30,7 @@ export const formReducer = (state = initialState, action) => {
         contactSuccess: true,
       };
     case FORM_SEND:
-      return { ...state, isSending: true };
+      return { ...state, isSending: true, phone: action.payload.phone };
     case FORM_FAILED:
       return { ...state, isSending: false, success: false };
     case CLOSE_CONTACT_POPUP:

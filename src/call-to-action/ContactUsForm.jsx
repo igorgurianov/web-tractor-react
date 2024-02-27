@@ -1,18 +1,21 @@
+import ReCAPTCHA from "react-google-recaptcha";
 import { useDispatch, useSelector } from "react-redux";
-import { createRef } from "react";
+import { createRef, useState } from "react";
 import { sendForm } from "../services/actions/form";
 import { useForm } from "../hooks/useForm";
 import { closePopup } from "../services/actions/form";
 import TelegramIcon from "../UI/TelegramIcon";
 import WhatsAppIcon from "../UI/WhatsAppIcon";
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import ReCAPTCHA from "react-google-recaptcha";
+
 import icon from "../assets/icons/powerIcon.svg";
+import { organizationInfo } from "../utils/const";
+import tickIcon from "../assets/icons/tick-in-circle.svg";
 
 const ContactUsForm = () => {
   const recaptchaRef = createRef();
   const dispatch = useDispatch();
-  const { contactPopup, isSending, success } = useSelector(
+  const { contactPopup, isSending, success, phone } = useSelector(
     (store) => store.form
   );
 
@@ -22,25 +25,37 @@ const ContactUsForm = () => {
     dispatch(closePopup());
   };
 
-  // function onSubmit(token) {
-  //   debugger;
-  //   console.log("onSubmit");
-  //   submitHandler(token);
-  // }
+  // const submitHandler = (e) => {
+  //   e.preventDefault();
+  //   recaptchaRef.current.execute();
+  // };
 
-  const submitHandler = (e) => {
+  // const handleReCaptchaChange = (value) => {
+  //   if (value === "") {
+  //     console.log("Вы не прошли капчу");
+  //   } else {
+  //     window.ym(94606235, "reachGoal", "lead");
+  //     dispatch(sendForm(values, value));
+  //   }
+  // };
+
+  const submitWithReCaptcha = async (e) => {
     e.preventDefault();
-    recaptchaRef.current.execute();
+    const token = await recaptchaRef.current.executeAsync();
+    //console.log(token);
+
+    dispatch(sendForm(values, token));
   };
 
-  const handleReCaptchaChange = (value) => {
-    if (value === "") {
-      console.log("Вы не прошли капчу");
-    } else {
-      window.ym(94606235, "reachGoal", "lead");
-      dispatch(sendForm(values, value));
-    }
-  };
+  //console.log(values.phone);
+  // const handleReCaptchaChange = (value) => {
+  //   if (value === "") {
+  //     console.log("Вы не прошли капчу");
+  //   } else {
+  //     window.ym(94606235, "reachGoal", "lead");
+  //     dispatch(sendForm(values, value));
+  //   }
+  // };
 
   const cursor = isSending ? "cursor-wait" : "cursor-auto";
 
@@ -53,14 +68,23 @@ const ContactUsForm = () => {
         >
           <AiOutlineCloseCircle size={40} />
         </div>
-        <h3 className="mt-4 uppercase text-lg md:text-3xl">
-          Ваша заявка принята!
-        </h3>
-        <h4 className="mt-6">Мы свяжемся с Вами в течение часа</h4>
-        <p className="mt-6">Наши профили в соц. сетях:</p>
-        <div className="flex flex-row items-center gap-14 mx-auto mt-6">
-          <TelegramIcon size="50" />
-          <WhatsAppIcon size="50" />
+        <div className="md:max-w-[540px] flex flex-col items-center">
+          <div
+            style={{ backgroundImage: `url(${tickIcon})` }}
+            className="h-20 w-20"
+          />
+          <h3 className="mt-4 text-xl md:text-2xl">Заявка отправлена</h3>
+
+          <p className="mt-6">
+            Специалисты свяжутся с вами в течение одного рабочего дня по номеру:{" "}
+            {phone}. Если что-то пойдет не так, звоните:{" "}
+            {organizationInfo.phone.aroundClock.toShow} или напишите нам в
+            соцсетях
+          </p>
+          <div className="flex flex-row items-center justify-center gap-14 mx-auto mt-6">
+            <TelegramIcon size="50" />
+            <WhatsAppIcon size="50" />
+          </div>
         </div>
       </div>
     );
@@ -78,46 +102,15 @@ const ContactUsForm = () => {
         >
           <AiOutlineCloseCircle size={40} />
         </div>
-
         <div>
           <h3 className="uppercase text-lg md:text-3xl mt-8 md:mt-5">
             Оставьте заявку и мы перезвоним
           </h3>
-          {/* <div className="mt-4 text-left">
-            <span className="m-0">
-              Акция только до
-              <strong className="text-color_accent_red"> 25.01.2024 </strong>
-            </span>
-            <span className="m-0">выберите свой бонус в подарок:</span>
-          </div> */}
-          {/* <div className="flex flex-col items-start justify-between py-1 md:py-4">
-            <div className="py-1">
-              <input type="radio" name="discount" id="option_2" />
-              <label className="ml-2 cursor-pointer" htmlFor="option_2">
-                Расходники для ТО - 1
-              </label>
-            </div>
-
-            <div className="py-1 text-left">
-              <input type="radio" name="discount" id="option_1" />
-              <label className="ml-2 cursor-pointer" htmlFor="option_1">
-                Бесплатная доставка до 500км
-              </label>
-            </div>
-
-            <div className="py-1">
-              <input type="radio" name="discount" id="option_3" />
-              <label className="ml-2 cursor-pointer" htmlFor="option_3">
-                Скидка 2%
-              </label>
-            </div>
-          </div> */}
-
           <form
             action=""
             className="flex flex-col gap-4"
             onSubmit={(e) => {
-              submitHandler(e);
+              submitWithReCaptcha(e);
             }}
           >
             <ReCAPTCHA
@@ -125,37 +118,44 @@ const ContactUsForm = () => {
               ref={recaptchaRef}
               size="invisible"
               sitekey="6LcOIc8oAAAAAKq31Zp9lOjnJ5hIj7RuR4aAnuGz"
-              onChange={handleReCaptchaChange}
+              // onChange={handleReCaptchaChange}
             />
+            <div className="flex flex-col md:mt-8">
+              <input
+                className="bg-color_white bg-opacity-70 py-2 pl-7 placeholder:text-color_placeholder border border-color_accent_yellow"
+                required
+                maxLength={20}
+                disabled={isSending}
+                onChange={handleChange}
+                value={values.name}
+                type="text"
+                name="name"
+                id=""
+                placeholder="Введите имя"
+              />
+
+              <span className="text-color_accent_red text-sm text-left ml-2 h-[20px]">
+                {values.name ? "" : "Заполните имя"}
+              </span>
+            </div>
+            <div className="flex flex-col">
+              <input
+                className="bg-color_white bg-opacity-70 py-2 pl-7 placeholder:text-color_placeholder border border-color_accent_yellow"
+                required
+                maxLength={20}
+                disabled={isSending}
+                onChange={handleChange}
+                value={values.phone}
+                type="tel"
+                name="phone"
+                id=""
+                placeholder="Введите телефон"
+              />
+              <span className="text-color_accent_red text-sm text-left ml-2 h-[20px]">
+                {values.phone ? "" : "Заполните телефон"}
+              </span>
+            </div>
             <input
-              className="bg-color_white bg-opacity-70 py-2 pl-7 placeholder:text-color_placeholder border border-color_accent_yellow"
-              required
-              maxLength={20}
-              disabled={isSending}
-              onChange={handleChange}
-              value={values.name}
-              type="text"
-              name="name"
-              id=""
-              placeholder="Введите имя"
-            />
-            <input
-              className="bg-color_white bg-opacity-70 py-2 pl-7 placeholder:text-color_placeholder border border-color_accent_yellow"
-              required
-              maxLength={20}
-              disabled={isSending}
-              onChange={handleChange}
-              value={values.phone}
-              type="tel"
-              name="phone"
-              id=""
-              placeholder="Введите телефон"
-            />
-            {/* <input type="email" name="" id="" placeholder="Ваш e-mail" /> */}
-            <input
-              //class="g-recaptcha"
-              //data-sitekey=""
-              //data-callback="onSubmit"
               className="bg-color_accent_yellow py-3 font-bold text-xs tracking-widest cursor-pointer hover:bg-color_dark_gray hover:text-color_white duration-200"
               type="submit"
               value={
@@ -164,11 +164,11 @@ const ContactUsForm = () => {
               disabled={isSending}
             />
           </form>
-          <h3 className="uppercase text-lg md:text-3xl mt-6 md:mt-8 text-center">
+          <h3 className="uppercase text-lg mt-6 text-center">
             Или напишите нам в соц сетях
           </h3>
         </div>
-        <div className="flex flex-row items-center gap-14 mx-auto mt-6 md:mt-8">
+        <div className="flex flex-row items-center gap-14 mx-auto mt-6">
           <TelegramIcon size="50" />
           <WhatsAppIcon size="50" />
         </div>

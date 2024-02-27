@@ -23,6 +23,9 @@ import tractorData from "./utils/data";
 import NotFoundPage from "./pages/NotFoundPage";
 import RepairPopup from "./components/RepairPopup";
 import RepairForm from "./call-to-action/RepairForm";
+import LargeImagePopup from "./components/LargeImagePopup";
+import CatalogDt75 from "./pages/tractors/CatalogDt75";
+import CatalogHtzT150 from "./pages/tractors/CatalogHtzT150";
 
 function App() {
   const dispatch = useDispatch();
@@ -30,6 +33,10 @@ function App() {
   const { repairPopup, repairForm, repairFormSuccess } = useSelector(
     (store) => store.repair
   );
+
+  const license = useSelector((store) => store.license);
+
+  //console.log(license);
 
   useEffect(() => {
     dispatch(setContent(tractorData));
@@ -50,8 +57,22 @@ function App() {
             <Route path="/eqipment/engine/:id/" element={<SingleSparePage />} />
             <Route path="/eqipment/spare/:id/" element={<SingleSparePage />} />
             <Route path="/eqipment/blade/:id/" element={<SingleSparePage />} />
-            <Route path="/tractors/" element={<TractorsCataloguePage />} />
-            <Route path="/tractors/:id/" element={<SingleTractorPage />} />
+            <Route path="/tractors" element={<TractorsCataloguePage />}></Route>
+            <Route
+              path="/tractors/catalog-htz-t150/"
+              element={<CatalogHtzT150 />}
+            />
+            <Route path="/tractors/catalog-dt-75/" element={<CatalogDt75 />} />
+
+            <Route
+              path="/tractors/catalog-dt-75/:id/"
+              element={<SingleTractorPage />}
+            />
+            <Route
+              path="/tractors/catalog-htz-t150/:id/"
+              element={<SingleTractorPage />}
+            />
+
             <Route path="/services/" element={<ServicesCatalogue />} />
             <Route path="/news/" element={<NewsCatalogue />} />
             <Route path="/news/:id" element={<SingleNewsPage />} />
@@ -82,6 +103,12 @@ function App() {
         {repairFormSuccess && (
           <Modal>
             <RepairForm />
+          </Modal>
+        )}
+
+        {license.isOpen && (
+          <Modal>
+            <LargeImagePopup />
           </Modal>
         )}
       </BrowserRouter>

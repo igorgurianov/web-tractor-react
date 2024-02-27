@@ -45,6 +45,8 @@ export default function InteractivePicRepair() {
     });
   };
 
+  console.log(element);
+
   return (
     <>
       {elementInfo ? (
@@ -56,13 +58,15 @@ export default function InteractivePicRepair() {
           />
           <div>
             <ul className="overflow-y-scroll md:overflow-visible flex gap-1">
-              <li className="flex flex-1 flex-col">
+              <li className="flex flex-col flex-1 min-w-[110px]">
                 <button
                   type="button"
                   onClick={(e) => iconClickHandler(e)}
                   value="tank"
-                  className={`p-1 md:py-2 flex flex-col items-center bg-color_light_gray border border-b-4 border-b-color_white hover:border-b-color_accent_yellow ${
-                    element === "tank" ? "border-b-color_accent_yellow" : ""
+                  className={`p-1 md:py-2 flex flex-col items-center bg-color_light_gray border border-b-4  hover:border-b-color_accent_yellow ${
+                    element === "tank"
+                      ? "border-b border-b-color_accent_yellow"
+                      : "border-b-color_white"
                   }`}
                 >
                   <div
@@ -72,13 +76,15 @@ export default function InteractivePicRepair() {
                   <span className="mt-1">Гидравлика</span>
                 </button>
               </li>
-              <li className="flex flex-1 flex-col">
+              <li className="flex flex-col flex-1 min-w-[110px]">
                 <button
                   type="button"
                   value="engine"
                   onClick={(e) => iconClickHandler(e)}
-                  className={`p-1 md:py-2 flex flex-col items-center bg-color_light_gray border border-b-4 border-b-color_white hover:border-b-color_accent_yellow ${
-                    element === "engine" ? "border-b-color_accent_yellow" : ""
+                  className={`p-1 md:py-2 flex flex-col items-center bg-color_light_gray border border-b-4  hover:border-b-color_accent_yellow ${
+                    element === "engine"
+                      ? "border-b-color_accent_yellow"
+                      : "border-b-color_white"
                   }`}
                 >
                   <div
@@ -88,13 +94,15 @@ export default function InteractivePicRepair() {
                   <span className="mt-1">Двигатель</span>
                 </button>
               </li>
-              <li className="flex flex-1 flex-col">
+              <li className="flex flex-col flex-1 min-w-[110px]">
                 <button
                   type="button"
                   value="cabin"
                   onClick={(e) => iconClickHandler(e)}
-                  className={`p-1 md:py-2 flex flex-col items-center bg-color_light_gray border border-b-4 border-b-color_white hover:border-b-color_accent_yellow ${
-                    element === "cabin" ? "border-b-color_accent_yellow" : ""
+                  className={`p-1 md:py-2 flex flex-col items-center bg-color_light_gray border border-b-4  hover:border-b-color_accent_yellow ${
+                    element === "cabin"
+                      ? "border-b-color_accent_yellow"
+                      : "border-b-color_white"
                   }`}
                 >
                   <div
@@ -105,15 +113,15 @@ export default function InteractivePicRepair() {
                 </button>
               </li>
 
-              <li className="flex flex-1 flex-col">
+              <li className="flex flex-col flex-1 min-w-[110px]">
                 <button
                   type="button"
                   value="transmission"
                   onClick={(e) => iconClickHandler(e)}
-                  className={`p-1 md:py-2 flex flex-col items-center bg-color_light_gray border border-b-4 border-b-color_white hover:border-b-color_accent_yellow ${
+                  className={`p-1 md:py-2 flex flex-col items-center bg-color_light_gray border border-b-4  hover:border-b-color_accent_yellow ${
                     element === "transmission"
                       ? "border-b-color_accent_yellow"
-                      : ""
+                      : "border-b-color_white"
                   }`}
                 >
                   <div
@@ -124,13 +132,15 @@ export default function InteractivePicRepair() {
                 </button>
               </li>
 
-              <li className="flex flex-1 flex-col">
+              <li className="flex flex-col flex-1 min-w-[110px]">
                 <button
                   type="button"
                   value="chassis"
                   onClick={(e) => iconClickHandler(e)}
-                  className={`p-1 md:py-2 flex flex-col items-center bg-color_light_gray border border-b-4 border-b-color_white hover:border-b-color_accent_yellow ${
-                    element === "chassis" ? "border-b-color_accent_yellow" : ""
+                  className={`p-1 md:py-2 flex flex-col items-center bg-color_light_gray border border-b-4  hover:border-b-color_accent_yellow ${
+                    element === "chassis"
+                      ? "border-b-color_accent_yellow"
+                      : "border-b-color_white"
                   }`}
                 >
                   <div
