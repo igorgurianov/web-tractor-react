@@ -248,7 +248,7 @@ const newtractorData = [
     ],
   },
   {
-    name: "Трактор ДТ-75 с прямым отвалом",
+    name: "Бульдозер ДТ-75 с прямым отвалом",
     shortName: "ДТ-75",
     url: "DT-75-s-pryamin-otvalom",
     price: "3 350 000",

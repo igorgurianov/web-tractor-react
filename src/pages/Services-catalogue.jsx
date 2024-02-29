@@ -171,13 +171,13 @@ const ServicesCatalogue = () => {
                         : "bg-color_white"
                     }
                   >
-                    <td className="text-s p-2 w-[70%] text-left md:text-base ">
+                    <td className="text-s p-2 w-[70%] text- md:text-base ">
                       {row.description}
                     </td>
                     {/* <td className="text-s p-2 text-left md:text-base min-w-[100px]">
                       {numberFormatConverter(row.price)}
                     </td> */}
-                    <td className="text-s text-left md:text-base ">
+                    <td className="text-s text-center flex justify-center md:text-base ">
                       {/* <span
                         className="block w-8 h-8 bg-no-repeat bg-cover"
                         style={{ backgroundImage: `url(${tickIcon})` }}

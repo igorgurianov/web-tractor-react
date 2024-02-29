@@ -43,9 +43,6 @@ const ContactUsForm = () => {
     e.preventDefault();
     window.ym(94606235, "reachGoal", "lead");
     const token = await recaptchaRef.current.executeAsync();
-
-    //console.log(token);
-
     dispatch(sendForm(values, token));
   };
 
