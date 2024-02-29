@@ -16,7 +16,7 @@ const OurTractor = ({ data, className }) => {
         </div>
         <div className="flex items-center md:gap-1 my-3 justify-center order-6 col-span-2">
           {/* <p className="text-sm mr-2 text-color_dark_gray">Стоимость:</p> */}
-          <h4 className="text-xs lg:text-base text-color_accent_red">
+          <h4 className="text-sm lg:text-base text-color_accent_red">
             {price} &#x20bd;
           </h4>
         </div>

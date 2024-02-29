@@ -114,16 +114,16 @@ const Header = () => {
             >
               Наша Техника
             </CustomLink>
-            <div className="invisible absolute flex w-full flex-col z-10 bg-color_light_gray group-hover:visible ">
+            <div className="invisible absolute flex w-full flex-col z-10 bg-color_light_gray group-hover:visible rounded-sm">
               <a
                 href="/tractors/catalog-dt-75/"
-                className="m-2 py-2 font-bold md:text-sm text-color_lighter_gray  hover:text-color_accent_yellow"
+                className="mx-4 py-6 font-bold md:text-sm text-color_lighter_gray  hover:text-color_accent_yellow"
               >
                 ДТ-75
               </a>
               <a
                 href="/tractors/catalog-htz-t150/"
-                className="m-2 py-2 font-bold md:text-sm text-color_lighter_gray hover:text-color_accent_yellow"
+                className="mx-4 py-6 font-bold md:text-sm text-color_lighter_gray hover:text-color_accent_yellow"
               >
                 ХТЗ Т-150
               </a>

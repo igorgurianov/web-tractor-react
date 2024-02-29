@@ -1,6 +1,11 @@
-RewriteEngine off
-RewriteBase /
-RewriteRule ^index\.html$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]
+RewriteEngine On
+RewriteCond %{HTTP_HOST} vzgm.ru
+
+# Первое правило перенаправления
+RewriteRule ^tractors/DT-75/$ https://vzgm.ru/tractors/catalog-dt-75/dt-75-bez-navesnogo/ [R=301,L]
+
+# Второе правило перенаправления
+RewriteRule ^tractors/DT-75-s-otvalom/$ https://vzgm.ru/tractors/catalog-dt-75/DT-75-s-pryamin-otvalom/ [R=301,L]
+
+# Третье правило перенаправления
+RewriteRule ^tractors/DT-75-s-navesnym/$ https://vzgm.ru/tractors/catalog-dt-75/dt-75-s-navesnym-oborydovaniem/ [R=301,L]
