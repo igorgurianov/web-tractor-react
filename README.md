@@ -3,6 +3,8 @@
 
 Статус: В разработке
 
+[Ссылка на сайт](https://vzgm.ru)
+
 ## Технологии
 - [React](https://react.dev)
 - [Tailwind CSS](https://tailwindcss.com)
