@@ -1398,7 +1398,7 @@ const newtractorData = [
         alt: "Трактор ДТ-75 с отвалом",
       },
       {
-        img: "http://www.vzgm.ru/content/tractors/VZGM-150/slobozhanec/VZGM-150-4.webpp",
+        img: "http://www.vzgm.ru/content/tractors/VZGM-150/slobozhanec/VZGM-150-4.webp",
         alt: "Трактор ДТ-75 с отвалом",
       },
       {
