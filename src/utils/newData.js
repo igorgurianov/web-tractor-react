@@ -1381,20 +1381,32 @@ const newtractorData = [
 
     gallery: [
       {
-        img: "http://www.vzgm.ru/content/tractors/VZGM-150/slobozhanec/VZGM-150-5.jpg",
+        img: "http://www.vzgm.ru/content/tractors/VZGM-150/slobozhanec/VZGM-150-1.webp",
         alt: "Трактор ДТ-75 с отвалом",
       },
       {
-        img: "http://www.vzgm.ru/content/tractors/VZGM-150/slobozhanec/VZGM-150-4.jpg",
+        img: "http://www.vzgm.ru/content/tractors/VZGM-150/slobozhanec/VZGM-150-10.webp",
         alt: "Трактор ДТ-75 с отвалом",
       },
 
       {
-        img: "http://www.vzgm.ru/content/tractors/VZGM-150/slobozhanec/VZGM-150-6.jpg",
+        img: "http://www.vzgm.ru/content/tractors/VZGM-150/slobozhanec/VZGM-150-2.webp",
         alt: "Трактор ДТ-75 с отвалом",
       },
       {
-        img: "http://www.vzgm.ru/content/tractors/VZGM-150/slobozhanec/VZGM-150-7.jpg",
+        img: "http://www.vzgm.ru/content/tractors/VZGM-150/slobozhanec/VZGM-150-3.webp",
+        alt: "Трактор ДТ-75 с отвалом",
+      },
+      {
+        img: "http://www.vzgm.ru/content/tractors/VZGM-150/slobozhanec/VZGM-150-4.webpp",
+        alt: "Трактор ДТ-75 с отвалом",
+      },
+      {
+        img: "http://www.vzgm.ru/content/tractors/VZGM-150/slobozhanec/VZGM-150-8.webp",
+        alt: "Трактор ДТ-75 с отвалом",
+      },
+      {
+        img: "http://www.vzgm.ru/content/tractors/VZGM-150/slobozhanec/VZGM-150-9.webp",
         alt: "Трактор ДТ-75 с отвалом",
       },
     ],
