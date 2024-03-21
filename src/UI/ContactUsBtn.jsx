@@ -11,11 +11,11 @@ const ContactUsBtn = ({ text, style, onClick, type }) => {
     switch (type) {
       case "repair":
         dispatch({ type: OPEN_REPAIR_FORM_POPUP });
-        console.log("repair");
+        // console.log("repair");
         break;
       case "tractor_purchase":
         dispatch({ type: OPEN_CONTACT_POPUP });
-        console.log("tractor purchase");
+        // console.log("tractor purchase");
         break;
       default:
         dispatch({ type: OPEN_CONTACT_POPUP });

@@ -3,7 +3,7 @@ import React from "react";
 function Information({ tab, tractor }) {
   return (
     <div>
-      {tab === "description" && (
+      {tab === "description" && tractor.description && (
         <div className="text-left ">
           <h2 className="text-lg my-3 border-b-2 border-color_accent_yellow">
             Устройство {tractor.shortName}
@@ -68,7 +68,7 @@ function Information({ tab, tractor }) {
         </div>
       )}
 
-      {tab === "fullDescription" && (
+      {tab === "fullDescription" && tractor.fullDescription && (
         <div className="text-left ">
           <h2 className="text-lg my-3 border-b-2 border-color_accent_yellow">
             описание {tractor.shortName}
@@ -133,7 +133,7 @@ function Information({ tab, tractor }) {
         </div>
       )}
 
-      {tab === "leasing" && (
+      {tab === "leasing" && tractor.leasing && (
         <div className="text-left mt-8">
           <h2 className="text-lg my-3 border-b-2 border-color_accent_yellow">
             Купить {tractor.shortName} в лизинг
@@ -162,7 +162,7 @@ function Information({ tab, tractor }) {
         </div>
       )}
 
-      {tab === "advantages" && (
+      {tab === "advantages" && tractor.advantages && (
         <div className="text-left mt-8">
           <h2 className="text-lg my-3 border-b-2 border-color_accent_yellow">
             Преимущества
@@ -191,7 +191,7 @@ function Information({ tab, tractor }) {
         </div>
       )}
 
-      {tab === "scope" && (
+      {tab === "scope" && tractor.scope && (
         <div className="text-left mt-8">
           <h2 className="text-lg my-3 border-b-2 border-color_accent_yellow">
             Сфера применения
@@ -220,7 +220,7 @@ function Information({ tab, tractor }) {
         </div>
       )}
 
-      {tab === "characteristics" && (
+      {tab === "characteristics" && tractor.characteristics && (
         <div className="mt-8">
           <h2 className="text-lg my-3 border-b-2 border-color_accent_yellow">
             Технические Характеристики {tractor.shortName}
@@ -250,7 +250,7 @@ function Information({ tab, tractor }) {
           </div>
         </div>
       )}
-      {tab === "modifications" && (
+      {tab === "modifications" && tractor.modifications && (
         <div className="text-left mt-8">
           <h2 className="text-lg my-3 border-b-2 border-color_accent_yellow">
             Модификации {tractor.shortName}

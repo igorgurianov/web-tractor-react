@@ -22,15 +22,13 @@ const GalleryPage = () => {
       <Section styles="md:my-6">
         <Breadcrumbs />
         <SectionHeader headerText="Галерея работ" styles="mt-6 lg:mt-8" />
-        <div className="max-h-[400px]">
-          <BaseSwiper
-            slides={galleryData}
-            sliderName="Gallery-Page"
-            isClickable
-            slidesPerViewMdScreen="2"
-            slideHeigth="400px"
-          />
-        </div>
+
+        <BaseSwiper
+          slides={galleryData}
+          sliderName="Gallery-Page"
+          // isClickable
+          slidesPerViewMdScreen="2"
+        />
       </Section>
     </div>
   );

@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom";
 import SpecTag from "./SpecTag";
 import PromoTag from "./PromoTag";
 import ContactUsBtn from "../UI/ContactUsBtn";
 import LinkBtn from "../UI/LinkBtn";
-import TractorSlider from "../vendor/TractorSlider";
 
 const OurTractor = ({ data, className }) => {
   const { name, promo, keySpecs, price, url, gallery, catalog } = data;
@@ -12,7 +12,14 @@ const OurTractor = ({ data, className }) => {
     <div className=" py-4 px-2 border border-color_middle_gray md:p-5 md:px-3 ">
       <div className="grid gap-x-2 grid-cols-1 ">
         <div className="md:w-full row-span-2 md:order-2 min-w-0">
-          <TractorSlider data={data} className={className} />
+          {/* <TractorSlider data={data} className={className} /> */}
+          <Link to={`/tractors/${catalog}/${url}/`}>
+            <img
+              className={`mx-auto  md:w-auto object-contain md:h-[300px]`}
+              src={data.gallery[0].img}
+              alt={data.gallery[0].alt}
+            />
+          </Link>
         </div>
         <div className="flex items-center md:gap-1 my-3 justify-center order-6 col-span-2">
           {/* <p className="text-sm mr-2 text-color_dark_gray">Стоимость:</p> */}

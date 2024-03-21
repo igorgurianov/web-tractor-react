@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { openLicencePopup } from "../services/actions/license";
 import { useDispatch } from "react-redux";
+import { Navigation } from "swiper";
 
 const BaseSwiper = ({
   slides,
@@ -17,15 +18,19 @@ const BaseSwiper = ({
     dispatch(openLicencePopup(content));
   };
 
+  const onClick = () => {
+    console.log("click");
+  };
+
   return (
     <div className="relative mt-10 md:mt-0">
       <Swiper
-        // modules={[Navigation]}
+        modules={[Navigation]}
         navigation={{
           prevEl: `.swiper-button-prev-${sliderName}`,
           nextEl: `.swiper-button-next-${sliderName}`,
         }}
-        slidesPerGroup={1}
+        // slidesPerGroup={1}
         className={`swiper ${sliderName}`}
         breakpoints={{
           320: {
@@ -59,7 +64,7 @@ const BaseSwiper = ({
               <img
                 src={slide.img}
                 alt={slide.alt}
-                className="mx-auto object-cover h-full w-full"
+                className="mx-auto object-contain h-full w-full object-center"
               />
             </div>
           </SwiperSlide>
@@ -70,6 +75,7 @@ const BaseSwiper = ({
       ></div>
       <div
         className={`swiper-button-next-custom swiper-button-next-${sliderName}`}
+        // onClick={onClick}
       ></div>
     </div>
   );

@@ -12,6 +12,7 @@ import Brands from "../call-to-action/Brands";
 import Breadcrumbs from "../UI/Breadcrumbs";
 import Information from "../components/Information";
 import { Helmet } from "react-helmet";
+import ProductSwiper from "../vendor/ProductSwiper";
 
 const SingleSparePage = () => {
   const { id } = useParams();
@@ -59,14 +60,17 @@ const SingleSparePage = () => {
               headerText={tractor.name}
               styles="mt-6 lg:mt-8"
             />
-            <div className="grid grid-cols-2 auto-rows-min md:grid-cols-[40%_35%_1fr] md:gap-x-6 md:gap-y-3">
-              <img
-                src={tractor.img}
+            <div className="grid auto-rows-min md:grid-cols-[40%_35%_1fr] md:gap-x-6 md:gap-y-3">
+              {/* <img
+                src={tractor.photos[0].img}
                 className="w-full h-full max-h-[169px] lg:max-h-[252px] object-contain container mx-auto md:order-[-1] md:mt-0 md:row-span-2"
                 alt={tractor.alt}
-              />
-              <div className="flex flex-col items-end md:row-span-2 md:col-start-3 md:justify-between">
-                <div className="flex items-center justify-end">
+              /> */}
+              <div className="min-w-0 w-full">
+                <ProductSwiper data={tractor} />
+              </div>
+              <div className="flex mt-4 md:mt-0 flex-col items-end md:row-span-2 md:col-start-3 ">
+                <div className="flex items-center justify-start">
                   <h2 className="text-color_accent_red">{tractor.price}</h2>
                 </div>
                 <h5 className="font-normal tracking-normal text-right">
@@ -74,120 +78,32 @@ const SingleSparePage = () => {
                 </h5>
                 <ContactUsBtn
                   text="ЗАБРОНИРОВАТЬ"
-                  style="mt-3 md:mt-10 md:px-10 text-color_xl_dark_gray hover:bg-color_dark hover:text-color_white"
+                  style="mt-3 md:mt-10 w-full md:px-10 text-color_xl_dark_gray hover:bg-color_dark hover:text-color_white"
                 />
               </div>
-              <div className="col-span-2 text-left mt-6 md:mt-0 md:col-span-1 md:col-start-2 md:row-start-1">
+              <div className="text-left mt-6 md:mt-0 md:col-span-1 md:col-start-2 md:row-start-1">
                 <p className="text-base xl:text-lg">
                   {tractor.shortDescription}
                 </p>
+                <ul className="flex gap-2 flex-wrap mt-6 md:mt-0  items-end content-start">
+                  {tractor.keySpecs?.map((spec, index) => {
+                    return <SpecTag data={spec} key={index} />;
+                  })}
+                </ul>
               </div>
-              <ul className="flex gap-2 col-span-2 flex-wrap mt-6 md:mt-0 md:col-start-2 md:row-start-2 md:col-span-1 items-end content-start">
-                {tractor.keySpecs.map((spec, index) => {
-                  return <SpecTag data={spec} key={index} />;
-                })}
-              </ul>
             </div>
-            {/* <div className="flex overflow-scroll md:overflow-auto mt-6 lg:mt-8 justify-between">
-              <button
-                className={buttonClass(0)}
-                onClick={() => handleTabClick(0)}
-              >
-                Описание
-              </button>
 
-              <button
-                className={buttonClass(1)}
-                onClick={() => handleTabClick(1)}
-              >
-                Характеристики
-              </button>
-
-              <button
-                className={buttonClass(2)}
-                onClick={() => handleTabClick(2)}
-              >
-                Преимущества
-              </button>
-
-              <button
-                className={buttonClass(3)}
-                onClick={() => handleTabClick(3)}
-              >
-                Сфера применения
-              </button>
-            </div> */}
             <div className="mt-2 p-2">
               <Information tab="fullDescription" tractor={tractor} />
               <Information tab="characteristics" tractor={tractor} />
               <Information tab="advantages" tractor={tractor} />
               <Information tab="scope" tractor={tractor} />
             </div>
-            {/* <div className="border border-color_accent_yellow p-2 mt-4 text-color_dark">
-              {activeTab === 0 && (
-                <div className="text-left">
-                  {tractor.fullDescription.map((item) => {
-                    if (item.type === "paragraph") {
-                      return (
-                        <p className="md:text-base mb-2">{item.content}</p>
-                      );
-                    } else if (item.type === "list") {
-                      return (
-                        <ul className="list-disc ml-8 mt-2 mb-6">
-                          {item.content.map((item) => {
-                            return <li className="ml-3">{item}</li>;
-                          })}
-                        </ul>
-                      );
-                    }
-                  })}
-                </div>
-              )}
-              {activeTab === 3 && (
-                <ul className="text-left">
-                  {tractor.scope.map((term, index) => {
-                    return <li key={index}>{term}</li>;
-                  })}
-                </ul>
-              )}
-              {activeTab === 1 && (
-                <div className="md:columns-2">
-                  <table className="table-auto w-full">
-                    <tbody>
-                      {tractor.characteristics.map((row, index) => (
-                        <tr
-                          key={index}
-                          className={
-                            index % 2 === 0
-                              ? "bg-color_light_gray md:break-inside-avoid-column"
-                              : "bg-color_white md:break-inside-avoid-column"
-                          }
-                        >
-                          <td className="text-xs p-1 w-[70%] text-left md:text-base">
-                            {row.column1}
-                          </td>
-                          <td className="text-xs p-1 text-left md:text-base">
-                            {row.column2}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
-              {activeTab === 2 && (
-                <ul className="text-left">
-                  {tractor.advantages.map((term, index) => {
-                    return <li key={index}>{term}</li>;
-                  })}
-                </ul>
-              )}
-            </div> */}
           </div>
         </Section>
-        <div className="bg-color_light_gray">
+        {/* <div className="bg-color_light_gray">
           <Brands />
-        </div>
+        </div> */}
         <OurSpareParts />
       </div>
     );

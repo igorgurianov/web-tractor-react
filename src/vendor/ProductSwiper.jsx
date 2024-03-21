@@ -11,7 +11,7 @@ import "swiper/css/thumbs";
 //import "./styles.css";
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { FreeMode, Navigation, Thumbs, Zoom } from "swiper";
 // import { FreeMode } from "swiper/modules/free-mode/free-mode";
 // import { Navigation } from "swiper/modules/navigation";
 // import { Thumbs } from "swiper/modules/thumbs";
@@ -32,20 +32,25 @@ function ProductSwiper({ data }) {
         preventInteractionOnTransition={true}
         spaceBetween={10}
         navigation={true}
+        zoom={true}
         thumbs={{
           swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[FreeMode, Navigation, Thumbs, Zoom]}
         className={`${data.url} mySwiper2`}
+        preventClicks={true}
+        preventClicksPropagation={true}
       >
         {data.gallery.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <img
-                src={item.img}
-                alt=""
-                className="mx-auto object-cover max-w-[90%] md:max-w-none md:max-h-none md:w-[430px] md:h-100%"
-              />
+              <div className="swiper-zoom-container">
+                <img
+                  src={item.img}
+                  alt={item.alt}
+                  className="mx-auto object-cover max-w-[90%] md:max-w-none md:max-h-none md:w-[430px] md:h-100%"
+                />
+              </div>
             </SwiperSlide>
           );
         })}
@@ -66,17 +71,11 @@ function ProductSwiper({ data }) {
                 key={index}
                 style={{ height: "auto" }}
                 className="border border-color_dark_gray bg-color_light_gray"
-                onClick={() => {
-                  console.log("click slide");
-                }}
               >
                 <img
                   src={item.img}
                   alt=""
                   className="block cursor-pointer h-full w-full object-cover"
-                  onClick={() => {
-                    console.log("click img");
-                  }}
                 />
               </SwiperSlide>
             );
