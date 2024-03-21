@@ -33,9 +33,9 @@ const SingleTractorPage = () => {
     const tractor = tractors.find((singleTractor) => singleTractor.url === id);
     setTractor(tractor);
     //console.log(`${tractor.pageTitle} ${tractor.pageDescription}`);
-    console.log(tractor);
+    // console.log(tractor);
   }, [tractor, id]);
-  console.log(tractor);
+  // console.log(tractor);
   return (
     <div>
       {tractor && tractors && (

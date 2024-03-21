@@ -25,8 +25,8 @@ const Card = ({ img, caption, captionStyle, alt, style }) => {
         className={`w-full h-full object-cover object-center ${style}`}
       />
       <div
-        className={`absolute bottom-0 bg-color_dark to to-60% w-full h-full duration-300 ease-in-out z-0 ${
-          isHovered ? "opacity-0" : "to-100% opacity-70"
+        className={`absolute bottom-0 w-full h-full duration-300 ease-in-out z-0 ${
+          isHovered ? "" : "bg-gradient-to-t from-color_dark to-40%"
         }`}
       ></div>
       <figcaption

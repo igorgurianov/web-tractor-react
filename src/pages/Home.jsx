@@ -32,12 +32,10 @@ const HomePage = () => {
   return (
     <div className="">
       <Helmet>
-        <title>
-          Купить трактор ДТ-75 по цене 3 050 000 руб. от производителя
-        </title>
+        <title>Купить трактор ДТ-75. Новый бульдозер ДТ-75, цена.</title>
         <meta
           name="description"
-          content="Предлагаем лучшие модели бульдозера, трактора ДТ-75 по доступным ценам от российского производителя ООО 'ВЗГМ'. Наши трактора сохранили лучшие качества своего предшественника ДТ-75, и станут надежным помощником в вашем бизнесе."
+          content="Производство гусеничных тракторов Дт-75, продажа бульдозеров Дт-75, навесного оборудования и запчастей без посредников от российского производителя «ВЗГМ», унаследовавшие лучшие качества ДТ-75.          "
         />
         <link rel="canonical" href="https://vzgm.ru" />
       </Helmet>
@@ -45,67 +43,70 @@ const HomePage = () => {
       <div className="relative">
         <MainSwiper sliderName="mainCarousel" />
       </div>
+      <div className="hidden md:block">
+        <Section styles="">
+          <SectionHeader
+            headerText="Почему мы"
+            subheaderText=" Завод ВЗГМ на рынке с 2017 года. Наша специализация - производство тракторов ДТ-75 и ХТЗ Т-150. Отличительные особенности наших тракторов - их исключительная надежность и неприхотливость, сочетающаяся с комфортом эксплуатации и высокой ремонтопригодностью."
+            styles="lg:mb-12"
+          />
 
-      <Section styles="">
-        <SectionHeader
-          headerText="Почему мы"
-          subheaderText=" Завод ВЗГМ на рынке с 2017 года. Наша специализация - производство тракторов ДТ-75 и ХТЗ Т-150. Отличительные особенности наших тракторов - их исключительная надежность и неприхотливость, сочетающаяся с комфортом эксплуатации и высокой ремонтопригодностью."
-          styles="lg:mb-12"
-        />
-
-        <ul className="grid md:grid-cols-3 md:mt-20 gap-4 md:px-16 md:gap-x-20">
-          <li className="flex flex-col items-center ">
-            <div
-              style={{ backgroundImage: `url(${sinceIcon})` }}
-              className="h-16 w-16"
-            />
-            <p className="text-center mt-5">
-              Производим тракторы с 2017 года, знаем о них все
-            </p>
-          </li>
-          <li className="flex flex-col items-center">
-            <div
-              style={{ backgroundImage: `url(${sertifiedIcon})` }}
-              className="h-16 w-16"
-            />
-            <p className="text-center mt-5">Сертифицированный производитель</p>
-          </li>
-          <li className="flex flex-col items-center">
-            <div
-              style={{ backgroundImage: `url(${modificationIcon})` }}
-              className="h-16 w-16"
-            />
-            <p className="text-center mt-5">
-              Любые стандартные и нестандартные модицификации
-            </p>
-          </li>
-          <li className="flex flex-col items-center">
-            <div
-              style={{ backgroundImage: `url(${warrantyIcon})` }}
-              className="h-16 w-16"
-            />
-            <p className="text-center mt-5">
-              Заводская гарантия 1 год, срок эксплуатации от 10 лет
-            </p>
-          </li>
-          <li className="flex flex-col items-center">
-            <div
-              style={{ backgroundImage: `url(${deliveryIcon})` }}
-              className="h-16 w-16"
-            />
-            <p className="text-center mt-5">
-              Доставка в любой регион от 0 руб.
-            </p>
-          </li>
-          <li className="flex flex-col items-center">
-            <div
-              style={{ backgroundImage: `url(${markupIcon})` }}
-              className="h-16 w-16"
-            />
-            <p className="text-center mt-5">Без наценок посредников</p>
-          </li>
-        </ul>
-      </Section>
+          <ul className="grid md:grid-cols-3 md:mt-8 gap-4 md:px-16 md:gap-x-20">
+            <li className="flex flex-col items-center ">
+              <div
+                style={{ backgroundImage: `url(${sinceIcon})` }}
+                className="h-24 w-24"
+              />
+              <p className="text-center mt-5">
+                Производим тракторы с 2017 года, знаем о них все
+              </p>
+            </li>
+            <li className="flex flex-col items-center">
+              <div
+                style={{ backgroundImage: `url(${sertifiedIcon})` }}
+                className="h-24 w-24"
+              />
+              <p className="text-center mt-5">
+                Сертифицированный производитель
+              </p>
+            </li>
+            <li className="flex flex-col items-center">
+              <div
+                style={{ backgroundImage: `url(${modificationIcon})` }}
+                className="h-24 w-24"
+              />
+              <p className="text-center mt-5">
+                Любые стандартные и нестандартные модицификации
+              </p>
+            </li>
+            <li className="flex flex-col items-center">
+              <div
+                style={{ backgroundImage: `url(${warrantyIcon})` }}
+                className="h-24 w-24"
+              />
+              <p className="text-center mt-5">
+                Заводская гарантия 1 год, срок эксплуатации от 10 лет
+              </p>
+            </li>
+            <li className="flex flex-col items-center">
+              <div
+                style={{ backgroundImage: `url(${deliveryIcon})` }}
+                className="h-24 w-24"
+              />
+              <p className="text-center mt-5">
+                Доставка в любой регион от 0 руб.
+              </p>
+            </li>
+            <li className="flex flex-col items-center">
+              <div
+                style={{ backgroundImage: `url(${markupIcon})` }}
+                className="h-24 w-24"
+              />
+              <p className="text-center mt-5">Без наценок посредников</p>
+            </li>
+          </ul>
+        </Section>
+      </div>
 
       <Section styles="md:my-14 ">
         <SectionHeader
@@ -260,68 +261,6 @@ const HomePage = () => {
           </ul>
         </Section>
       </div>
-
-      <Section styles=" md:py-14">
-        <SectionHeader
-          headerText="Финансовые условия"
-          subheaderText="Мы всегда идем навстречу нашим клиентам и подбираем самые выгодные словия для кадого"
-        />
-        <ul className="mt-10 md:mt-16 grid grid-flow-row md:grid-flow-col gap-4 md:gap-8 md:px-10">
-          <li className="flex flex-col items-center">
-            <div
-              style={{ backgroundImage: `url(${leasingIcon})` }}
-              className="h-16 w-16"
-            />
-            <span className="mt-5 font-semibold">Лизинг</span>
-            <p className="text-center mt-1">С удобным платежом</p>
-          </li>
-          <li className="flex flex-col items-center">
-            <div
-              style={{ backgroundImage: `url(${vatIcon})` }}
-              className="h-16 w-16"
-            />
-            <span className="mt-5 font-semibold">С НДС</span>
-            <p className="text-center mt-1">Для организаций</p>
-          </li>
-          <li className="flex flex-col items-center">
-            <div
-              style={{ backgroundImage: `url(${novatIcon})` }}
-              className="h-16 w-16"
-            />
-            <span className="mt-5 font-semibold">Без НДС</span>
-            <p className="text-center mt-1">Для физлиц</p>
-          </li>
-          <li className="flex flex-col items-center">
-            <div
-              style={{ backgroundImage: `url(${discountIcon})` }}
-              className="h-16 w-16"
-            />
-            <span className="mt-5 font-semibold">Персональные скидки</span>
-            <p className="text-center mt-1">Для каждого</p>
-          </li>
-        </ul>
-        <div>
-          <ContactUsBtn
-            text="Пишите, обо всем договоримся!"
-            style="hover:bg-color_dark hover:text-color_white px-6 mt-10 md:mt-20 mx-auto block rounded-md"
-          />
-        </div>
-      </Section>
-
-      {/* <CallBackForm /> */}
-      {/* <Partners /> */}
-
-      {/* <div className="bg-color_light_gray">
-        <Section styles="py-10 md:py-14 lg:py-20 xl:py-24">
-          <SectionHeader headerText="Новости и обновления" />
-          <NewsSlider />
-          <LinkBtn
-            text="Все новости"
-            to={"/news/"}
-            style="mx-auto md:mr-0 max-w-[254px] mt-8 md:mt-12 hover:bg-color_dark hover:text-color_white"
-          />
-        </Section>
-      </div> */}
       <Section styles="py-10">
         <SectionHeader
           headerText="Тендеры и госзакупки (44-ФЗ и 223-ФЗ)"
@@ -362,6 +301,69 @@ const HomePage = () => {
           </li>
         </ul>
       </Section>
+      <div className="bg-color_light_gray">
+        <Section styles="py-10">
+          <SectionHeader
+            headerText="Финансовые условия"
+            subheaderText="Мы всегда идем навстречу нашим клиентам и подбираем самые выгодные словия для кадого"
+          />
+          <ul className="mt-10 md:mt-16 grid grid-flow-row md:grid-flow-col gap-4 md:px-10 md:justify-around">
+            <li className="flex flex-col items-center justify-center bg-color_white rounded-full md:w-[220px] md:h-[220px] pb-2">
+              <div
+                style={{ backgroundImage: `url(${leasingIcon})` }}
+                className="h-24 w-24"
+              />
+              {/* <span className="mt-5 font-semibold">Лизинг</span> */}
+              <p className="text-center mt-1">Лизинг</p>
+            </li>
+            <li className="flex flex-col items-center justify-center bg-color_white rounded-full md:w-[220px] md:h-[220px] pb-2">
+              <div
+                style={{ backgroundImage: `url(${vatIcon})` }}
+                className="h-24 w-24"
+              />
+              {/* <span className="mt-5 font-semibold">С НДС</span> */}
+              <p className="text-center mt-1">Для организаций</p>
+            </li>
+            <li className="flex flex-col items-center justify-center bg-color_white rounded-full md:w-[220px] md:h-[220px] pb-2">
+              <div
+                style={{ backgroundImage: `url(${novatIcon})` }}
+                className="h-24 w-24"
+              />
+              {/* <span className="mt-5 font-semibold">Без НДС</span> */}
+              <p className="text-center mt-1">Для физлиц</p>
+            </li>
+            <li className="flex flex-col items-center justify-center bg-color_white rounded-full md:w-[220px] md:h-[220px] pb-2">
+              <div
+                style={{ backgroundImage: `url(${discountIcon})` }}
+                className="h-24 w-24"
+              />
+              {/* <span className="mt-5 font-semibold">Персональные скидки</span> */}
+              <p className="text-center mt-1">Cкидки</p>
+            </li>
+          </ul>
+          <div>
+            <ContactUsBtn
+              text="Свяжитесь с нами"
+              style="hover:bg-color_dark hover:text-color_white px-6 mt-10 md:mt-20 mx-auto block rounded-md"
+            />
+          </div>
+        </Section>
+      </div>
+
+      {/* <CallBackForm /> */}
+      {/* <Partners /> */}
+
+      {/* <div className="bg-color_light_gray">
+        <Section styles="py-10 md:py-14 lg:py-20 xl:py-24">
+          <SectionHeader headerText="Новости и обновления" />
+          <NewsSlider />
+          <LinkBtn
+            text="Все новости"
+            to={"/news/"}
+            style="mx-auto md:mr-0 max-w-[254px] mt-8 md:mt-12 hover:bg-color_dark hover:text-color_white"
+          />
+        </Section>
+      </div> */}
     </div>
   );
 };

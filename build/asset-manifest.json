@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.742907b4.css",
-    "main.js": "/static/js/main.24ca2643.js",
+    "main.css": "/static/css/main.f4f5e0b5.css",
+    "main.js": "/static/js/main.c8fdcf76.js",
+    "static/media/Imagenews-004.png": "/static/media/Imagenews-004.904fb01180c76e953ae3.png",
+    "static/media/Imagenews-005.png": "/static/media/Imagenews-005.dce258f0e8d7dc99beee.png",
     "static/media/form-bg-md.png": "/static/media/form-bg-md.7d2909256250704f69a7.png",
     "static/media/sertificate_11zon_1.webp": "/static/media/sertificate_11zon_1.0769fb8a36cec5e6f179.webp",
     "static/media/VZGM-90-2.png": "/static/media/VZGM-90-2.aba3ccb0be16dbfb7fde.png",
@@ -122,7 +124,7 @@
     "static/media/agreement.svg": "/static/media/agreement.157ce46514ad54e4d4ec07c16b059e3d.svg",
     "static/media/asNew.svg": "/static/media/asNew.247115b4ea5c02bdb77b4530f24c0a85.svg",
     "static/media/tractorIcon.svg": "/static/media/tractorIcon.231534b1cc9e5b3ad415159a5cd1f593.svg",
-    "static/media/since2017.svg": "/static/media/since2017.02f952be5cde030bc4df79f90bc8c186.svg",
+    "static/media/since2017.svg": "/static/media/since2017.e8e75d2b07e4edf85bf6b52b25eeaa45.svg",
     "static/media/delivery.svg": "/static/media/delivery.57f091baae60b1c7af36a6b7fb7f40ff.svg",
     "static/media/chassiss.svg": "/static/media/chassiss.0619c81c6a67a4e5ee41668840f00fa4.svg",
     "static/media/transport.svg": "/static/media/transport.df8f432335dcd5178e913297675d2e79.svg",
@@ -133,7 +135,7 @@
     "static/media/no-vat.svg": "/static/media/no-vat.7744b62cf56079fc94451be0a6b601e3.svg",
     "static/media/guarantee.svg": "/static/media/guarantee.9dce8e7622a7c07d93246ee2d53b936d.svg",
     "static/media/vat.svg": "/static/media/vat.3c1401edc4f42cb0187b3a70abb09ac1.svg",
-    "static/media/modifications.svg": "/static/media/modifications.2c174b11ba76f3366510c192be4da2b8.svg",
+    "static/media/modifications.svg": "/static/media/modifications.093b48ee2d12f5c013a8028f30363927.svg",
     "static/media/leasing.svg": "/static/media/leasing.3961e4b7c81f88cae0d24fe62bd5b9bc.svg",
     "index.html": "/index.html",
     "static/media/discount.svg": "/static/media/discount.f65893abeb73da8a8149738405d0fafb.svg",
@@ -141,9 +143,9 @@
     "static/media/transmission.svg": "/static/media/transmission.6a1786c6e2370858122589ed36654105.svg",
     "static/media/hydraulics.svg": "/static/media/hydraulics.0d39da14b0f2a868303d89e4d58ea978.svg",
     "static/media/address.svg": "/static/media/address.f3e83c99c07cdd4987cda696f421cfa4.svg",
-    "static/media/warranty.svg": "/static/media/warranty.75da3e784a2b6637f9e0a67c8115c228.svg",
-    "static/media/markup.svg": "/static/media/markup.01fb380ef8010e9df5dd9b3e078152c5.svg",
-    "static/media/sertified.svg": "/static/media/sertified.c9a27cbbc043dbf974bf100455aeb01f.svg",
+    "static/media/warranty.svg": "/static/media/warranty.d169e3a88fe43444c7c1411974fe2fe1.svg",
+    "static/media/markup.svg": "/static/media/markup.6447bfad1b96fa2376ad73652eeced71.svg",
+    "static/media/sertified.svg": "/static/media/sertified.dc1b1f0b200b90b2a282229160a7b2e6.svg",
     "static/media/cabin.svg": "/static/media/cabin.06b06da10777a44a8d7cbf60db6017fd.svg",
     "static/media/search.svg": "/static/media/search.a8cca39bb7ac60fe1bd8ba0f23d99577.svg",
     "static/media/wrenchTime.svg": "/static/media/wrenchTime.926aaa1c46aeb35d9724d9dad2bab2c1.svg",
@@ -171,11 +173,11 @@
     "static/media/info-svgrepo-com.svg": "/static/media/info-svgrepo-com.e54d768c242dc87d75ddb24f23683e91.svg",
     "static/media/top-arrow-5-svgrepo-com.svg": "/static/media/top-arrow-5-svgrepo-com.99f248f8e71b053fbf0c86c19356cbda.svg",
     "static/media/breadCrumb.svg": "/static/media/breadCrumb.afa1dbafeb536be9f7c083f3b4f29ca8.svg",
-    "main.742907b4.css.map": "/static/css/main.742907b4.css.map",
-    "main.24ca2643.js.map": "/static/js/main.24ca2643.js.map"
+    "main.f4f5e0b5.css.map": "/static/css/main.f4f5e0b5.css.map",
+    "main.c8fdcf76.js.map": "/static/js/main.c8fdcf76.js.map"
   },
   "entrypoints": [
-    "static/css/main.742907b4.css",
-    "static/js/main.24ca2643.js"
+    "static/css/main.f4f5e0b5.css",
+    "static/js/main.c8fdcf76.js"
   ]
 }

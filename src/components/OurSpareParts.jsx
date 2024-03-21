@@ -18,12 +18,12 @@ const OurSpareParts = ({ children }) => {
       <div className="flex flex-col">
         <ul className="grid grid-cols-2 grid-rows-[repeat(4,130px)] gap-4 md:gap-6 md:grid-cols-4 md:grid-rows-[repeat(2,160px)]">
           {sparesData.map((item, index) => {
-            if (item.position === "span-2" && item.category != "blade") {
+            if (item.position === "span-2" && item.category !== "blade") {
               return (
                 <li key={index} className="row-span-2 h-auto">
                   <Link to={`/eqipment/${item.category}/${item.url}`}>
                     <Card
-                      img={item.img}
+                      img={item.gallery[0].img}
                       alt={item.alt}
                       caption={item.name}
                       captionStyle={captionStyle}
@@ -32,12 +32,12 @@ const OurSpareParts = ({ children }) => {
                   </Link>
                 </li>
               );
-            } else if (item.category != "blade") {
+            } else if (item.category !== "blade") {
               return (
                 <li key={index} className="">
                   <Link to={`/eqipment/${item.category}/${item.url}`}>
                     <Card
-                      img={item.img}
+                      img={item.gallery[0].img}
                       alt={item.alt}
                       caption={item.name}
                       captionStyle={captionStyle}
