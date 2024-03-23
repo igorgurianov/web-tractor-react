@@ -1,9 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f4f5e0b5.css",
-    "main.js": "/static/js/main.f754afbf.js",
-    "static/media/Imagenews-004.png": "/static/media/Imagenews-004.904fb01180c76e953ae3.png",
-    "static/media/Imagenews-005.png": "/static/media/Imagenews-005.dce258f0e8d7dc99beee.png",
+    "main.css": "/static/css/main.01294286.css",
+    "main.js": "/static/js/main.50cba61d.js",
     "static/media/form-bg-md.png": "/static/media/form-bg-md.7d2909256250704f69a7.png",
     "static/media/sertificate_11zon_1.webp": "/static/media/sertificate_11zon_1.0769fb8a36cec5e6f179.webp",
     "static/media/VZGM-90-2.png": "/static/media/VZGM-90-2.aba3ccb0be16dbfb7fde.png",
@@ -77,6 +75,7 @@
     "static/media/ourServices.png": "/static/media/ourServices.c2ace3dc7ba93cff7abd.png",
     "static/media/capital-1.jpg": "/static/media/capital-1.e0e6c3f9f1fb852f634c.jpg",
     "static/media/banner2.jpg": "/static/media/banner2.9c46d1ab9f97f30a2bf8.jpg",
+    "static/media/Imagenews-004.webp": "/static/media/Imagenews-004.ff3d2f47a037b944ce31.webp",
     "static/media/sertificate_11zon_2.webp": "/static/media/sertificate_11zon_2.b107d66ef5a9ac102fa3.webp",
     "static/media/roboto-v30-latin_cyrillic-ext_cyrillic-500.woff": "/static/media/roboto-v30-latin_cyrillic-ext_cyrillic-500.9d99ca9df5962f656ec8.woff",
     "static/media/roboto-v30-latin_cyrillic-ext_cyrillic-700.woff": "/static/media/roboto-v30-latin_cyrillic-ext_cyrillic-700.e9c7fd6dbec082f8d866.woff",
@@ -86,6 +85,7 @@
     "static/media/dtbanner.webp": "/static/media/dtbanner.e577ea0c8b7333e9ef72.webp",
     "static/media/Gilroy-Bold.woff": "/static/media/Gilroy-Bold.0607a1bc636f63251ed8.woff",
     "static/media/Gilroy-Semibold.woff": "/static/media/Gilroy-Semibold.5b042906a8b58ec4633e.woff",
+    "static/media/Imagenews-005.webp": "/static/media/Imagenews-005.635993585a39ff0916e8.webp",
     "static/media/Gilroy-Regular.woff": "/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
     "static/media/VZGM-90-4.png": "/static/media/VZGM-90-4.4795217477507af4e3d3.png",
     "static/media/icon2.svg": "/static/media/icon2.6265e406bda90eeaa64c99e8ba9f11ed.svg",
@@ -173,11 +173,11 @@
     "static/media/info-svgrepo-com.svg": "/static/media/info-svgrepo-com.e54d768c242dc87d75ddb24f23683e91.svg",
     "static/media/top-arrow-5-svgrepo-com.svg": "/static/media/top-arrow-5-svgrepo-com.99f248f8e71b053fbf0c86c19356cbda.svg",
     "static/media/breadCrumb.svg": "/static/media/breadCrumb.afa1dbafeb536be9f7c083f3b4f29ca8.svg",
-    "main.f4f5e0b5.css.map": "/static/css/main.f4f5e0b5.css.map",
-    "main.f754afbf.js.map": "/static/js/main.f754afbf.js.map"
+    "main.01294286.css.map": "/static/css/main.01294286.css.map",
+    "main.50cba61d.js.map": "/static/js/main.50cba61d.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4f5e0b5.css",
-    "static/js/main.f754afbf.js"
+    "static/css/main.01294286.css",
+    "static/js/main.50cba61d.js"
   ]
 }

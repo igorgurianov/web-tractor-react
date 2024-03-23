@@ -66,8 +66,10 @@ const TractorsCataloguePage = () => {
             <div className="flex flex-col items-start text-left px-4 pt-4 pb-9 mx-auto md:pt-14 md:pb-10 lg:pt-16 lg:pb-28 pl-[5%] lg:pl-0  lg:max-w-[1200px]">
               {/* <p className="text-color_accent_yellow md:text-2xl">qweqwe</p> */}
               <h1 className="text-2xl text-color_light_gray mt-4 lg:mt-6  md:text-4xl max-w-[700px]">
-                Купить тракторы ДТ-75 и ХТЗ Т-150 <br />
-                от производителя
+                Купить <br />
+                гусеничный трактор ДТ-75
+                <br />
+                колесный ХТЗ Т-150 <br />
               </h1>
               {/* <h1 className="text-color_white text-base mt-6 md:text-xl lg:mt-10 font-normal lowercase font-primary">
                   

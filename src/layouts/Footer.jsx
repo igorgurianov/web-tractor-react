@@ -30,11 +30,19 @@ const Footer = () => {
                 icon={<FiMapPin className="w-6 h-6 " />}
               />
             </li>
-            <li className=" hover:text-color_white">
+            {/* <li className=" hover:text-color_white">
               <FooterFrame
                 text={`Заказ техники ${organizationInfo.phone.callNow.toShow}`}
                 href={`tel:${organizationInfo.phone.callNow.toLink}`}
                 icon={<FiPhoneCall className="w-6 h-6" />}
+              />
+            </li> */}
+            <li className="">
+              <FooterFrame
+                text={organizationInfo.address2.textTop}
+                textBottom={organizationInfo.address2.textBottom}
+                href="#"
+                icon={<FiMapPin className="w-6 h-6 " />}
               />
             </li>
             <li className=" hover:text-color_white">

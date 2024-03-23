@@ -412,3 +412,7 @@ body {
 .swiper-rtl .swiper-button-prev {
   right: 0;
 }
+
+.swiper-gallery {
+  padding-bottom: 30px;
+}

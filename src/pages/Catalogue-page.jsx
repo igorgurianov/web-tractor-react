@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Section from "../components/Section";
 import SectionHeader from "../components/SectionHeader";
 import { Link } from "react-router-dom";
@@ -7,7 +8,8 @@ import Card from "../components/Card";
 import sparesData from "../utils/sparesData";
 import Breadcrumbs from "../UI/Breadcrumbs";
 import Brands from "../call-to-action/Brands";
-import { Helmet } from "react-helmet";
+
+import ContactUsBtn from "../UI/ContactUsBtn";
 
 const CataloguePage = () => {
   const { id } = useParams();
@@ -103,9 +105,23 @@ const CataloguePage = () => {
           </ul>
         </div>
       </Section>
-      <div className="bg-color_light_gray">
+      <Section styles="mt-10">
+        <div className="flex flex-col justify-center items-center gap-5 mb-10">
+          <div>
+            <h2>Не нашли подходящую деталь? Свяжитесь с нами!</h2>
+            <p>Подберем и доставим в кратчайшие сроки</p>
+
+            <p></p>
+          </div>
+          <ContactUsBtn
+            text="Связаться"
+            style="hover:bg-color_dark hover:text-color_white basis-1/2 px-8 md:px-10 max-w-[300px] rounded-sm"
+          />
+        </div>
+      </Section>
+      {/* <div className="bg-color_light_gray">
         <Brands />
-      </div>
+      </div> */}
     </div>
   );
 };

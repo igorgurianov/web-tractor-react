@@ -28,7 +28,7 @@ import twotractors from "../assets/images/main-banner/banner2tractors.jpg";
 const slide = {
   header: "Надежные трактора",
   subHeader: "для широкого спектра работ",
-  text1: "купить тракторы ДТ 75 и ХТЗ Т-150 ",
+  text1: "купить гусеничные тракторы ДТ 75 и колесные ХТЗ Т-150 ",
   text2: " с оборудованием и гарантией от производителя",
   img: twotractors,
 };
@@ -59,11 +59,11 @@ const MainSwiper = ({ sliderName }) => {
             {slide.header}
           </h2>
           <h1 className="text-color_white text-base mt-6 md:text-xl lg:mt-10 lowercase ">
-            {slide.text1}
+            купить гусеничные тракторы ДТ 75 <br />и колесные ХТЗ Т-150
           </h1>
-          <p className="text-color_white md:text-xl text-left font-semibold">
+          {/* <p className="text-color_white md:text-xl text-left font-semibold">
             {slide.text2}
-          </p>
+          </p> */}
 
           <ContactUsBtn
             text="Связаться с нами"

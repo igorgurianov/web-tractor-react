@@ -1,8 +1,8 @@
 import img001 from "../assets/images/news/Imagenews-001.jpg";
 import img002 from "../assets/images/news/Imagenews-002.jpg";
 import img003 from "../assets/images/news/Imagenews-003.jpg";
-import img004 from "../assets/images/news/Imagenews-004.png";
-import img005 from "../assets/images/news/Imagenews-005.png";
+import img004 from "../assets/images/news/Imagenews-004.webp";
+import img005 from "../assets/images/news/Imagenews-005.webp";
 
 export const newsData = [
   {

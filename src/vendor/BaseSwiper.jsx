@@ -10,6 +10,7 @@ const BaseSwiper = ({
   slidesPerViewSmallScreen = "1",
   slidesPerViewMdScreen = "3",
   slideHeigth,
+  spaceBetween = "24",
   isClickable = false,
 }) => {
   const dispatch = useDispatch();
@@ -40,7 +41,7 @@ const BaseSwiper = ({
             slidesPerView: slidesPerViewMdScreen,
           },
         }}
-        spaceBetween={24}
+        spaceBetween={spaceBetween}
         preventClicks={true}
         preventClicksPropagation={true}
       >

@@ -47,9 +47,6 @@ const EquipmentPage = () => {
           })}
         </div>
       </Section>
-      <div className="bg-color_light_gray">
-        <Brands />
-      </div>
     </div>
   );
 };
