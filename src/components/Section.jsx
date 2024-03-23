@@ -1,6 +1,6 @@
 const Section = ({ children, styles }) => {
   return (
-    <section className={`px-3 my-10 mx-auto md:px-6 max-w-[1200px] ${styles}`}>
+    <section className={`px-3 my-5 mx-auto md:px-6 max-w-[1200px] ${styles}`}>
       {children}
     </section>
   );

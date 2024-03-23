@@ -79,7 +79,7 @@ function CatalogDt75() {
         "
             >
               <h1 className="text-2xl text-color_light_gray mt-4 lg:mt-6  md:text-4xl max-w-[700px]">
-                Купить трактор ДТ-75 <br />
+                Купить гусеничный трактор ДТ-75 <br />
                 от производителя
               </h1>
               <ul className="md:max-w-[600px] mt-5 text-lg">

@@ -61,6 +61,7 @@ import vzgm150p7 from "../assets/images/tractors/vzgm-150/VZGM-150-7.png";
 const newtractorData = [
   {
     name: "Трактор ДТ-75 без навесного оборудования",
+    chassis: "Гусеничный",
     shortName: "ДТ-75",
     url: "dt-75-bez-navesnogo",
     price: "3 100 000",
@@ -250,6 +251,7 @@ const newtractorData = [
   {
     name: "Бульдозер ДТ-75 с прямым отвалом",
     shortName: "ДТ-75",
+    chassis: "Гусеничный",
     url: "DT-75-s-pryamin-otvalom",
     price: "3 350 000",
     type: "dt-75",
@@ -456,7 +458,9 @@ const newtractorData = [
     name: "Дт-75 Болотник без навесного оборудования",
     shortName: "ДТ-75",
     url: "dt-75-bolotnik",
+    onMainPage: true,
     price: "3 280 000",
+    chassis: "Гусеничный",
     img: vzgm_90_base_1,
     inStock: true,
     catalog: "catalog-dt-75",
@@ -469,20 +473,32 @@ const newtractorData = [
 
     gallery: [
       {
-        img: "http://www.vzgm.ru/content/tractors/vzgm-90/DT-75-Bolotnik-bez-navesnogo-oborudovania/DT-75-bez-navesnogo- oborudovania-3.webp",
-        alt: "Болотник ДТ-75",
+        img: "http://www.vzgm.ru/content/tractors/vzgm-90/DT-75-Bolotnik-bez-navesnogo-oborudovania/DT-75-bez-navesnogo- oborudovania-9.webp",
+        alt: "Синий болотник ДТ-75 без навески",
       },
 
       {
+        img: "http://www.vzgm.ru/content/tractors/vzgm-90/DT-75-Bolotnik-bez-navesnogo-oborudovania/DT-75-bez-navesnogo- oborudovania-10.webp",
+        alt: "Болотник ДТ-75 в Московской области",
+      },
+      {
+        img: "http://www.vzgm.ru/content/tractors/vzgm-90/DT-75-Bolotnik-bez-navesnogo-oborudovania/DT-75-bez-navesnogo- oborudovania-12.webp",
+        alt: "Болотоход ДТ-75 в Москве",
+      },
+      {
         img: " http://www.vzgm.ru/content/tractors/vzgm-90/DT-75-Bolotnik-bez-navesnogo-oborudovania/DT-75-bez-navesnogo- oborudovania-4.webp",
         alt: "Болотоход ДТ-75",
+      },
+      {
+        img: "http://www.vzgm.ru/content/tractors/vzgm-90/DT-75-Bolotnik-bez-navesnogo-oborudovania/DT-75-bez-navesnogo- oborudovania-3.webp",
+        alt: "Болотник ДТ-75",
       },
       {
         img: " http://www.vzgm.ru/content/tractors/vzgm-90/DT-75-Bolotnik-bez-navesnogo-oborudovania/DT-75-bez-navesnogo- oborudovania-5.webp",
         alt: "Болотник ДТ-75 под снегом",
       },
       {
-        img: " http://www.vzgm.ru/content/tractors/vzgm-90/DT-75-Bolotnik-bez-navesnogo-oborudovania/DT-75-bez-navesnogo- oborudovania-7.webp",
+        img: "http://www.vzgm.ru/content/tractors/vzgm-90/DT-75-Bolotnik-bez-navesnogo-oborudovania/DT-75-bez-navesnogo- oborudovania-7.webp",
         alt: "2 Болотохода на белом фоне",
       },
       {
@@ -501,18 +517,6 @@ const newtractorData = [
       {
         img: "http://www.vzgm.ru/content/tractors/vzgm-90/DT-75-Bolotnik-bez-navesnogo-oborudovania/DT-75-bez-navesnogo- oborudovania-8.webp",
         alt: "Двигатель болотника ДТ-75",
-      },
-      {
-        img: "http://www.vzgm.ru/content/tractors/vzgm-90/DT-75-Bolotnik-bez-navesnogo-oborudovania/DT-75-bez-navesnogo- oborudovania-9.webp",
-        alt: "Синий болотник ДТ-75без навески",
-      },
-      {
-        img: "http://www.vzgm.ru/content/tractors/vzgm-90/DT-75-Bolotnik-bez-navesnogo-oborudovania/DT-75-bez-navesnogo- oborudovania-10.webp",
-        alt: "Болотник ДТ-75 в Московской области",
-      },
-      {
-        img: "http://www.vzgm.ru/content/tractors/vzgm-90/DT-75-Bolotnik-bez-navesnogo-oborudovania/DT-75-bez-navesnogo- oborudovania-12.webp",
-        alt: "Болотоход ДТ-75 в Москве",
       },
     ],
     shortDescription: "Болотоход ДТ-75 без навесного оборудования ",
@@ -619,11 +623,12 @@ const newtractorData = [
     shortName: "ДТ-75",
     url: "DT-75-s-universalnym-otvalom",
     price: "3 460 000",
+    chassis: "Гусеничный",
     type: "dt-75",
     catalog: "catalog-dt-75",
     img: vzgm90,
     inStock: true,
-    onMainPage: true,
+
     pageTitle:
       "Купить новый бульдозер ДТ-75 с универсальным отвалом. Цена 3 460 000 руб| ВЗГМ",
     pageDescription:
@@ -868,7 +873,7 @@ const newtractorData = [
     type: "dt-75",
     catalog: "catalog-dt-75",
     img: vzgm90,
-
+    chassis: "Гусеничный",
     inStock: true,
     pageTitle:
       "Купить новый трактор ДТ-75 с задней гидронавеской. Цена 3 150 000 руб| ВЗГМ ",
@@ -1038,6 +1043,7 @@ const newtractorData = [
     shortName: "ДТ-75",
     url: "dt-75-bolotnik-s-pryamim-otvalom",
     price: "3 530 000",
+    chassis: "Гусеничный",
     img: vzgm_90_base_1,
     inStock: true,
     catalog: "catalog-dt-75",
@@ -1184,6 +1190,7 @@ const newtractorData = [
     url: "DT-75-na-rezinovyh-gusenitsah",
     price: "3 900 000",
     type: "dt-75",
+    chassis: "Гусеничный",
     catalog: "catalog-dt-75",
     img: vzgm90,
     inStock: true,
@@ -1373,6 +1380,7 @@ const newtractorData = [
     url: "XTZ-150",
     type: "t-150",
     price: "6 800 000",
+    chassis: "Колесный",
     catalog: "catalog-htz-t150",
     pageTitle: "Купить трактор ХТЗ 150",
     pageDescription:
@@ -1541,12 +1549,13 @@ const newtractorData = [
   },
 
   {
-    name: "Купить ДТ-75 с навесным оборудованием",
+    name: "ДТ-75 с навесным оборудованием",
     shortName: "ДТ-75",
     url: "dt-75-s-navesnym-oborydovaniem",
     price: "3 495 000",
     type: "dt-75",
     img: vzgm90,
+    chassis: "Гусеничный",
     catalog: "catalog-dt-75",
     inStock: false,
     pageTitle:
@@ -1715,8 +1724,9 @@ const newtractorData = [
     name: "Трактор ХТЗ-150 с навесным оборудованием",
     shortName: "ХТЗ-150",
     url: "XTZ-150-s-otvalom",
-    price: "7 400 000",
+    price: "6 400 000",
     type: "t-150",
+    chassis: "Колесный",
     catalog: "catalog-htz-t150",
     pageTitle:
       "Купить новый трактор ХТЗ 150 с навесным оборудованием. Цена 7 400 000 руб. - ВЗГМ",
@@ -1891,7 +1901,8 @@ const newtractorData = [
     name: "Трактор ХТЗ 150",
     shortName: "ХТЗ-150",
     url: "XTZ-150-s-navesnym",
-    price: "7 200 000",
+    price: "6 200 000",
+    chassis: "Колесный",
     catalog: "catalog-htz-t150",
     type: "t-150",
     inStock: true,

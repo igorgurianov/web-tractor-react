@@ -341,7 +341,7 @@ const sparesData = [
       },
     ],
 
-    price: "по запросу",
+    price: "300 000 руб.",
     img: cabin,
     pageTitle: " Купить кабину Дт 75. Цена 210 000 руб|     ВЗГМ",
     pageDescription:

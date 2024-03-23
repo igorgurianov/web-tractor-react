@@ -31,7 +31,7 @@ const CatalogHtzT150 = () => {
           <div className="bg-gradient-to-r from-10% from-[#171717] to-[#3B3B3B4D] to-70% w-full h-full">
             <div className="flex flex-col items-start text-left px-4 pt-4 pb-9 mx-auto md:pt-14 md:pb-10 lg:pt-16 lg:pb-28 pl-[5%] lg:pl-0  lg:max-w-[1200px]">
               <h1 className="text-2xl text-color_light_gray mt-4 lg:mt-6  md:text-4xl max-w-[700px]">
-                Купить трактор ХТЗ Т-150 <br />
+                Купить колесный трактор ХТЗ Т-150 <br />
                 от производителя
               </h1>
               <ul className="md:max-w-[500px] mt-5">

@@ -48,7 +48,7 @@ export default function InteractivePicRepair() {
   console.log(element);
 
   return (
-    <>
+    <div className="hidden md:block">
       {elementInfo ? (
         <Section styles="md:mb-14 md:mt-6 lg:mb-20">
           <SectionHeader
@@ -300,6 +300,6 @@ export default function InteractivePicRepair() {
       ) : (
         ""
       )}
-    </>
+    </div>
   );
 }

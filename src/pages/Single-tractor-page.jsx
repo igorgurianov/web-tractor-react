@@ -57,7 +57,7 @@ const SingleTractorPage = () => {
               <div className="mt-6 lg:mt-8 grid md:grid-rows-none md:grid-cols-[50%_50%] min-w-0 md:gap-6">
                 <div className="flex flex-col min-w-0">
                   <h1 className="mt-10 md:mt-0 text-left text-2xl xl:text-3xl">
-                    Купить новый {tractor.name}
+                    Купить новый {tractor.chassis} {tractor.name}
                   </h1>
                   <ul className="mt-8 md:pl-10">
                     <li className="flex gap-2">

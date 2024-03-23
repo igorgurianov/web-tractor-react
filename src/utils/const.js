@@ -68,20 +68,88 @@ const experts = [
   { img: expert3, title: "Игорь Исаев", subtitle: "Директор" },
   { img: expert4, title: "Игорь Исаев", subtitle: "Директор" },
 ];
+
 const galleryData = [
-  { img: gallery1, title: "", subtitle: "" },
-  { img: gallery2, title: "", subtitle: "" },
-  { img: gallery3, title: "", subtitle: "" },
-  { img: gallery4, title: "", subtitle: "" },
-  { img: gallery5, title: "", subtitle: "" },
-  { img: gallery7, title: "", subtitle: "" },
-  { img: gallery8, title: "", subtitle: "" },
-  { img: gallery9, title: "", subtitle: "" },
-  { img: gallery10, title: "", subtitle: "" },
-  { img: gallery11, title: "", subtitle: "" },
-  { img: gallery12, title: "", subtitle: "" },
-  { img: gallery14, title: "", subtitle: "" },
-  { img: gallery15, title: "", subtitle: "" },
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-1.webp",
+    title: "",
+    subtitle: "",
+  },
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-2.webp",
+    title: "",
+    subtitle: "",
+  },
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-3.webp",
+    title: "",
+    subtitle: "",
+  },
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-4.webp",
+    title: "",
+    subtitle: "",
+  },
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-5.webp",
+    title: "",
+    subtitle: "",
+  },
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-6.webp",
+    title: "",
+    subtitle: "",
+  }, // Added missing number 6
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-7.webp",
+    title: "",
+    subtitle: "",
+  },
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-8.webp",
+    title: "",
+    subtitle: "",
+  },
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-9.webp",
+    title: "",
+    subtitle: "",
+  },
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-10.webp",
+    title: "",
+    subtitle: "",
+  },
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-11.webp",
+    title: "",
+    subtitle: "",
+  },
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-12.webp",
+    title: "",
+    subtitle: "",
+  },
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-13.webp",
+    title: "",
+    subtitle: "",
+  }, // Added missing number 13
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-14.webp",
+    title: "",
+    subtitle: "",
+  },
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-15.webp",
+    title: "",
+    subtitle: "",
+  },
+  {
+    img: "https://www.vzgm.ru/content/gallery/Galery-16.webp",
+    title: "",
+    subtitle: "",
+  }, // Added missing number 16
 ];
 
 const sertificates = [
